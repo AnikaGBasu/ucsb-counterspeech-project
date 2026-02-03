@@ -3,3 +3,9 @@ python-dotenv
 pydantic
 tenacity
 tqdm
+openai
+scikit-learn
+pandas
+transformers>=4.30.0
+torch>=2.0.0
+vaderSentiment>=3.3.2
