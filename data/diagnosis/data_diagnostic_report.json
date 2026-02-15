@@ -1,0 +1,33 @@
+{
+  "total_examples": 67,
+  "labeled_counterspeech": 65,
+  "class_distribution": {
+    "positive": 16,
+    "negative": 49
+  },
+  "imbalance_ratio": 3.0625,
+  "train_test_split": {
+    "train_total": 52,
+    "train_positive": 4,
+    "train_negative": 48,
+    "test_total": 13,
+    "test_positive": 12,
+    "test_negative": 1
+  },
+  "text_stats": {
+    "avg_length": 113.31343283582089,
+    "median_length": 91.0,
+    "min_length": 14,
+    "max_length": 332
+  },
+  "issues": [
+    "Severe class imbalance",
+    "Too few positive examples (<20)",
+    "Training set has <10 positive examples"
+  ],
+  "recommendations": [
+    "Run: python run_improved_optimization.py (has oversampling)",
+    "Add more counterspeech examples to your dataset",
+    "CRITICAL: Need more data before optimization will work"
+  ]
+}
