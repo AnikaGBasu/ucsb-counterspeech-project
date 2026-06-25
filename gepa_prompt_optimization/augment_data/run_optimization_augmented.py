@@ -14,11 +14,16 @@ import os
 import dspy
 import json
 import pandas as pd
+from pathlib import Path
 from sklearn.metrics import precision_recall_fscore_support, classification_report
 from dotenv import load_dotenv
 import random
 
 load_dotenv()
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+THREADS_FILE = PROJECT_ROOT / "data" / "sample" / "extracted_68_threads.json"
+AUGMENTED_CSV = Path(__file__).resolve().parent / "ground_truth_dataset_augmented.csv"
 
 print("="*60)
 print("OPTIMIZATION WITH AUGMENTED DATA")
@@ -36,8 +41,8 @@ lm = dspy.LM('openai/gpt-4o-mini', api_key=api_key, temperature=0.0)
 dspy.configure(lm=lm)
 
 # Load augmented dataset
-augmented_csv = "ground_truth_dataset_augmented.csv"
-if not os.path.exists(augmented_csv):
+augmented_csv = AUGMENTED_CSV
+if not augmented_csv.exists():
     print(f"❌ {augmented_csv} not found!")
     print("\nRun augmentation first: python augment_data.py")
     sys.exit(1)
@@ -45,7 +50,7 @@ if not os.path.exists(augmented_csv):
 print(f"Loading {augmented_csv}...")
 
 # Load thread map
-with open("extracted_68_threads.json", 'r') as f:
+with THREADS_FILE.open("r", encoding="utf-8") as f:
     thread_data = json.load(f)
 
 thread_map = {}

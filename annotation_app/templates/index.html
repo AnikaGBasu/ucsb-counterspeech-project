@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hate Speech Annotation</title>
+    <style>
+        :root {
+            --bg: #f4f6f8;
+            --surface: #ffffff;
+            --surface-soft: #f9fafb;
+            --text: #18202a;
+            --muted: #667085;
+            --border: #d7dde5;
+            --border-strong: #b8c2cf;
+            --accent: #1f6f68;
+            --accent-dark: #185b55;
+            --accent-soft: #dff3f0;
+            --danger: #b42318;
+            --danger-soft: #fff1f0;
+            --success: #16703f;
+            --success-soft: #e7f6ec;
+            --warning: #946200;
+            --shadow: 0 12px 28px rgba(24, 32, 42, 0.08);
+            --shadow-soft: 0 4px 14px rgba(24, 32, 42, 0.06);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+            line-height: 1.5;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .page {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 28px 24px 44px;
+        }
+
+        .topbar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 18px;
+            align-items: center;
+            margin-bottom: 18px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .title-wrap {
+            max-width: 620px;
+        }
+
+        .title-wrap h1 {
+            margin: 0;
+            font-size: 30px;
+            line-height: 1.15;
+            font-weight: 760;
+        }
+
+        .title-wrap p {
+            margin: 7px 0 0 0;
+            color: var(--muted);
+            max-width: 58ch;
+        }
+
+        .annotator-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 14px;
+            box-shadow: var(--shadow-soft);
+            min-width: 280px;
+        }
+
+        .annotator-box label,
+        .thread-nav label {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--muted);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        .annotator-box input {
+            width: 100%;
+        }
+
+        .progress-card,
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .progress-card {
+            padding: 18px;
+            margin-bottom: 18px;
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        #item-counter,
+        #completion-text {
+            font-size: 14px;
+        }
+
+        .thread-nav {
+            display: grid;
+            grid-template-columns: minmax(220px, 1fr) minmax(260px, 1.4fr);
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        @media (max-width: 700px) {
+            .thread-nav {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            border-radius: 999px;
+            background: #e8edf2;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: var(--accent);
+            transition: width 0.2s ease;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.12fr) minmax(340px, 0.88fr);
+            gap: 20px;
+            align-items: start;
+        }
+
+        @media (max-width: 900px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            padding: 18px;
+        }
+
+        .section-title {
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 10px;
+        }
+
+        .context-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .context-post,
+        .target-post {
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 14px;
+            background: var(--surface-soft);
+        }
+
+        .context-meta,
+        .target-meta {
+            font-size: 12px;
+            font-weight: 650;
+            color: var(--muted);
+            margin-bottom: 8px;
+        }
+
+        .target-post {
+            border-left: 4px solid var(--accent);
+            background: #f7fbfa;
+        }
+
+        .text-content {
+            white-space: pre-wrap;
+            font-size: 16px;
+            line-height: 1.55;
+        }
+
+        .pill-row {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+        }
+
+        .pill {
+            font-size: 12px;
+            border-radius: 999px;
+            padding: 5px 10px;
+            background: var(--accent-soft);
+            color: var(--accent-dark);
+            font-weight: 650;
+        }
+
+        .field {
+            margin-bottom: 18px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid #edf1f5;
+        }
+
+        .field:last-of-type {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .field label.main {
+            display: block;
+            font-weight: 740;
+            margin-bottom: 8px;
+        }
+
+        .help {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 5px;
+        }
+
+        .radio-grid {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .radio-card {
+            position: relative;
+        }
+
+        .radio-card input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .radio-card label {
+            display: inline-block;
+            padding: 9px 13px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--surface);
+            cursor: pointer;
+            user-select: none;
+            min-width: 84px;
+            text-align: center;
+            transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+        }
+
+        .radio-card label:hover {
+            border-color: var(--border-strong);
+        }
+
+        .radio-card input[type="radio"]:checked + label {
+            background: var(--accent-soft);
+            border-color: var(--accent);
+            color: var(--accent-dark);
+            font-weight: 760;
+        }
+
+        select,
+        textarea,
+        input[type="text"] {
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            font-size: 14px;
+            background: var(--surface);
+            color: var(--text);
+            outline: none;
+            transition: border-color 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        select:focus,
+        textarea:focus,
+        input[type="text"]:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(31, 111, 104, 0.14);
+        }
+
+        textarea {
+            min-height: 96px;
+            resize: vertical;
+        }
+
+        .disabled {
+            opacity: 0.45;
+            pointer-events: none;
+        }
+
+        .button-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        button,
+        .button-link {
+            border: 1px solid transparent;
+            border-radius: 8px;
+            padding: 10px 15px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+        }
+
+        button:hover:not(:disabled),
+        .button-link:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-soft);
+        }
+
+        button:disabled {
+            opacity: 0.55;
+            cursor: not-allowed;
+        }
+
+        .secondary {
+            background: #eef2f6;
+            color: #27313f;
+            border-color: #d9e0e8;
+        }
+
+        .primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .success {
+            background: var(--success-soft);
+            color: var(--success);
+            border-color: #bfe6cb;
+        }
+
+        .danger {
+            background: var(--danger-soft);
+            color: var(--danger);
+        }
+
+        .status-line {
+            margin-top: 12px;
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .kbd {
+            display: inline-block;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            font-size: 12px;
+            border: 1px solid var(--border);
+            border-bottom-width: 2px;
+            border-radius: 6px;
+            padding: 1px 6px;
+            background: var(--surface);
+            margin-left: 5px;
+            color: #344054;
+        }
+
+        .review-flag {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .legend {
+            margin-top: 10px;
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .final-box {
+            display: none;
+            margin-top: 18px;
+            padding: 16px;
+            border-radius: 8px;
+            background: var(--success-soft);
+            border: 1px solid #bfe6cb;
+        }
+
+        .small-note {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .instructions-section {
+            margin-bottom: 24px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .instructions-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .instructions-section h3 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+        }
+
+        .instructions-section h4 {
+            margin: 16px 0 8px 0;
+            font-size: 15px;
+            color: var(--text);
+        }
+
+        .instructions-section p {
+            margin: 8px 0;
+        }
+
+        .instructions-section ul {
+            margin: 8px 0 8px 20px;
+            padding: 0;
+        }
+
+        .instructions-section li {
+            margin-bottom: 6px;
+        }
+
+        .instruction-callout {
+            background: #f7fbfa;
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--accent);
+            border-radius: 8px;
+            padding: 12px 14px;
+            margin: 10px 0;
+        }
+
+        .content-warning {
+            color: var(--danger);
+            background: var(--danger-soft);
+            border: 1px solid #f3b8b0;
+            border-left: 4px solid var(--danger);
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .consent-box {
+            background: #fff8e8;
+            border: 1px solid #efc66b;
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin-bottom: 22px;
+        }
+
+        .consent-box label {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            font-weight: 700;
+        }
+
+        .consent-box input {
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+
+        .instruction-bad {
+            color: var(--danger);
+            font-weight: 700;
+        }
+
+        .instruction-good {
+            color: var(--success);
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="topbar">
+            <div class="title-wrap">
+                <h1>Hate Speech Annotation</h1>
+                <p>Label one reply at a time using tweet context, abuse, hate speech, and counterspeech guidance.</p>
+                <div style="margin-top: 12px;" id="top-instructions-link">
+                    <a class="button-link primary" href="/instructions/back">View annotation instructions</a>
+                </div>
+            </div>
+            <div class="annotator-box">
+                <label for="annotator-id">Annotator hex ID</label>
+                <input id="annotator-id" type="text" placeholder="e.g. a3f9c1" />
+                <div class="small-note" style="margin-top: 8px;">Use an anonymous hex identifier rather than a name. Saved locally in your browser so annotators do not need to re-enter it.</div>
+            </div>
+        </div>
+
+        <div class="progress-card" id="consent-gate" style="display: none;">
+            <strong>Consent required before annotation.</strong>
+            <div class="legend">Please read the instructions and provide consent before viewing the tweet/reply examples.</div>
+            <div style="margin-top: 12px;">
+                <a class="button-link primary" href="/instructions">Go to annotation instructions</a>
+            </div>
+        </div>
+
+        <div class="progress-card" id="annotation-progress">
+            <div class="progress-header">
+                <div><strong id="item-counter">Item 1 of 1</strong></div>
+                <div id="completion-text">0 / 0 completed</div>
+            </div>
+            <div class="thread-nav" aria-label="Tweet and reply navigation">
+                <div>
+                    <label for="thread-select">Tweet</label>
+                    <select id="thread-select" disabled>
+                        <option value="">Load items first</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="post-select">Reply in selected tweet</label>
+                    <select id="post-select" disabled>
+                        <option value="">Load items first</option>
+                    </select>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="legend">
+                Shortcuts: <span class="kbd">1</span> no identity-based hate, <span class="kbd">2</span> identity-based hate, <span class="kbd">C</span> counterspeech yes, <span class="kbd">N</span> next reply, <span class="kbd">B</span> previous reply.
+            </div>
+        </div>
+
+        <div class="layout">
+            <div>
+                <div class="card" style="margin-bottom: 20px;">
+                    <div class="section-title">Tweet Context</div>
+                    <div id="context-list" class="context-list"></div>
+                    <div style="margin-top: 12px;">
+                        <button type="button" class="secondary" id="toggle-context-btn">Show full tweet context</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="section-title">Target Reply</div>
+                    <div class="target-post">
+                        <div class="target-meta" id="target-meta"></div>
+                        <div class="text-content" id="target-text"></div>
+                        <div class="pill-row" id="target-pills"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <form id="annotation-form" class="card">
+                    <div class="field">
+                        <label class="main">1. Does the target reply contain identity-based hate speech?</label>
+                        <div class="radio-grid">
+                            <div class="radio-card">
+                                <input type="radio" id="identity-hate-no" name="identity_hate_speech" value="0" />
+                                <label for="identity-hate-no">No</label>
+                            </div>
+                            <div class="radio-card">
+                                <input type="radio" id="identity-hate-yes" name="identity_hate_speech" value="1" />
+                                <label for="identity-hate-yes">Yes</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field" id="hate-severity-field">
+                        <label class="main">2. If yes, what is the hate speech severity?</label>
+                        <div class="radio-grid">
+                            <div class="radio-card">
+                                <input type="radio" id="severity-low" name="hate_severity" value="low" />
+                                <label for="severity-low">Low</label>
+                            </div>
+                            <div class="radio-card">
+                                <input type="radio" id="severity-medium" name="hate_severity" value="medium" />
+                                <label for="severity-medium">Medium</label>
+                            </div>
+                            <div class="radio-card">
+                                <input type="radio" id="severity-high" name="hate_severity" value="high" />
+                                <label for="severity-high">High</label>
+                            </div>
+                        </div>
+                        <div class="help">Only answer if Q1 = Yes.</div>
+                    </div>
+
+                    <div class="field" id="hate-target-field">
+                        <label class="main" for="hate-target-group">3. Primary hate target group</label>
+                        <select id="hate-target-group" name="hate_target_group">
+                            <option value="">Select target group</option>
+                            <option>Race / ethnicity</option>
+                            <option>Nationality / immigration status</option>
+                            <option>Religion</option>
+                            <option>Caste</option>
+                            <option>Gender / sex</option>
+                            <option>Sexual orientation</option>
+                            <option>Disability</option>
+                            <option>Other protected identity</option>
+                            <option>Unclear</option>
+                        </select>
+                        <div class="help">Only answer if Q1 = Yes.</div>
+                    </div>
+
+                    <div class="field">
+                        <label class="main">4. Does the target reply contain offensive, uncivil, or abusive language?</label>
+                        <div class="radio-grid">
+                            <div class="radio-card">
+                                <input type="radio" id="abuse-none" name="abuse_level" value="none" />
+                                <label for="abuse-none">None</label>
+                            </div>
+                            <div class="radio-card">
+                                <input type="radio" id="abuse-mild" name="abuse_level" value="mild" />
+                                <label for="abuse-mild">Mild</label>
+                            </div>
+                            <div class="radio-card">
+                                <input type="radio" id="abuse-moderate" name="abuse_level" value="moderate" />
+                                <label for="abuse-moderate">Moderate</label>
+                            </div>
+                            <div class="radio-card">
+                                <input type="radio" id="abuse-severe" name="abuse_level" value="severe" />
+                                <label for="abuse-severe">Severe</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field" id="abuse-target-field">
+                        <label class="main" for="abuse-target">5. What is the main target of the offensive or abusive language?</label>
+                        <select id="abuse-target" name="abuse_target">
+                            <option value="">Select target</option>
+                            <option>Individual person</option>
+                            <option>Protected identity group</option>
+                            <option>Body size / appearance</option>
+                            <option>Intelligence / competence</option>
+                            <option>Political belief or ideology</option>
+                            <option>Behavior / actions</option>
+                            <option>Family or personal life</option>
+                            <option>Other</option>
+                            <option>Unclear</option>
+                        </select>
+                        <div class="help">Only answer if Q4 is not None.</div>
+                    </div>
+
+                    <div class="field">
+                        <label class="main">6. Is the target reply counterspeech?</label>
+                        <div class="radio-grid">
+                            <div class="radio-card">
+                                <input type="radio" id="counter-no" name="counterspeech" value="0" />
+                                <label for="counter-no">No</label>
+                            </div>
+                            <div class="radio-card">
+                                <input type="radio" id="counter-yes" name="counterspeech" value="1" />
+                                <label for="counter-yes">Yes</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field" id="counter-type-field">
+                        <label class="main" for="counter-type">7. If counterspeech, what type?</label>
+                        <select id="counter-type" name="counterspeech_type">
+                            <option value="">Select counterspeech type</option>
+                            <option>Direct condemnation</option>
+                            <option>Correction / fact-check</option>
+                            <option>Warning of consequences</option>
+                            <option>Support for target</option>
+                            <option>Moral appeal</option>
+                            <option>Humor / sarcasm</option>
+                            <option>Insulting pushback</option>
+                            <option>De-escalation</option>
+                            <option>Other</option>
+                        </select>
+                        <div class="help">Only answer if Q6 = Yes.</div>
+                    </div>
+
+                    <div class="field" id="counter-politeness-field">
+                        <label class="main" for="counter-politeness">8. If counterspeech, how polite is it?</label>
+                        <select id="counter-politeness" name="counterspeech_politeness">
+                            <option value="">Select politeness level</option>
+                            <option>Not polite</option>
+                            <option>Normal</option>
+                            <option>Somewhat polite</option>
+                            <option>Polite</option>
+                        </select>
+                        <div class="help">Only answer if Q6 = Yes.</div>
+                    </div>
+
+                    <div class="field">
+                        <label class="main">9. Confidence</label>
+                        <div class="radio-grid">
+                            <div class="radio-card">
+                                <input type="radio" id="conf-low" name="confidence" value="low" />
+                                <label for="conf-low">Low</label>
+                            </div>
+                            <div class="radio-card">
+                                <input type="radio" id="conf-med" name="confidence" value="medium" />
+                                <label for="conf-med">Medium</label>
+                            </div>
+                            <div class="radio-card">
+                                <input type="radio" id="conf-high" name="confidence" value="high" />
+                                <label for="conf-high">High</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="main review-flag">
+                            <input type="checkbox" id="flag-review" name="flag_for_review" />
+                            10. Flag for review?
+                        </label>
+                        <div class="help">Use this if you are unsure.</div>
+                    </div>
+
+                    <div class="field">
+                        <label class="main" for="notes">11. Optional notes</label>
+                        <textarea id="notes" name="notes" placeholder="Free response. Use for uncertainty, ambiguity, sarcasm, unclear targets, or context dependence."></textarea>
+                    </div>
+
+                    <div class="button-row">
+                        <div class="button-group">
+                            <button type="button" class="secondary" id="prev-btn">Previous</button>
+                            <button type="button" class="secondary" id="next-btn">Next</button>
+                        </div>
+                        <div class="button-group">
+                            <button type="button" class="success" id="save-btn">Save current progress</button>
+                            <button type="button" class="primary" id="submit-btn">Submit all annotations</button>
+                        </div>
+                    </div>
+
+                    <div class="status-line" id="status-line">Ready.</div>
+                </form>
+            </div>
+        </div>
+
+        <div class="final-box" id="final-box"></div>
+    <script>
+        const state = {
+            items: [],
+            currentIndex: 0,
+            annotations: {},
+            showFullContext: false
+        };
+
+        const STORAGE_KEYS = {
+            annotatorId: 'hate_annotation_annotator_id',
+            draft: 'hate_annotation_draft',
+            consent: 'hate_annotation_content_consent',
+            startedSession: 'hate_annotation_started_session'
+        };
+
+        const DOM = {
+            annotatorId: document.getElementById('annotator-id'),
+            itemCounter: document.getElementById('item-counter'),
+            completionText: document.getElementById('completion-text'),
+            progressFill: document.getElementById('progress-fill'),
+            threadSelect: document.getElementById('thread-select'),
+            postSelect: document.getElementById('post-select'),
+            contextList: document.getElementById('context-list'),
+            targetMeta: document.getElementById('target-meta'),
+            targetText: document.getElementById('target-text'),
+            targetPills: document.getElementById('target-pills'),
+            toggleContextBtn: document.getElementById('toggle-context-btn'),
+            form: document.getElementById('annotation-form'),
+            statusLine: document.getElementById('status-line'),
+            finalBox: document.getElementById('final-box'),
+            prevBtn: document.getElementById('prev-btn'),
+            nextBtn: document.getElementById('next-btn'),
+            saveBtn: document.getElementById('save-btn'),
+            submitBtn: document.getElementById('submit-btn'),
+            hateSeverityField: document.getElementById('hate-severity-field'),
+            hateTargetField: document.getElementById('hate-target-field'),
+            abuseTargetField: document.getElementById('abuse-target-field'),
+            counterTypeField: document.getElementById('counter-type-field'),
+            counterPolitenessField: document.getElementById('counter-politeness-field')
+        };
+
+        function hasContentConsent() {
+            try {
+                return localStorage.getItem(STORAGE_KEYS.consent) === 'true';
+            } catch (error) {
+                console.error('Unable to read content consent:', error);
+                return false;
+            }
+        }
+
+        function hasStartedAnnotationSession() {
+            try {
+                return sessionStorage.getItem(STORAGE_KEYS.startedSession) === 'true';
+            } catch (error) {
+                console.error('Unable to read annotation session state:', error);
+                return false;
+            }
+        }
+
+        function showConsentGate() {
+            document.getElementById('consent-gate').style.display = 'block';
+            document.getElementById('annotation-progress').style.display = 'none';
+            document.getElementById('top-instructions-link').style.display = 'none';
+            document.querySelector('.layout').style.display = 'none';
+        }
+
+        function getCurrentItem() {
+            return state.items[state.currentIndex];
+        }
+
+        function getThreadIds() {
+            return [...new Set(state.items.map(item => item.thread_id))];
+        }
+
+        function getItemsInThread(threadId) {
+            return state.items.filter(item => item.thread_id === threadId);
+        }
+
+        function getThreadPosition(item) {
+            return getItemsInThread(item.thread_id).findIndex(threadItem => threadItem.item_id === item.item_id);
+        }
+
+        function makeReplyOptionLabel(item, position, total) {
+            const username = item.username ? ` @${item.username}` : '';
+            const replyId = item.post_id ? ` ${item.post_id}` : '';
+            return `Reply ${position + 1} of ${total}${username}${replyId}`;
+        }
+
+        function defaultAnnotation(item) {
+            return {
+                item_id: item.item_id,
+                thread_id: item.thread_id || '',
+                post_id: item.post_id || '',
+                parent_id: item.parent_id || '',
+                identity_hate_speech: '',
+                hate_severity: '',
+                hate_target_group: '',
+                abuse_level: '',
+                abuse_target: '',
+                counterspeech: '',
+                counterspeech_type: '',
+                counterspeech_politeness: '',
+                confidence: '',
+                flag_for_review: false,
+                notes: ''
+            };
+        }
+
+        function getAnnotation(itemId) {
+            const item = state.items.find(x => x.item_id === itemId);
+            if (!state.annotations[itemId]) {
+                state.annotations[itemId] = defaultAnnotation(item);
+            } else {
+                state.annotations[itemId] = { ...defaultAnnotation(item), ...state.annotations[itemId] };
+            }
+            return state.annotations[itemId];
+        }
+
+        function saveDraftLocal() {
+            localStorage.setItem(STORAGE_KEYS.draft, JSON.stringify(state.annotations));
+        }
+
+        function loadDraftLocal() {
+            const raw = localStorage.getItem(STORAGE_KEYS.draft);
+            if (!raw) return;
+            try {
+                state.annotations = JSON.parse(raw);
+            } catch (error) {
+                console.error('Failed to load local draft:', error);
+            }
+        }
+
+        function isValidHexIdentifier(value) {
+            return /^[0-9a-fA-F]+$/.test(value);
+        }
+
+        function saveAnnotatorIdLocal() {
+            localStorage.setItem(STORAGE_KEYS.annotatorId, DOM.annotatorId.value.trim());
+        }
+
+        function loadAnnotatorIdLocal() {
+            DOM.annotatorId.value = localStorage.getItem(STORAGE_KEYS.annotatorId) || '';
+        }
+
+        function setRadio(name, value) {
+            const input = document.querySelector(`input[name="${name}"][value="${value}"]`);
+            if (input) input.checked = true;
+        }
+
+        function clearRadio(name) {
+            document.querySelectorAll(`input[name="${name}"]`).forEach(el => {
+                el.checked = false;
+            });
+        }
+
+        function checkedValue(name) {
+            const el = document.querySelector(`input[name="${name}"]:checked`);
+            return el ? el.value : '';
+        }
+
+        function renderContext(item) {
+            const full = item.context || [];
+            const visible = state.showFullContext ? full : full.slice(-1);
+            DOM.contextList.innerHTML = '';
+
+            if (visible.length === 0) {
+                DOM.contextList.innerHTML = '<div class="context-post"><div class="context-meta">No earlier tweet context provided.</div></div>';
+            } else {
+                visible.forEach((ctx, idx) => {
+                    const div = document.createElement('div');
+                    div.className = 'context-post';
+                    div.innerHTML = `
+                        <div class="context-meta">Context ${idx + 1}${ctx.post_id ? ` • ${ctx.post_id}` : ''}${ctx.speaker ? ` • ${ctx.speaker}` : ''}</div>
+                        <div class="text-content"></div>
+                    `;
+                    div.querySelector('.text-content').textContent = ctx.text || '';
+                    DOM.contextList.appendChild(div);
+                });
+            }
+
+            DOM.toggleContextBtn.textContent = state.showFullContext ? 'Show less tweet context' : 'Show full tweet context';
+        }
+
+        function renderTarget(item) {
+            DOM.targetMeta.textContent = [
+                item.item_id,
+                item.thread_id ? `Tweet ${item.thread_id}` : '',
+                item.post_id ? `Reply ${item.post_id}` : '',
+                item.is_reply ? 'Reply' : 'Original tweet'
+            ].filter(Boolean).join(' • ');
+
+            DOM.targetText.textContent = item.target_text || '';
+            DOM.targetPills.innerHTML = '';
+
+            const pills = [];
+            if (item.has_prior_hate_in_context) pills.push('Prior context available');
+            if (item.platform) pills.push(item.platform);
+            if (item.source) pills.push(item.source);
+
+            pills.forEach(text => {
+                const pill = document.createElement('div');
+                pill.className = 'pill';
+                pill.textContent = text;
+                DOM.targetPills.appendChild(pill);
+            });
+        }
+
+        function renderForm(item) {
+            const ann = getAnnotation(item.item_id);
+
+            clearRadio('identity_hate_speech');
+            clearRadio('hate_severity');
+            clearRadio('abuse_level');
+            clearRadio('counterspeech');
+            clearRadio('confidence');
+
+            if (ann.identity_hate_speech !== '') setRadio('identity_hate_speech', ann.identity_hate_speech);
+            if (ann.hate_severity) setRadio('hate_severity', ann.hate_severity);
+            if (ann.abuse_level) setRadio('abuse_level', ann.abuse_level);
+            if (ann.counterspeech !== '') setRadio('counterspeech', ann.counterspeech);
+            if (ann.confidence) setRadio('confidence', ann.confidence);
+
+            document.getElementById('hate-target-group').value = ann.hate_target_group || '';
+            document.getElementById('abuse-target').value = ann.abuse_target || '';
+            document.getElementById('counter-type').value = ann.counterspeech_type || '';
+            document.getElementById('counter-politeness').value = ann.counterspeech_politeness || '';
+            document.getElementById('flag-review').checked = Boolean(ann.flag_for_review);
+            document.getElementById('notes').value = ann.notes || '';
+
+            updateConditionalFields(ann);
+        }
+
+        function updateConditionalFields(ann) {
+            const hateYes = ann.identity_hate_speech === '1';
+            const abuseHasTarget = ann.abuse_level && ann.abuse_level !== 'none';
+            const counterYes = ann.counterspeech === '1';
+
+            DOM.hateSeverityField.classList.toggle('disabled', !hateYes);
+            DOM.hateTargetField.classList.toggle('disabled', !hateYes);
+            DOM.abuseTargetField.classList.toggle('disabled', !abuseHasTarget);
+            DOM.counterTypeField.classList.toggle('disabled', !counterYes);
+            DOM.counterPolitenessField.classList.toggle('disabled', !counterYes);
+
+            if (!hateYes) {
+                clearRadio('hate_severity');
+                document.getElementById('hate-target-group').value = '';
+                ann.hate_severity = '';
+                ann.hate_target_group = '';
+            }
+
+            if (!abuseHasTarget) {
+                document.getElementById('abuse-target').value = '';
+                ann.abuse_target = '';
+            }
+
+            if (!counterYes) {
+                document.getElementById('counter-type').value = '';
+                document.getElementById('counter-politeness').value = '';
+                ann.counterspeech_type = '';
+                ann.counterspeech_politeness = '';
+            }
+        }
+
+        function isItemComplete(item) {
+            const ann = getAnnotation(item.item_id);
+            if (ann.identity_hate_speech === '') return false;
+            if (ann.abuse_level === '') return false;
+            if (ann.counterspeech === '') return false;
+            if (ann.confidence === '') return false;
+            if (ann.identity_hate_speech === '1' && (!ann.hate_severity || !ann.hate_target_group)) return false;
+            if (ann.abuse_level !== 'none' && !ann.abuse_target) return false;
+            if (ann.counterspeech === '1' && !ann.counterspeech_type) return false;
+            if (ann.counterspeech === '1' && !ann.counterspeech_politeness) return false;
+            return true;
+        }
+
+        function updateProgress() {
+            const total = state.items.length;
+            const completed = state.items.filter(isItemComplete).length;
+            const pct = total === 0 ? 0 : (completed / total) * 100;
+            const item = getCurrentItem();
+            const tweetReplies = item ? getItemsInThread(item.thread_id) : [];
+            const replyPosition = item ? getThreadPosition(item) : -1;
+
+            DOM.itemCounter.textContent = item
+                ? `Item ${state.currentIndex + 1} of ${total} • Reply ${replyPosition + 1} of ${tweetReplies.length}`
+                : `Item 0 of ${total}`;
+            DOM.completionText.textContent = `${completed} / ${total} completed`;
+            DOM.progressFill.style.width = `${pct}%`;
+        }
+
+        function renderThreadNavigation() {
+            const item = getCurrentItem();
+            if (!item) {
+                DOM.threadSelect.disabled = true;
+                DOM.postSelect.disabled = true;
+                return;
+            }
+
+            const threadIds = getThreadIds();
+            DOM.threadSelect.innerHTML = '';
+            threadIds.forEach((threadId, index) => {
+                const replies = getItemsInThread(threadId);
+                const option = document.createElement('option');
+                option.value = threadId;
+                option.textContent = `Tweet ${index + 1} of ${threadIds.length} • ${threadId} (${replies.length} replies)`;
+                DOM.threadSelect.appendChild(option);
+            });
+            DOM.threadSelect.value = item.thread_id;
+            DOM.threadSelect.disabled = false;
+
+            const replies = getItemsInThread(item.thread_id);
+            DOM.postSelect.innerHTML = '';
+            replies.forEach((reply, index) => {
+                const option = document.createElement('option');
+                option.value = reply.item_id;
+                option.textContent = makeReplyOptionLabel(reply, index, replies.length);
+                DOM.postSelect.appendChild(option);
+            });
+            DOM.postSelect.value = item.item_id;
+            DOM.postSelect.disabled = false;
+        }
+
+        function captureFormIntoState() {
+            const item = getCurrentItem();
+            if (!item) return;
+            const ann = getAnnotation(item.item_id);
+
+            ann.identity_hate_speech = checkedValue('identity_hate_speech');
+            ann.hate_severity = checkedValue('hate_severity');
+            ann.hate_target_group = document.getElementById('hate-target-group').value;
+            ann.abuse_level = checkedValue('abuse_level');
+            ann.abuse_target = document.getElementById('abuse-target').value;
+            ann.counterspeech = checkedValue('counterspeech');
+            ann.counterspeech_type = document.getElementById('counter-type').value;
+            ann.counterspeech_politeness = document.getElementById('counter-politeness').value;
+            ann.confidence = checkedValue('confidence');
+            ann.flag_for_review = document.getElementById('flag-review').checked;
+            ann.notes = document.getElementById('notes').value.trim();
+
+            updateConditionalFields(ann);
+            saveDraftLocal();
+            updateProgress();
+        }
+
+        function renderCurrentItem() {
+            const item = getCurrentItem();
+            renderContext(item);
+            renderTarget(item);
+            renderForm(item);
+            renderThreadNavigation();
+            updateProgress();
+            DOM.statusLine.textContent = `Viewing ${item.item_id}.`;
+            DOM.prevBtn.disabled = state.currentIndex === 0;
+            DOM.nextBtn.disabled = state.currentIndex === state.items.length - 1;
+        }
+
+        function goTo(index) {
+            if (state.items.length === 0 || index < 0 || index >= state.items.length) return;
+            captureFormIntoState();
+            state.currentIndex = index;
+            renderCurrentItem();
+        }
+
+        function goToItemId(itemId) {
+            const index = state.items.findIndex(item => item.item_id === itemId);
+            goTo(index);
+        }
+
+        function goToThread(threadId) {
+            const index = state.items.findIndex(item => item.thread_id === threadId);
+            goTo(index);
+        }
+
+        async function fetchItems() {
+            const response = await fetch('/items');
+            if (!response.ok) {
+                throw new Error('Failed to load items from /items');
+            }
+            return await response.json();
+        }
+
+        async function saveCurrentToServer() {
+            captureFormIntoState();
+
+            const annotator_id = DOM.annotatorId.value.trim();
+            if (!annotator_id) {
+                alert('Please enter an annotator hex ID before saving.');
+                return;
+            }
+            if (!isValidHexIdentifier(annotator_id)) {
+                alert('Annotator hex ID must use only 0-9 and a-f characters.');
+                return;
+            }
+
+            const item = getCurrentItem();
+            const ann = getAnnotation(item.item_id);
+
+            const response = await fetch('/save_item', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ annotator_id, annotation: ann })
+            });
+
+            const data = await response.json();
+            if (!response.ok) {
+                throw new Error(data.error || 'Save failed');
+            }
+
+            DOM.statusLine.textContent = `Saved current progress for ${item.item_id} at ${new Date().toLocaleTimeString()}.`;
+        }
+
+        async function submitAll() {
+            captureFormIntoState();
+
+            const annotator_id = DOM.annotatorId.value.trim();
+            if (!annotator_id) {
+                alert('Please enter an annotator hex ID before submitting.');
+                return;
+            }
+            if (!isValidHexIdentifier(annotator_id)) {
+                alert('Annotator hex ID must use only 0-9 and a-f characters.');
+                return;
+            }
+
+            const incomplete = state.items.filter(item => !isItemComplete(item)).map(item => item.item_id);
+            if (incomplete.length > 0) {
+                alert(`Please complete all items before submitting. Incomplete: ${incomplete.slice(0, 8).join(', ')}${incomplete.length > 8 ? '...' : ''}`);
+                return;
+            }
+
+            const payload = {
+                annotator_id,
+                annotations: state.items.map(item => getAnnotation(item.item_id))
+            };
+
+            const response = await fetch('/submit_all', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+
+            const data = await response.json();
+            if (!response.ok) {
+                throw new Error(data.error || 'Submission failed');
+            }
+
+            DOM.finalBox.style.display = 'block';
+            DOM.finalBox.innerHTML = `
+                <strong>Submission successful.</strong><br>
+                Confirmation code: <code>${data.confirmation_code}</code><br>
+                Saved ${data.items_saved} annotations.
+            `;
+            DOM.statusLine.textContent = 'All annotations submitted successfully.';
+        }
+
+        function bindFormEvents() {
+            DOM.annotatorId.addEventListener('input', () => {
+                DOM.annotatorId.value = DOM.annotatorId.value.replace(/[^0-9a-fA-F]/g, '');
+                saveAnnotatorIdLocal();
+            });
+
+            DOM.toggleContextBtn.addEventListener('click', () => {
+                state.showFullContext = !state.showFullContext;
+                renderContext(getCurrentItem());
+            });
+            DOM.threadSelect.addEventListener('change', () => goToThread(DOM.threadSelect.value));
+            DOM.postSelect.addEventListener('change', () => goToItemId(DOM.postSelect.value));
+
+            DOM.prevBtn.addEventListener('click', () => goTo(state.currentIndex - 1));
+            DOM.nextBtn.addEventListener('click', () => goTo(state.currentIndex + 1));
+            DOM.saveBtn.addEventListener('click', async () => {
+                try {
+                    await saveCurrentToServer();
+                } catch (error) {
+                    console.error(error);
+                    DOM.statusLine.textContent = `Save failed: ${error.message}`;
+                }
+            });
+            DOM.submitBtn.addEventListener('click', async () => {
+                try {
+                    await submitAll();
+                } catch (error) {
+                    console.error(error);
+                    DOM.statusLine.textContent = `Submission failed: ${error.message}`;
+                }
+            });
+
+            DOM.form.addEventListener('change', captureFormIntoState);
+            document.getElementById('notes').addEventListener('input', captureFormIntoState);
+
+            document.addEventListener('keydown', (event) => {
+                const tag = document.activeElement.tagName.toLowerCase();
+                if (tag === 'textarea' || tag === 'select' || tag === 'input' && document.activeElement.type === 'text') return;
+
+                if (event.key === '1') {
+                    setRadio('identity_hate_speech', '0');
+                    captureFormIntoState();
+                    renderForm(getCurrentItem());
+                } else if (event.key === '2') {
+                    setRadio('identity_hate_speech', '1');
+                    captureFormIntoState();
+                    renderForm(getCurrentItem());
+                } else if (event.key.toLowerCase() === 'c') {
+                    setRadio('counterspeech', '1');
+                    captureFormIntoState();
+                    renderForm(getCurrentItem());
+                } else if (event.key.toLowerCase() === 'n') {
+                    goTo(state.currentIndex + 1);
+                } else if (event.key.toLowerCase() === 'b') {
+                    goTo(state.currentIndex - 1);
+                }
+            });
+        }
+
+        async function loadItems() {
+            try {
+                const data = await fetchItems();
+                state.items = data.items || [];
+                if (state.items.length === 0) {
+                    DOM.statusLine.textContent = 'No items found. Add annotation_app/data/items.json first.';
+                    return;
+                }
+                renderCurrentItem();
+            } catch (error) {
+                console.error(error);
+                DOM.statusLine.textContent = `Initialization failed: ${error.message}`;
+            }
+        }
+
+        async function init() {
+            if (!hasContentConsent() || !hasStartedAnnotationSession()) {
+                showConsentGate();
+                window.location.replace('/instructions');
+                return;
+            }
+            loadAnnotatorIdLocal();
+            loadDraftLocal();
+            bindFormEvents();
+            await loadItems();
+        }
+
+        init();
+    </script>
+</body>
+</html>

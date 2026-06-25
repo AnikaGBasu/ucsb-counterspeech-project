@@ -1,0 +1,7 @@
+timestamp,annotator_id,confirmation_code,item_id,thread_id,post_id,parent_id,hate_speech,hate_type,target_group,endorsement,counterspeech,counterspeech_type,confidence,flag_for_review,notes
+2026-03-11T22:44:35.054351,anika,c5e9653b-23a7-4ee7-8cf6-1c17923e7c8f,gab_0003_r2,gab_0003,r2,r1,0,,,0,1,denouncing hate speech,3,False,
+2026-03-11T22:44:41.050870,anika,d895732c-fccd-4779-be91-67ee46963328,gab_0001_r1,gab_0001,r1,p0,1,implicit,Immigrants / refugees,1,0,,3,False,
+2026-03-11T22:44:41.050870,anika,d895732c-fccd-4779-be91-67ee46963328,gab_0002_p0,gab_0002,p0,,1,explicit,Immigrants / refugees,NA,0,,3,False,
+2026-03-11T22:44:41.050870,anika,d895732c-fccd-4779-be91-67ee46963328,gab_0003_r2,gab_0003,r2,r1,0,,,0,1,denouncing hate speech,3,False,
+2026-03-11T23:00:07.227522,anika,01e0af5d-855b-464f-a2ce-426550108649,extracted_68_threads_976887425627811842,959685036311064576,976887425627811842,959685036311064576,1,implicit,Unspecified,0,1,warning of consequences,2,False,
+2026-03-11T23:00:08.662372,anika,e0930d8b-7703-4f73-a91d-122a051f35e1,extracted_68_threads_976887425627811842,959685036311064576,976887425627811842,959685036311064576,1,implicit,Unspecified,0,1,warning of consequences,2,False,

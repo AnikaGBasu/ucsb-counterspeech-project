@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Annotation Instructions</title>
+    <link rel="prefetch" href="/?start=1" />
+    <style>
+        :root {
+            --bg: #f4f6f8;
+            --surface: #ffffff;
+            --surface-soft: #f9fafb;
+            --text: #18202a;
+            --muted: #667085;
+            --border: #d7dde5;
+            --accent: #1f6f68;
+            --accent-dark: #185b55;
+            --accent-soft: #dff3f0;
+            --danger: #b42318;
+            --danger-soft: #fff1f0;
+            --success: #16703f;
+            --shadow: 0 12px 28px rgba(24, 32, 42, 0.08);
+            --shadow-soft: 0 4px 14px rgba(24, 32, 42, 0.06);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+            line-height: 1.58;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .page {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 30px 24px 52px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 18px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 32px;
+            line-height: 1.15;
+            font-weight: 760;
+        }
+
+        .subtitle {
+            margin: 8px 0 0;
+            color: var(--muted);
+            max-width: 60ch;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            box-shadow: var(--shadow-soft);
+            padding: 22px;
+            margin-bottom: 18px;
+        }
+
+        .section {
+            padding-bottom: 18px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #edf1f5;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            margin: 0 0 12px;
+            font-size: 21px;
+            line-height: 1.25;
+        }
+
+        h3 {
+            margin: 18px 0 8px;
+            font-size: 17px;
+            line-height: 1.3;
+        }
+
+        p {
+            margin: 8px 0;
+        }
+
+        ul {
+            margin: 8px 0 8px 22px;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 7px;
+        }
+
+        .content-warning {
+            color: var(--danger);
+            background: var(--danger-soft);
+            border: 1px solid #f3b8b0;
+            border-left: 4px solid var(--danger);
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
+
+        .callout {
+            background: #f7fbfa;
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--accent);
+            border-radius: 8px;
+            padding: 12px 14px;
+            margin: 10px 0;
+        }
+
+        .instruction-lead {
+            font-weight: 760;
+            color: var(--text);
+        }
+
+        .tutorial-video {
+            width: 100%;
+            max-height: 520px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: #111827;
+            display: block;
+            margin-top: 14px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .consent-box {
+            background: #fff8e8;
+            border: 1px solid #efc66b;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 18px;
+        }
+
+        .consent-box label {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            font-weight: 700;
+        }
+
+        .consent-box input {
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+
+        .small-note {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .button-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+
+        button,
+        .button-link {
+            border: 1px solid transparent;
+            border-radius: 8px;
+            padding: 10px 15px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+        }
+
+        button:hover:not(:disabled),
+        .button-link:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-soft);
+        }
+
+        button:disabled {
+            opacity: 0.55;
+            cursor: not-allowed;
+        }
+
+        .primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .secondary {
+            background: #eef2f6;
+            color: #27313f;
+            border-color: #d9e0e8;
+        }
+
+        .status {
+            color: var(--success);
+            font-size: 13px;
+            font-weight: 650;
+        }
+
+        @media (max-width: 700px) {
+            .header {
+                flex-direction: column;
+            }
+
+            .button-link,
+            button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <div>
+                <h1>Annotation Instructions</h1>
+                <p class="subtitle">Read these instructions and provide consent before beginning annotation.</p>
+            </div>
+            {% if show_back_to_annotation %}
+            <a class="button-link secondary" href="/?start=1">Back to annotation</a>
+            {% endif %}
+        </div>
+
+        <div class="content-warning" role="alert">
+            Warning: this annotation task includes hate speech examples and other disturbing content. Some users may find the material upsetting.
+        </div>
+
+        <p class="instruction-lead">Please read the following instructions before you start annotating.</p>
+
+        <div class="card">
+            <h2>Annotation Task</h2>
+            <p>You will annotate social media posts from Twitter or from four fringe platforms: Gab, 4chan, Stormfront, and Vanguard.</p>
+            <p>For this trial task, you will work with Twitter data. Please annotate each tweet and each reply using the labels and questions explained below.</p>
+        </div>
+
+        <div class="card">
+            <h2>Video Tutorial</h2>
+            <p>If you want a video tutorial, here is a walkthrough of the interface with a voiceover.</p>
+            <video class="tutorial-video" controls preload="none" poster="{{ url_for('static', filename='media/instruction-video-poster.jpg') }}">
+                <source src="{{ url_for('static', filename='media/instruction-video.mp4') }}" type="video/mp4" />
+                Your browser does not support the embedded video player.
+            </video>
+        </div>
+
+        <div class="card">
+            <div class="section">
+                <h2>How to Use the System</h2>
+                <ul>
+                    <li><strong>Annotator hex ID:</strong> Enter an anonymous ID using only 0-9 and a-f characters. The browser remembers it locally.</li>
+                    <li><strong>Tweet selector:</strong> Use the Tweet dropdown to switch between the two loaded tweet conversations.</li>
+                    <li><strong>Reply selector:</strong> Use the Reply dropdown to jump to a specific reply within the selected tweet.</li>
+                    <li><strong>Previous / Next:</strong> Move one reply backward or forward in the full annotation queue.</li>
+                    <li><strong>Tweet context:</strong> The context panel shows earlier conversation context for the current target reply. Use Show full tweet context when you need more of the conversation path.</li>
+                    <li><strong>Save current progress:</strong> Saves the current reply annotation to the server.</li>
+                    <li><strong>Submit all annotations:</strong> Submit the full batch after all required questions are complete.</li>
+                    <li><strong>Flag for review:</strong> Use this when you are unsure or the case needs adjudication.</li>
+                    <li><strong>Optional notes:</strong> Add brief notes for ambiguity, sarcasm, unclear targets, or context-dependent decisions.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Annotation Questions</h2>
+                <p>Use these questions to label the target reply. Conditional questions should only be answered when the stated condition applies.</p>
+            </div>
+
+            <div class="section">
+                <h3>1. Does the target reply contain identity-based hate speech?</h3>
+                <ul>
+                    <li>No.</li>
+                    <li>Yes.</li>
+                </ul>
+                <div class="callout">
+                    <p><strong>Definition:</strong> Mark Yes only if the reply attacks, demeans, stereotypes, excludes, dehumanizes, threatens, or expresses hatred toward a protected identity group, or toward a person because of perceived membership in that group.</p>
+                    <p>Protected identity includes but is not limited to race, ethnicity, nationality, religion, caste, gender, sex, sexual orientation, and disability.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>2. If yes, what is the hate speech severity?</h3>
+                <p><strong>Only answer if Q1 = Yes.</strong></p>
+                <ul>
+                    <li>Low.</li>
+                    <li>Medium.</li>
+                    <li>High.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>3. Primary hate target group</h3>
+                <p><strong>Only answer if Q1 = Yes.</strong></p>
+                <ul>
+                    <li>Race / ethnicity.</li>
+                    <li>Nationality / immigration status.</li>
+                    <li>Religion.</li>
+                    <li>Caste.</li>
+                    <li>Gender / sex.</li>
+                    <li>Sexual orientation.</li>
+                    <li>Disability.</li>
+                    <li>Other protected identity.</li>
+                    <li>Unclear.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>4. Does the target reply contain offensive, uncivil, or abusive language?</h3>
+                <p>Answer this for every reply, even if Q1 = No.</p>
+                <ul>
+                    <li>None.</li>
+                    <li>Mild.</li>
+                    <li>Moderate.</li>
+                    <li>Severe.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>5. What is the main target of the offensive or abusive language?</h3>
+                <p><strong>Only answer if Q4 is not None.</strong></p>
+                <ul>
+                    <li>Individual person.</li>
+                    <li>Protected identity group.</li>
+                    <li>Body size / appearance.</li>
+                    <li>Intelligence / competence.</li>
+                    <li>Political belief or ideology.</li>
+                    <li>Behavior / actions.</li>
+                    <li>Family or personal life.</li>
+                    <li>Other.</li>
+                    <li>Unclear.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>6. Is the target reply counterspeech?</h3>
+                <ul>
+                    <li>No.</li>
+                    <li>Yes.</li>
+                </ul>
+                <div class="callout">
+                    <p>Mark Yes if the reply responds to hate, abuse, misinformation, or harmful speech by challenging, criticizing, warning, correcting, mocking, or pushing back against it.</p>
+                    <p>Counterspeech can be polite or impolite. A reply can be counterspeech and still be offensive.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>7. If counterspeech, what type?</h3>
+                <p><strong>Only answer if Q6 = Yes.</strong></p>
+                <ul>
+                    <li><strong>Direct condemnation:</strong> Clearly calls out the hateful/offensive comment as wrong, unacceptable, racist, antisemitic, etc.</li>
+                    <li><strong>Correction / fact-check:</strong> Responds by correcting false claims, misinformation, stereotypes, or misleading statements.</li>
+                    <li><strong>Warning of consequences:</strong> Points out potential harm, social consequences, policy violations, escalation, or real-world danger.</li>
+                    <li><strong>Support for target:</strong> Defends, comforts, or shows solidarity with the person/group being targeted.</li>
+                    <li><strong>Moral appeal:</strong> Appeals to empathy, fairness, shared values, humanity, or treat people with respect reasoning.</li>
+                    <li><strong>Humor / sarcasm:</strong> Uses jokes, irony, mockery, memes, or sarcasm to challenge the hateful comment.</li>
+                    <li><strong>Insulting pushback:</strong> Pushes back against hate using insults, profanity, or aggressive language toward the speaker.</li>
+                    <li><strong>De-escalation:</strong> Tries to calm the conversation, reduce hostility, redirect, or encourage a more civil discussion.</li>
+                    <li><strong>Other:</strong> Counterspeech that does not fit the categories above.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>8. If counterspeech, how polite is it?</h3>
+                <p><strong>Only answer if Q6 = Yes.</strong></p>
+                <ul>
+                    <li>Not polite.</li>
+                    <li>Normal.</li>
+                    <li>Somewhat polite.</li>
+                    <li>Polite.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>9. Confidence</h3>
+                <ul>
+                    <li>Low.</li>
+                    <li>Medium.</li>
+                    <li>High.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>10. Flag for review?</h3>
+                <ul>
+                    <li>No.</li>
+                    <li>Yes.</li>
+                </ul>
+                <p>Use this if you are unsure.</p>
+            </div>
+
+            <div class="section">
+                <h3>11. Optional notes</h3>
+                <p>Free response.</p>
+            </div>
+        </div>
+
+        <div class="consent-box">
+            <label for="disturbing-content-consent">
+                <input type="checkbox" id="disturbing-content-consent" />
+                <span>I understand that the annotation examples may include hate speech or disturbing content, and I explicitly consent to viewing this material for the annotation task.</span>
+            </label>
+            <p class="small-note">You must check this box before entering the annotation site.</p>
+        </div>
+
+        <div class="button-row card">
+            <button type="button" class="primary" id="start-btn" disabled>Save consent and start annotating</button>
+            <span class="status" id="consent-status"></span>
+        </div>
+    </div>
+
+    <script>
+        const STORAGE_KEY = 'hate_annotation_content_consent';
+        const STARTED_ANNOTATION_KEY = 'hate_annotation_started_session';
+        const checkbox = document.getElementById('disturbing-content-consent');
+        const startBtn = document.getElementById('start-btn');
+        const status = document.getElementById('consent-status');
+
+        let prewarmStarted = false;
+
+        function prewarmAnnotationPage() {
+            if (prewarmStarted) return;
+            prewarmStarted = true;
+
+            fetch('/items', { cache: 'force-cache' }).catch((error) => {
+                console.error('Unable to prewarm annotation items:', error);
+            });
+        }
+
+        function updateConsentControls() {
+            startBtn.disabled = !checkbox.checked;
+            const consentRecorded = localStorage.getItem(STORAGE_KEY) === 'true';
+            status.textContent = consentRecorded ? 'Consent has already been recorded in this browser.' : '';
+
+            if (checkbox.checked || consentRecorded) {
+                prewarmAnnotationPage();
+            }
+        }
+
+        checkbox.checked = localStorage.getItem(STORAGE_KEY) === 'true';
+        updateConsentControls();
+
+        function markAnnotationStarted() {
+            try {
+                sessionStorage.setItem(STARTED_ANNOTATION_KEY, 'true');
+            } catch (error) {
+                console.error('Unable to remember annotation session start:', error);
+            }
+        }
+
+        checkbox.addEventListener('change', updateConsentControls);
+        startBtn.addEventListener('click', () => {
+            if (!checkbox.checked) return;
+            localStorage.setItem(STORAGE_KEY, 'true');
+            markAnnotationStarted();
+            window.location.href = '/?start=1';
+        });
+    </script>
+</body>
+</html>
