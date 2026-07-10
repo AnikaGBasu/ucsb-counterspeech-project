@@ -9,9 +9,9 @@ uv sync
 uv run flask --app annotation_app.app run
 ```
 
-Open the local Flask URL and read the instructions page before starting annotation. The app loads annotation items from `annotation_app/data/items.json` and writes submissions to dated CSV and JSONL files in `annotation_storage/`.
+Open the local Flask URL and read the instructions page before starting annotation. After consent, annotators choose between the trial annotation and the full annotation. The trial task loads the fixed trial set from `annotation_app/data/items.json`; dynamic assignment applies only to the full task. The full task dynamically assigns one validation thread at a time from `data/validation_set_jsons/`, restores saved progress for returning annotators, and requires completing the assigned thread for payment. Submissions are written to dated CSV and JSONL files in `annotation_storage/`.
 
-To share the local app through ngrok, start Flask first, then run this in another terminal and share the forwarding URL:
+To share the local app through ngrok, start Flask first, then run this in another terminal and share the forwarding URL. Annotators should open the forwarding URL at `/`, read the instructions, save consent, and choose either Trial Annotation or Full Annotation. Full Annotation assigns one validation thread at a time:
 
 ```bash
 ngrok http 5000
@@ -30,13 +30,14 @@ python annotation_app/app.py
 .
 ├── annotation_app/                 # Flask annotation app
 │   ├── app.py                     # Routes and annotation save logic
-│   ├── data/items.json            # Active annotation queue consumed by the app
+│   ├── data/items.json            # Trial annotation queue consumed by the app
 │   ├── templates/                 # HTML templates for instructions and annotation UI
 │   └── static/media/              # Public instruction video and poster assets
 ├── data/
 │   ├── sample/                    # Sample source dataset used by scripts
 │   ├── reference/                 # Converted samples and derived reference files
-│   └── diagnosis/                 # Diagnostic reports
+│   ├── diagnosis/                 # Diagnostic reports
+│   └── validation_set_jsons/      # Validation datasets used by the full annotation task
 ├── annotation_storage/            # Generated annotation exports
 ├── scripts/                       # Reusable data, diagnostic, and classification utilities
 ├── gepa_prompt_optimization/      # DSPy / prompt optimization experiments
@@ -93,7 +94,8 @@ The agreement script compares the latest saved row for each annotator/item pair,
 ## Data Conventions
 
 - Keep the sample source files in `data/sample/`.
-- Keep the active app input at `annotation_app/data/items.json`.
+- Keep the trial app input at `annotation_app/data/items.json`.
+- Keep validation datasets for the full annotation task in `data/validation_set_jsons/`.
 - Keep generated annotation exports in `annotation_storage/`.
 - Keep one-off or historical experiments in `old_runs/` instead of the project root.
 - Avoid committing local caches, virtual environments, or secret files.
