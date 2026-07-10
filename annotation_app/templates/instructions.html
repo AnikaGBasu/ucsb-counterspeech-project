@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Annotation Instructions</title>
-    <link rel="prefetch" href="/?start=1" />
+    <link rel="prefetch" href="/choose" />
     <style>
         :root {
             --bg: #f4f6f8;
@@ -237,10 +237,10 @@
         <div class="header">
             <div>
                 <h1>Annotation Instructions</h1>
-                <p class="subtitle">Read these instructions and provide consent before beginning annotation.</p>
+                <p class="subtitle">Read these instructions and provide consent before choosing an annotation task.</p>
             </div>
             {% if show_back_to_annotation %}
-            <a class="button-link secondary" href="/?start=1">Back to annotation</a>
+            <a class="button-link secondary" href="/choose">Choose annotation task</a>
             {% endif %}
         </div>
 
@@ -253,7 +253,9 @@
         <div class="card">
             <h2>Annotation Task</h2>
             <p>You will annotate social media posts from Twitter or from four fringe platforms: Gab, 4chan, Stormfront, and Vanguard.</p>
-            <p>For this trial task, you will work with Twitter data. Please annotate each tweet and each reply using the labels and questions explained below.</p>
+            <p>For the trial task, you will work with Twitter data. Dynamic thread assignment is only for the full annotation.</p>
+            <p>For the full annotation, you will receive one dynamically assigned validation thread at a time. You may pause and resume; your saved progress on that assigned thread will be restored. You must complete every post in the assigned thread to be paid for that thread.</p>
+            <p>Please annotate each post and reply using the labels and questions explained below.</p>
         </div>
 
         <div class="card">
@@ -270,12 +272,14 @@
                 <h2>How to Use the System</h2>
                 <ul>
                     <li><strong>Annotator ID:</strong> The system randomly generates an anonymous 10-character hex ID and remembers it in the browser.</li>
-                    <li><strong>Tweet selector:</strong> Use the Tweet dropdown to switch between the two loaded tweet conversations.</li>
-                    <li><strong>Reply selector:</strong> Use the Reply dropdown to jump to a specific reply within the selected tweet.</li>
+                    <li><strong>Thread selector:</strong> Use the thread dropdown to switch between loaded conversations.</li>
+                    <li><strong>Post selector:</strong> Use the post dropdown to jump to a specific original post or reply within the selected conversation.</li>
                     <li><strong>Previous / Next:</strong> Move one reply backward or forward in the full annotation queue.</li>
-                    <li><strong>Tweet context:</strong> The context panel shows earlier conversation context for the current target reply. Use Show full tweet context when you need more of the conversation path.</li>
-                    <li><strong>Save current progress:</strong> Saves the current reply annotation to the server.</li>
-                    <li><strong>Submit all annotations:</strong> Submit the full batch after all required questions are complete.</li>
+                    <li><strong>Conversation context:</strong> The context panel shows earlier conversation context for the current target post. Use the context button when you need more of the conversation path.</li>
+                    <li><strong>Save current progress:</strong> Saves the current post annotation to the server.</li>
+                    <li><strong>Trial annotation:</strong> The trial task uses the fixed trial set and is not dynamically assigned.</li>
+                    <li><strong>Full annotation:</strong> Complete every post in your assigned thread before requesting another thread. Partial full-thread work is resumable, but it does not count for payment until the assigned thread is complete.</li>
+                    <li><strong>Submit:</strong> Submit the full batch or assigned thread after all required questions are complete.</li>
                     <li><strong>Flag for review:</strong> Use this when you are unsure or the case needs adjudication.</li>
                     <li><strong>Optional notes:</strong> Add brief notes for ambiguity, sarcasm, unclear targets, or context-dependent decisions.</li>
                 </ul>
@@ -421,11 +425,11 @@
                 <input type="checkbox" id="disturbing-content-consent" />
                 <span>I understand that the annotation examples may include hate speech or disturbing content, and I explicitly consent to viewing this material for the annotation task.</span>
             </label>
-            <p class="small-note">You must check this box before entering the annotation site.</p>
+            <p class="small-note">You must check this box before choosing an annotation task.</p>
         </div>
 
         <div class="button-row card">
-            <button type="button" class="primary" id="start-btn" disabled>Save consent and start annotating</button>
+            <button type="button" class="primary" id="start-btn" disabled>Save consent and choose annotation task</button>
             <span class="status" id="consent-status"></span>
         </div>
     </div>
@@ -443,7 +447,7 @@
             if (prewarmStarted) return;
             prewarmStarted = true;
 
-            fetch('/items', { cache: 'force-cache' }).catch((error) => {
+            fetch('/items/trial', { cache: 'no-store' }).catch((error) => {
                 console.error('Unable to prewarm annotation items:', error);
             });
         }
@@ -474,7 +478,7 @@
             if (!checkbox.checked) return;
             localStorage.setItem(STORAGE_KEY, 'true');
             markAnnotationStarted();
-            window.location.href = '/?start=1';
+            window.location.href = '/choose';
         });
     </script>
 </body>

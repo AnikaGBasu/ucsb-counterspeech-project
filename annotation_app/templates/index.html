@@ -75,6 +75,35 @@
             max-width: 58ch;
         }
 
+        .platform-banner {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin: 0 0 18px;
+            padding: 12px 14px;
+            border-radius: 8px;
+            background: var(--accent-soft);
+            color: var(--accent-dark);
+            border: 1px solid #bde4df;
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .platform-banner[hidden] {
+            display: none;
+        }
+
+        .completion-rule {
+            margin-top: 10px;
+            color: var(--text);
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .completion-rule[hidden] {
+            display: none;
+        }
+
         .annotator-box {
             display: flex;
             align-items: center;
@@ -232,6 +261,40 @@
             white-space: pre-wrap;
             font-size: 16px;
             line-height: 1.55;
+        }
+
+        .image-url-details {
+            margin-top: 12px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--surface);
+            padding: 8px 10px;
+        }
+
+        .image-url-details[hidden] {
+            display: none;
+        }
+
+        .image-url-details summary {
+            cursor: pointer;
+            color: var(--accent-dark);
+            font-size: 13px;
+            font-weight: 740;
+        }
+
+        .image-url-list {
+            margin: 8px 0 0 18px;
+            padding: 0;
+            font-size: 13px;
+            overflow-wrap: anywhere;
+        }
+
+        .image-url-list li {
+            margin-bottom: 6px;
+        }
+
+        .image-url-list a {
+            color: var(--accent-dark);
         }
 
         .pill-row {
@@ -543,13 +606,13 @@
         <div class="topbar">
             <div class="title-wrap">
                 <div class="title-row">
-                    <h1>Hate Speech Annotation</h1>
+                    <h1>{{ task.title }}</h1>
                     <div class="annotator-box">
                         <label for="annotator-id">Your ID is</label>
                         <div id="annotator-id" class="generated-id">Generating...</div>
                     </div>
                 </div>
-                <p>Label one reply at a time using tweet context, abuse, hate speech, and counterspeech guidance.</p>
+                <p>{{ task.description }}</p>
                 <div style="margin-top: 12px;" id="top-instructions-link">
                     <a class="button-link primary" href="/instructions/back">View annotation instructions</a>
                 </div>
@@ -558,7 +621,7 @@
 
         <div class="progress-card" id="consent-gate" style="display: none;">
             <strong>Consent required before annotation.</strong>
-            <div class="legend">Please read the instructions and provide consent before viewing the tweet/reply examples.</div>
+            <div class="legend">Please read the instructions and provide consent before viewing annotation examples.</div>
             <div style="margin-top: 12px;">
                 <a class="button-link primary" href="/instructions">Go to annotation instructions</a>
             </div>
@@ -571,13 +634,13 @@
             </div>
             <div class="thread-nav" aria-label="Tweet and reply navigation">
                 <div>
-                    <label for="thread-select">Tweet</label>
+                    <label for="thread-select">{{ task.thread_label }}</label>
                     <select id="thread-select" disabled>
                         <option value="">Load items first</option>
                     </select>
                 </div>
                 <div>
-                    <label for="post-select">Reply in selected tweet</label>
+                    <label for="post-select">{{ task.post_label }}</label>
                     <select id="post-select" disabled>
                         <option value="">Load items first</option>
                     </select>
@@ -591,13 +654,15 @@
             </div>
         </div>
 
+        <div class="platform-banner" id="platform-banner" hidden>Platform: <span id="platform-name"></span></div>
+
         <div class="layout">
             <div>
                 <div class="card" style="margin-bottom: 20px;">
-                    <div class="section-title">Tweet Context</div>
+                    <div class="section-title">{{ task.context_label }}</div>
                     <div id="context-list" class="context-list"></div>
                     <div style="margin-top: 12px;">
-                        <button type="button" class="secondary" id="toggle-context-btn">Show full tweet context</button>
+                        <button type="button" class="secondary" id="toggle-context-btn">{{ task.context_more }}</button>
                     </div>
                 </div>
 
@@ -606,6 +671,7 @@
                     <div class="target-post">
                         <div class="target-meta" id="target-meta"></div>
                         <div class="text-content" id="target-text"></div>
+                        <div id="target-image-urls"></div>
                         <div class="pill-row" id="target-pills"></div>
                     </div>
                 </div>
@@ -754,9 +820,11 @@
                         </div>
                         <div class="button-group">
                             <button type="button" class="success" id="save-btn">Save current progress</button>
-                            <button type="button" class="primary" id="submit-btn">Submit all annotations</button>
+                            <button type="button" class="secondary" id="new-thread-btn" hidden>Submit and get next thread</button>
+                            <button type="button" class="primary" id="submit-btn">{{ task.submit_label }}</button>
                         </div>
                     </div>
+                    <div class="completion-rule" id="completion-rule" {% if not task.completion_note %}hidden{% endif %}>{{ task.completion_note }}</div>
 
                     <div class="status-line" id="status-line">Ready.</div>
                 </form>
@@ -769,14 +837,22 @@
             items: [],
             currentIndex: 0,
             annotations: {},
-            showFullContext: false
+            showFullContext: false,
+            assignment: null,
+            savedAnnotations: {}
         };
 
         const STORAGE_KEYS = {
             annotatorId: 'hate_annotation_annotator_id',
-            draft: 'hate_annotation_draft',
+            draft: 'hate_annotation_draft_{{ task.mode }}',
             consent: 'hate_annotation_content_consent',
-            startedSession: 'hate_annotation_started_session'
+            startedSession: 'hate_annotation_started_session',
+            mode: '{{ task.mode }}',
+            itemEndpoint: '/items/{{ task.mode }}',
+            contextMore: '{{ task.context_more }}',
+            contextLess: '{{ task.context_less }}',
+            noContext: '{{ task.no_context }}',
+            threadOption: '{{ task.thread_option }}'
         };
 
         const DOM = {
@@ -784,11 +860,14 @@
             itemCounter: document.getElementById('item-counter'),
             completionText: document.getElementById('completion-text'),
             progressFill: document.getElementById('progress-fill'),
+            platformBanner: document.getElementById('platform-banner'),
+            platformName: document.getElementById('platform-name'),
             threadSelect: document.getElementById('thread-select'),
             postSelect: document.getElementById('post-select'),
             contextList: document.getElementById('context-list'),
             targetMeta: document.getElementById('target-meta'),
             targetText: document.getElementById('target-text'),
+            targetImageUrls: document.getElementById('target-image-urls'),
             targetPills: document.getElementById('target-pills'),
             toggleContextBtn: document.getElementById('toggle-context-btn'),
             form: document.getElementById('annotation-form'),
@@ -797,6 +876,7 @@
             prevBtn: document.getElementById('prev-btn'),
             nextBtn: document.getElementById('next-btn'),
             saveBtn: document.getElementById('save-btn'),
+            newThreadBtn: document.getElementById('new-thread-btn'),
             submitBtn: document.getElementById('submit-btn'),
             hateSeverityField: document.getElementById('hate-severity-field'),
             hateTargetField: document.getElementById('hate-target-field'),
@@ -893,18 +973,28 @@
             return state.annotations[itemId];
         }
 
+        function draftStorageKey() {
+            if (STORAGE_KEYS.mode !== 'full') return STORAGE_KEYS.draft;
+            const threadKey = state.items[0] ? state.items[0].thread_key : 'unassigned';
+            return `${STORAGE_KEYS.draft}_${threadKey}`;
+        }
+
         function saveDraftLocal() {
-            localStorage.setItem(STORAGE_KEYS.draft, JSON.stringify(state.annotations));
+            localStorage.setItem(draftStorageKey(), JSON.stringify(state.annotations));
         }
 
         function loadDraftLocal() {
-            const raw = localStorage.getItem(STORAGE_KEYS.draft);
+            const raw = localStorage.getItem(draftStorageKey());
             if (!raw) return;
             try {
-                state.annotations = JSON.parse(raw);
+                state.annotations = { ...state.annotations, ...JSON.parse(raw) };
             } catch (error) {
                 console.error('Failed to load local draft:', error);
             }
+        }
+
+        function clearDraftLocal() {
+            localStorage.removeItem(draftStorageKey());
         }
 
         function isValidHexIdentifier(value) {
@@ -966,13 +1056,52 @@
             return el ? el.value : '';
         }
 
+        function imageLabel(url, index) {
+            try {
+                const path = new URL(url).pathname;
+                return path.split('/').filter(Boolean).pop() || `Image URL ${index + 1}`;
+            } catch (error) {
+                return `Image URL ${index + 1}`;
+            }
+        }
+
+        function renderImageUrls(container, imageUrls) {
+            container.innerHTML = '';
+            const urls = imageUrls || [];
+            if (urls.length === 0) return;
+
+            const details = document.createElement('details');
+            details.className = 'image-url-details';
+
+            const summary = document.createElement('summary');
+            summary.textContent = `Optionally view image URLs (${urls.length})`;
+            details.appendChild(summary);
+
+            const list = document.createElement('ul');
+            list.className = 'image-url-list';
+
+            urls.forEach((url, index) => {
+                const item = document.createElement('li');
+                const link = document.createElement('a');
+                link.href = url;
+                link.target = '_blank';
+                link.rel = 'noopener noreferrer';
+                link.textContent = imageLabel(url, index);
+                item.appendChild(link);
+                list.appendChild(item);
+            });
+
+            details.appendChild(list);
+            container.appendChild(details);
+        }
+
         function renderContext(item) {
             const full = item.context || [];
             const visible = state.showFullContext ? full : full.slice(-1);
             DOM.contextList.innerHTML = '';
 
             if (visible.length === 0) {
-                DOM.contextList.innerHTML = '<div class="context-post"><div class="context-meta">No earlier tweet context provided. This item is the original post.</div></div>';
+                DOM.contextList.innerHTML = `<div class="context-post"><div class="context-meta">${STORAGE_KEYS.noContext}</div></div>`;
             } else {
                 visible.forEach((ctx, idx) => {
                     const div = document.createElement('div');
@@ -980,31 +1109,38 @@
                     div.innerHTML = `
                         <div class="context-meta">Context ${idx + 1}${ctx.post_id ? ` • ${ctx.post_id}` : ''}${ctx.speaker ? ` • ${ctx.speaker}` : ''}</div>
                         <div class="text-content"></div>
+                        <div class="image-url-container"></div>
                     `;
                     div.querySelector('.text-content').textContent = ctx.text || '';
+                    renderImageUrls(div.querySelector('.image-url-container'), ctx.image_urls || []);
                     DOM.contextList.appendChild(div);
                 });
             }
 
-            DOM.toggleContextBtn.textContent = state.showFullContext ? 'Show less tweet context' : 'Show full tweet context';
+            DOM.toggleContextBtn.textContent = state.showFullContext ? STORAGE_KEYS.contextLess : STORAGE_KEYS.contextMore;
         }
 
         function renderTarget(item) {
             const originalPost = isOriginalPost(item);
+            const platform = item.platform || '';
+            DOM.platformBanner.hidden = !platform;
+            DOM.platformName.textContent = platform ? platform.toUpperCase() : '';
             DOM.targetSectionTitle.textContent = originalPost ? 'Original Post' : 'Target Reply';
             DOM.targetMeta.textContent = [
                 item.item_id,
-                item.thread_id ? `Tweet ${item.thread_id}` : '',
+                item.thread_id ? `${STORAGE_KEYS.threadOption} ${item.thread_id}` : '',
                 item.post_id ? `${originalPost ? 'Original post' : 'Reply'} ${item.post_id}` : '',
                 originalPost ? 'Original post' : 'Reply'
             ].filter(Boolean).join(' • ');
 
             DOM.targetText.textContent = item.target_text || '';
+            renderImageUrls(DOM.targetImageUrls, item.image_urls || []);
             DOM.targetPills.innerHTML = '';
 
             const pills = [];
             if (item.has_prior_hate_in_context) pills.push('Prior context available');
             if (item.platform) pills.push(item.platform);
+            if ((item.image_urls || []).length) pills.push(`${item.image_urls.length} optional image URL${item.image_urls.length === 1 ? '' : 's'}`);
             if (item.source) pills.push(item.source);
 
             pills.forEach(text => {
@@ -1111,6 +1247,8 @@
                 : `Item 0 of ${total}`;
             DOM.completionText.textContent = `${completed} / ${total} completed`;
             DOM.progressFill.style.width = `${pct}%`;
+            const canRequestNextThread = STORAGE_KEYS.mode === 'full' && total > 0 && completed === total;
+            DOM.newThreadBtn.hidden = !canRequestNextThread;
         }
 
         function renderThreadNavigation() {
@@ -1127,7 +1265,7 @@
                 const replies = getItemsInThread(threadId);
                 const option = document.createElement('option');
                 option.value = threadId;
-                option.textContent = `Tweet ${index + 1} of ${threadIds.length} • ${threadId} (${replies.length} replies)`;
+                option.textContent = `${STORAGE_KEYS.threadOption} ${index + 1} of ${threadIds.length} • ${threadId} (${replies.length} posts)`;
                 DOM.threadSelect.appendChild(option);
             });
             DOM.threadSelect.value = item.thread_id;
@@ -1158,6 +1296,9 @@
             ann.counterspeech = isOriginalPost(item) ? '' : normalizeCounterspeechValue(checkedValue('counterspeech'));
             ann.confidence = checkedValue('confidence');
             ann.flag_for_review = document.getElementById('flag-review').checked;
+            ann.platform = item.platform || '';
+            ann.dataset = item.dataset || item.source || '';
+            ann.assignment_id = item.assignment_id || '';
             ann.notes = document.getElementById('notes').value.trim();
 
             updateConditionalFields(ann, item);
@@ -1194,10 +1335,20 @@
             goTo(index);
         }
 
-        async function fetchItems() {
-            const response = await fetch('/items');
+        async function fetchItems(forceNew = false) {
+            const url = new URL(STORAGE_KEYS.itemEndpoint, window.location.origin);
+            if (STORAGE_KEYS.mode === 'full') {
+                url.searchParams.set('annotator_id', getAnnotatorId());
+                if (forceNew) url.searchParams.set('new', '1');
+            }
+            const response = await fetch(url.toString(), { cache: 'no-store' });
             if (!response.ok) {
-                throw new Error('Failed to load items from /items');
+                let message = `Failed to load items from ${url.pathname}`;
+                try {
+                    const data = await response.json();
+                    if (data.error) message = data.error;
+                } catch (error) {}
+                throw new Error(message);
             }
             return await response.json();
         }
@@ -1232,7 +1383,7 @@
             DOM.statusLine.textContent = `Saved current progress for ${item.item_id} at ${new Date().toLocaleTimeString()}.`;
         }
 
-        async function submitAll() {
+        async function submitAll(showFinal = true) {
             captureFormIntoState();
 
             const annotator_id = getAnnotatorId();
@@ -1267,13 +1418,16 @@
                 throw new Error(data.error || 'Submission failed');
             }
 
-            DOM.finalBox.style.display = 'block';
-            DOM.finalBox.innerHTML = `
-                <strong>Submission successful.</strong><br>
-                Confirmation code: <code>${data.confirmation_code}</code><br>
-                Saved ${data.items_saved} annotations.
-            `;
-            DOM.statusLine.textContent = 'All annotations submitted successfully.';
+            if (showFinal) {
+                DOM.finalBox.style.display = 'block';
+                DOM.finalBox.innerHTML = `
+                    <strong>Submission successful.</strong><br>
+                    Confirmation code: <code>${data.confirmation_code}</code><br>
+                    Saved ${data.items_saved} annotations.
+                `;
+                DOM.statusLine.textContent = 'All annotations submitted successfully.';
+            }
+            return data;
         }
 
         function bindFormEvents() {
@@ -1292,6 +1446,24 @@
                 } catch (error) {
                     console.error(error);
                     DOM.statusLine.textContent = `Save failed: ${error.message}`;
+                }
+            });
+            DOM.newThreadBtn.addEventListener('click', async () => {
+                try {
+                    const incomplete = state.items.filter(item => !isItemComplete(item));
+                    if (incomplete.length > 0) {
+                        alert('Please complete every item in this assigned thread before requesting a new thread.');
+                        return;
+                    }
+                    await submitAll(false);
+                    clearDraftLocal();
+                    state.annotations = {};
+                    await loadItems(true);
+                    DOM.finalBox.style.display = 'none';
+                    DOM.statusLine.textContent = 'Loaded the next assigned thread.';
+                } catch (error) {
+                    console.error(error);
+                    DOM.statusLine.textContent = `Could not load a new thread: ${error.message}`;
                 }
             });
             DOM.submitBtn.addEventListener('click', async () => {
@@ -1330,14 +1502,22 @@
             });
         }
 
-        async function loadItems() {
+        async function loadItems(forceNew = false) {
             try {
-                const data = await fetchItems();
+                const data = await fetchItems(forceNew);
                 state.items = data.items || [];
+                state.assignment = data.assignment || null;
+                state.savedAnnotations = data.saved_annotations || {};
+                state.currentIndex = 0;
+                state.annotations = { ...state.savedAnnotations };
                 if (state.items.length === 0) {
-                    DOM.statusLine.textContent = 'No items found. Add annotation_app/data/items.json first.';
+                    DOM.statusLine.textContent = state.assignment && state.assignment.status === 'empty'
+                        ? 'Every available thread already has three completed annotators or is currently assigned.'
+                        : 'No eligible validation threads are currently available.';
+                    DOM.newThreadBtn.hidden = true;
                     return;
                 }
+                loadDraftLocal();
                 renderCurrentItem();
             } catch (error) {
                 console.error(error);
@@ -1352,7 +1532,6 @@
                 return;
             }
             loadAnnotatorIdLocal();
-            loadDraftLocal();
             bindFormEvents();
             await loadItems();
         }

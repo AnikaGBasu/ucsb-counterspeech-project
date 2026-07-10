@@ -1,5 +1,0 @@
-{
-  "superseded": true,
-  "superseded_by": "data/annotation_selection/llm_verification_labels.json",
-  "reason": "Redo uses metadata-only stratified sampling followed by Codex GPT-5 LLM verification; this manual curation plan is not used by the current outputs."
-}
