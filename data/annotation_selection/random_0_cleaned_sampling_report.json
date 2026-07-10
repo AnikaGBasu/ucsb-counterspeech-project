@@ -1,0 +1,20 @@
+{
+  "selection_method": "simple_random_order_from_0_cleaned_data_only_no_classification",
+  "source_file": "data/full_data/0_cleaned_data.json",
+  "random_seed": 20260707,
+  "original_post_pool_count": 154,
+  "random_order_count": 154,
+  "selected_100_count": 100,
+  "candidate_count": 54,
+  "duplicate_count": 0,
+  "outputs": {
+    "review_pool_csv": "data/annotation_selection/original_post_review_pool.csv",
+    "all_random_csv": "data/annotation_selection/random_0_cleaned_original_posts.csv",
+    "all_random_items_json": "data/annotation_selection/random_0_cleaned_original_posts_items.json",
+    "selected_100_csv": "data/annotation_selection/selected_100_original_posts.csv",
+    "selected_100_items_json": "data/annotation_selection/selected_100_original_posts_items.json",
+    "remaining_candidates_csv": "data/annotation_selection/original_post_candidates.csv",
+    "remaining_candidates_items_json": "data/annotation_selection/original_post_candidates_items.json",
+    "sampling_report": "data/annotation_selection/random_0_cleaned_sampling_report.json"
+  }
+}

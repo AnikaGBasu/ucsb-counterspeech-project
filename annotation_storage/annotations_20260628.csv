@@ -1,0 +1,2 @@
+timestamp,annotator_id,confirmation_code,item_id,thread_id,post_id,parent_id,identity_hate_speech,hate_severity,hate_target_group,abuse_level,abuse_target,counterspeech,confidence,flag_for_review,notes
+2026-06-28T18:00:26.655470,adf3333,a3036207-b1a0-43fa-b392-3544b16e4423,selected_threads_1243374808030572544_1243385688797499393,1243374808030572544,1243385688797499393,1243374808030572544,0,,,severe,Individual person,1,high,False,

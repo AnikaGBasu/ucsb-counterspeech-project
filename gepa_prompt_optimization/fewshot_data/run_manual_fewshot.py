@@ -13,11 +13,16 @@ import os
 import dspy
 import json
 import pandas as pd
+from pathlib import Path
 from sklearn.metrics import precision_recall_fscore_support, classification_report
 from dotenv import load_dotenv
 import random
 
 load_dotenv()
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+GROUND_TRUTH_FILE = PROJECT_ROOT / "data" / "sample" / "ground_truth_dataset.csv"
+THREADS_FILE = PROJECT_ROOT / "data" / "sample" / "extracted_68_threads.json"
 
 print("="*60)
 print("MANUAL FEW-SHOT OPTIMIZATION")
@@ -36,7 +41,7 @@ dspy.configure(lm=lm)
 # Load data - USE ORIGINAL, NOT AUGMENTED
 print("\nLoading ORIGINAL data (no augmentation)...")
 
-with open("extracted_68_threads.json", 'r') as f:
+with THREADS_FILE.open("r", encoding="utf-8") as f:
     thread_data = json.load(f)
 
 thread_map = {}
@@ -49,7 +54,7 @@ for thread in thread_data.get('threads', []):
             thread_map[reply['tweet_id']] = reply.get('raw_content', '')
 
 # Load ORIGINAL CSV (not augmented)
-df = pd.read_csv("ground_truth_dataset.csv")
+df = pd.read_csv(GROUND_TRUTH_FILE)
 
 all_examples = []
 for _, row in df.iterrows():

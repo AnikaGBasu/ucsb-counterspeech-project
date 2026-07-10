@@ -1,11 +1,12 @@
 [project]
 name = "ucsbcounterspeechproject"
 version = "0.1.0"
-description = "Add your description here"
+description = "Flask annotation app and analysis scripts for counterspeech research"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "dspy-ai>=3.1.3",
+    "flask>=3.1.3",
     "jupyter>=1.1.1",
     "litellm>=1.76.2",
     "pandas>=2.3.3",

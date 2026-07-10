@@ -13,12 +13,17 @@ import os
 import dspy
 import json
 import pandas as pd
+from pathlib import Path
 from typing import List, Dict
 from sklearn.metrics import precision_recall_fscore_support, classification_report
 from dotenv import load_dotenv
 from collections import Counter
 
 load_dotenv()
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+GROUND_TRUTH_FILE = PROJECT_ROOT / "data" / "sample" / "ground_truth_dataset.csv"
+THREADS_FILE = PROJECT_ROOT / "data" / "sample" / "extracted_68_threads.json"
 
 # ============================================================
 # SETUP
@@ -42,7 +47,7 @@ dspy.configure(lm=lm)
 
 print("\nLoading data...")
 
-with open("extracted_68_threads.json", 'r') as f:
+with THREADS_FILE.open("r", encoding="utf-8") as f:
     thread_data = json.load(f)
 
 # Build thread map
@@ -59,7 +64,7 @@ for thread in thread_data.get('threads', []):
             thread_map[reply_id] = reply.get('raw_content', '')
 
 # Load CSV
-df = pd.read_csv("ground_truth_dataset.csv")
+df = pd.read_csv(GROUND_TRUTH_FILE)
 
 # Create examples
 all_examples = []

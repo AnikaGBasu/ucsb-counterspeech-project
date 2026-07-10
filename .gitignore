@@ -1,2 +1,10 @@
-.venv 
+.venv/
 .env
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.mov

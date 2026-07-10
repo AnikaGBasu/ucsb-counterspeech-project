@@ -1,0 +1,2574 @@
+{
+  "verification_model": "Codex GPT-5 in-session LLM judgment",
+  "verification_date": "2026-07-02",
+  "sample_method": "Metadata-only stratified sample over top-level original posts; no text keywords or label rules used for sampling.",
+  "label_guideline": "Hate speech means author-endorsed targeting of a protected identity group. Quoted/reported/condemned hate, institutional criticism, political criticism, personal insults, and body-size-only insults are not labeled hate unless they target a protected identity group.",
+  "random_seed": 20260701,
+  "sample_target": 320,
+  "label_counts": {
+    "hate_speech": 118,
+    "not_hate_speech": 202
+  },
+  "entries": [
+    {
+      "tweet_id": "1366789680931368963",
+      "sample_rank": 1,
+      "sampling_stratum": "0_cleaned_data.json|medium|medium_engagement|no_media|quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1278815661259661313",
+      "sample_rank": 2,
+      "sampling_stratum": "0_cleaned_data.json|short|high_engagement|media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1429199917382311945",
+      "sample_rank": 3,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1398684935393710082",
+      "sample_rank": 4,
+      "sampling_stratum": "0_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1543357944040914950",
+      "sample_rank": 5,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1303430138898657282",
+      "sample_rank": 6,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1238420579566354432",
+      "sample_rank": 7,
+      "sampling_stratum": "0_cleaned_data.json|long|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1300592125625667584",
+      "sample_rank": 8,
+      "sampling_stratum": "2_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1284598605211295744",
+      "sample_rank": 9,
+      "sampling_stratum": "2_cleaned_data.json|long|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1430014121911758848",
+      "sample_rank": 10,
+      "sampling_stratum": "3_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1192081876585988096",
+      "sample_rank": 11,
+      "sampling_stratum": "0_cleaned_data.json|medium|low_engagement|no_media|quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1420842785129779201",
+      "sample_rank": 12,
+      "sampling_stratum": "3_cleaned_data.json|medium|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1343257829973508096",
+      "sample_rank": 13,
+      "sampling_stratum": "2_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "272576838574948352",
+      "sample_rank": 14,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1543164957688217601",
+      "sample_rank": 15,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1476280474603507714",
+      "sample_rank": 16,
+      "sampling_stratum": "0_cleaned_data.json|long|medium_engagement|media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1466104909863034888",
+      "sample_rank": 17,
+      "sampling_stratum": "0_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "349778093088587776",
+      "sample_rank": 18,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1004549145313476609",
+      "sample_rank": 19,
+      "sampling_stratum": "2_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1420763357167202307",
+      "sample_rank": 20,
+      "sampling_stratum": "3_cleaned_data.json|medium|medium_engagement|media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1325217183807516673",
+      "sample_rank": 21,
+      "sampling_stratum": "3_cleaned_data.json|short|high_engagement|media|quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1419486543064952832",
+      "sample_rank": 22,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1524354558448877570",
+      "sample_rank": 23,
+      "sampling_stratum": "3_cleaned_data.json|long|low_engagement|no_media|quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1304427172740956162",
+      "sample_rank": 24,
+      "sampling_stratum": "3_cleaned_data.json|long|medium_engagement|no_media|quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "722402304482287618",
+      "sample_rank": 25,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "479870315539869696",
+      "sample_rank": 26,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1364859644439592960",
+      "sample_rank": 27,
+      "sampling_stratum": "3_cleaned_data.json|short|medium_engagement|media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1317774561119621120",
+      "sample_rank": 28,
+      "sampling_stratum": "3_cleaned_data.json|long|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1371313902500204547",
+      "sample_rank": 29,
+      "sampling_stratum": "2_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1078450558694912000",
+      "sample_rank": 30,
+      "sampling_stratum": "0_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1393391657366822913",
+      "sample_rank": 31,
+      "sampling_stratum": "0_cleaned_data.json|short|high_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1270138296941842432",
+      "sample_rank": 32,
+      "sampling_stratum": "2_cleaned_data.json|long|high_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1319386959031070720",
+      "sample_rank": 33,
+      "sampling_stratum": "2_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1333168746119229440",
+      "sample_rank": 34,
+      "sampling_stratum": "0_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "589698863675506688",
+      "sample_rank": 35,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1342264935196352519",
+      "sample_rank": 36,
+      "sampling_stratum": "2_cleaned_data.json|medium|low_engagement|no_media|quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1134753455413719041",
+      "sample_rank": 37,
+      "sampling_stratum": "3_cleaned_data.json|long|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1481896510166077441",
+      "sample_rank": 38,
+      "sampling_stratum": "0_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1222140332915265537",
+      "sample_rank": 39,
+      "sampling_stratum": "3_cleaned_data.json|medium|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1456372554302623744",
+      "sample_rank": 40,
+      "sampling_stratum": "0_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1225406154181939201",
+      "sample_rank": 41,
+      "sampling_stratum": "0_cleaned_data.json|long|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1486392715034214403",
+      "sample_rank": 42,
+      "sampling_stratum": "2_cleaned_data.json|long|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1535316695840985090",
+      "sample_rank": 43,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1481015016388190209",
+      "sample_rank": 44,
+      "sampling_stratum": "3_cleaned_data.json|long|low_engagement|media|quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1466529721374502920",
+      "sample_rank": 45,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1207365082285514752",
+      "sample_rank": 46,
+      "sampling_stratum": "0_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "553537194716303360",
+      "sample_rank": 47,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1514596577490444296",
+      "sample_rank": 48,
+      "sampling_stratum": "3_cleaned_data.json|short|medium_engagement|no_media|quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1513950916310970377",
+      "sample_rank": 49,
+      "sampling_stratum": "2_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1507475083954036739",
+      "sample_rank": 50,
+      "sampling_stratum": "0_cleaned_data.json|long|medium_engagement|media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1479231272765599747",
+      "sample_rank": 51,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1232709068562800640",
+      "sample_rank": 52,
+      "sampling_stratum": "3_cleaned_data.json|long|high_engagement|no_media|quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1316686510670909442",
+      "sample_rank": 53,
+      "sampling_stratum": "3_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1505997017558011906",
+      "sample_rank": 54,
+      "sampling_stratum": "2_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1453796959496687626",
+      "sample_rank": 55,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1515822368068931584",
+      "sample_rank": 56,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1365423264126877700",
+      "sample_rank": 57,
+      "sampling_stratum": "3_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1245151320199307264",
+      "sample_rank": 58,
+      "sampling_stratum": "0_cleaned_data.json|medium|low_engagement|no_media|quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "502296205192597504",
+      "sample_rank": 59,
+      "sampling_stratum": "0_cleaned_data.json|medium|high_engagement|media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "637782027559927808",
+      "sample_rank": 60,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1518255026430431233",
+      "sample_rank": 61,
+      "sampling_stratum": "3_cleaned_data.json|short|medium_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1320085401055318016",
+      "sample_rank": 62,
+      "sampling_stratum": "0_cleaned_data.json|medium|high_engagement|media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1318388474785878016",
+      "sample_rank": 63,
+      "sampling_stratum": "0_cleaned_data.json|medium|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1515913221131096067",
+      "sample_rank": 64,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1463303119769681920",
+      "sample_rank": 65,
+      "sampling_stratum": "3_cleaned_data.json|short|medium_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1291456233090609154",
+      "sample_rank": 66,
+      "sampling_stratum": "0_cleaned_data.json|medium|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1189603769950060544",
+      "sample_rank": 67,
+      "sampling_stratum": "0_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "431611572809895936",
+      "sample_rank": 68,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1472228624535367682",
+      "sample_rank": 69,
+      "sampling_stratum": "2_cleaned_data.json|short|medium_engagement|media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "959685036311064576",
+      "sample_rank": 70,
+      "sampling_stratum": "0_cleaned_data.json|short|medium_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "320749663101792256",
+      "sample_rank": 71,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1518633186741395459",
+      "sample_rank": 72,
+      "sampling_stratum": "3_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1192971481426345985",
+      "sample_rank": 73,
+      "sampling_stratum": "3_cleaned_data.json|long|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1544287165831475200",
+      "sample_rank": 74,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1399787393574703106",
+      "sample_rank": 75,
+      "sampling_stratum": "0_cleaned_data.json|medium|low_engagement|no_media|quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1401903534594002945",
+      "sample_rank": 76,
+      "sampling_stratum": "3_cleaned_data.json|medium|medium_engagement|media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1372210726761271296",
+      "sample_rank": 77,
+      "sampling_stratum": "0_cleaned_data.json|long|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1512230423883128832",
+      "sample_rank": 78,
+      "sampling_stratum": "2_cleaned_data.json|short|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1441636428404781056",
+      "sample_rank": 79,
+      "sampling_stratum": "2_cleaned_data.json|medium|medium_engagement|media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1240313779855847424",
+      "sample_rank": 80,
+      "sampling_stratum": "0_cleaned_data.json|long|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "689152887440691200",
+      "sample_rank": 81,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1309201426376265729",
+      "sample_rank": 82,
+      "sampling_stratum": "3_cleaned_data.json|long|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1292988620962504709",
+      "sample_rank": 83,
+      "sampling_stratum": "2_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1418701957640843267",
+      "sample_rank": 84,
+      "sampling_stratum": "3_cleaned_data.json|short|high_engagement|media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1030736644553551872",
+      "sample_rank": 85,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "323905284181463040",
+      "sample_rank": 86,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "482752196685991936",
+      "sample_rank": 87,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1255663044773982209",
+      "sample_rank": 88,
+      "sampling_stratum": "0_cleaned_data.json|long|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "849654065437052928",
+      "sample_rank": 89,
+      "sampling_stratum": "2_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "483741576003194880",
+      "sample_rank": 90,
+      "sampling_stratum": "2_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1514301211217993736",
+      "sample_rank": 91,
+      "sampling_stratum": "3_cleaned_data.json|long|medium_engagement|media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1513935154305138692",
+      "sample_rank": 92,
+      "sampling_stratum": "2_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1403906032733245440",
+      "sample_rank": 93,
+      "sampling_stratum": "3_cleaned_data.json|short|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1379144943076319242",
+      "sample_rank": 94,
+      "sampling_stratum": "3_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1210795068723826688",
+      "sample_rank": 95,
+      "sampling_stratum": "0_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1354976616275988480",
+      "sample_rank": 96,
+      "sampling_stratum": "2_cleaned_data.json|long|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1407293890067984387",
+      "sample_rank": 97,
+      "sampling_stratum": "3_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1119310074340462592",
+      "sample_rank": 98,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1192510621427875842",
+      "sample_rank": 99,
+      "sampling_stratum": "2_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1387111407733415937",
+      "sample_rank": 100,
+      "sampling_stratum": "3_cleaned_data.json|short|high_engagement|no_media|quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1346450474996822016",
+      "sample_rank": 101,
+      "sampling_stratum": "3_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1409507476572147722",
+      "sample_rank": 102,
+      "sampling_stratum": "2_cleaned_data.json|long|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1248509454997491717",
+      "sample_rank": 103,
+      "sampling_stratum": "3_cleaned_data.json|long|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "850062632572923905",
+      "sample_rank": 104,
+      "sampling_stratum": "2_cleaned_data.json|medium|low_engagement|media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1388905063448555535",
+      "sample_rank": 105,
+      "sampling_stratum": "0_cleaned_data.json|long|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1543433189850497024",
+      "sample_rank": 106,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1501405105039589380",
+      "sample_rank": 107,
+      "sampling_stratum": "3_cleaned_data.json|long|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1183100849310126080",
+      "sample_rank": 108,
+      "sampling_stratum": "0_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1240701206751633408",
+      "sample_rank": 109,
+      "sampling_stratum": "3_cleaned_data.json|medium|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1491810148762865665",
+      "sample_rank": 110,
+      "sampling_stratum": "3_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "849105324619575297",
+      "sample_rank": 111,
+      "sampling_stratum": "2_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1435811626322587650",
+      "sample_rank": 112,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1508625593318920194",
+      "sample_rank": 113,
+      "sampling_stratum": "0_cleaned_data.json|long|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1359038037267742720",
+      "sample_rank": 114,
+      "sampling_stratum": "0_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1528158438642946048",
+      "sample_rank": 115,
+      "sampling_stratum": "0_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "560570596392976387",
+      "sample_rank": 116,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1478744978079817735",
+      "sample_rank": 117,
+      "sampling_stratum": "2_cleaned_data.json|short|medium_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1315371292233658368",
+      "sample_rank": 118,
+      "sampling_stratum": "3_cleaned_data.json|long|medium_engagement|media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1513635739740815364",
+      "sample_rank": 119,
+      "sampling_stratum": "2_cleaned_data.json|medium|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1512242874926125071",
+      "sample_rank": 120,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1271505752759427074",
+      "sample_rank": 121,
+      "sampling_stratum": "3_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1541515571552043010",
+      "sample_rank": 122,
+      "sampling_stratum": "3_cleaned_data.json|long|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1526705993714909184",
+      "sample_rank": 123,
+      "sampling_stratum": "2_cleaned_data.json|short|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1350199055197089793",
+      "sample_rank": 124,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1310958439741493248",
+      "sample_rank": 125,
+      "sampling_stratum": "3_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1348805312141283328",
+      "sample_rank": 126,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1375449805493702660",
+      "sample_rank": 127,
+      "sampling_stratum": "2_cleaned_data.json|short|low_engagement|no_media|quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "996566998464286722",
+      "sample_rank": 128,
+      "sampling_stratum": "2_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1386826597584543748",
+      "sample_rank": 129,
+      "sampling_stratum": "2_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1514019788141572097",
+      "sample_rank": 130,
+      "sampling_stratum": "0_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1372915825842122753",
+      "sample_rank": 131,
+      "sampling_stratum": "0_cleaned_data.json|long|high_engagement|media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1535843870654681089",
+      "sample_rank": 132,
+      "sampling_stratum": "0_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1380412402496327680",
+      "sample_rank": 133,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1394333827393327110",
+      "sample_rank": 134,
+      "sampling_stratum": "3_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1235260008150913024",
+      "sample_rank": 135,
+      "sampling_stratum": "0_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1513285008089399299",
+      "sample_rank": 136,
+      "sampling_stratum": "2_cleaned_data.json|long|high_engagement|media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1320388405243662336",
+      "sample_rank": 137,
+      "sampling_stratum": "0_cleaned_data.json|long|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1514332441711894535",
+      "sample_rank": 138,
+      "sampling_stratum": "3_cleaned_data.json|long|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1403236616143998977",
+      "sample_rank": 139,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1296867636651925505",
+      "sample_rank": 140,
+      "sampling_stratum": "2_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1335220023745503232",
+      "sample_rank": 141,
+      "sampling_stratum": "2_cleaned_data.json|medium|medium_engagement|media|quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1019413472059092992",
+      "sample_rank": 142,
+      "sampling_stratum": "3_cleaned_data.json|short|medium_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1339305882065231877",
+      "sample_rank": 143,
+      "sampling_stratum": "2_cleaned_data.json|long|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1502440982306070528",
+      "sample_rank": 144,
+      "sampling_stratum": "3_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1474914954427830278",
+      "sample_rank": 145,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1512247037491785728",
+      "sample_rank": 146,
+      "sampling_stratum": "3_cleaned_data.json|short|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "493222058219028480",
+      "sample_rank": 147,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1317042703532699648",
+      "sample_rank": 148,
+      "sampling_stratum": "3_cleaned_data.json|medium|medium_engagement|media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "230778290212843520",
+      "sample_rank": 149,
+      "sampling_stratum": "0_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1357963181990248448",
+      "sample_rank": 150,
+      "sampling_stratum": "2_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "996137780949475328",
+      "sample_rank": 151,
+      "sampling_stratum": "2_cleaned_data.json|long|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "788946551766941697",
+      "sample_rank": 152,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1506798798013616133",
+      "sample_rank": 153,
+      "sampling_stratum": "2_cleaned_data.json|medium|medium_engagement|media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1260757622426341377",
+      "sample_rank": 154,
+      "sampling_stratum": "2_cleaned_data.json|long|low_engagement|no_media|quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1226691248922251265",
+      "sample_rank": 155,
+      "sampling_stratum": "3_cleaned_data.json|long|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1009505892876906497",
+      "sample_rank": 156,
+      "sampling_stratum": "3_cleaned_data.json|long|medium_engagement|no_media|quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1365619595999084547",
+      "sample_rank": 157,
+      "sampling_stratum": "0_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1346940239835664389",
+      "sample_rank": 158,
+      "sampling_stratum": "3_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1488583623930523652",
+      "sample_rank": 159,
+      "sampling_stratum": "0_cleaned_data.json|short|high_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "850433769748262912",
+      "sample_rank": 160,
+      "sampling_stratum": "0_cleaned_data.json|short|low_engagement|no_media|quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1375724333868347393",
+      "sample_rank": 161,
+      "sampling_stratum": "2_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "316281182830600192",
+      "sample_rank": 162,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1541062453588623360",
+      "sample_rank": 163,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1407408036013084672",
+      "sample_rank": 164,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1000926297252560896",
+      "sample_rank": 165,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1539969692319641602",
+      "sample_rank": 166,
+      "sampling_stratum": "0_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1502051619185340423",
+      "sample_rank": 167,
+      "sampling_stratum": "3_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1340737065588285443",
+      "sample_rank": 168,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1188864317279653898",
+      "sample_rank": 169,
+      "sampling_stratum": "2_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1166314073727762433",
+      "sample_rank": 170,
+      "sampling_stratum": "3_cleaned_data.json|long|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1238344513376014336",
+      "sample_rank": 171,
+      "sampling_stratum": "0_cleaned_data.json|long|medium_engagement|no_media|quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1500293858114084867",
+      "sample_rank": 172,
+      "sampling_stratum": "2_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1434152982808088576",
+      "sample_rank": 173,
+      "sampling_stratum": "2_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1243274440420413441",
+      "sample_rank": 174,
+      "sampling_stratum": "3_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "510640084497203200",
+      "sample_rank": 175,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1317130762282565633",
+      "sample_rank": 176,
+      "sampling_stratum": "3_cleaned_data.json|medium|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1492891385997017089",
+      "sample_rank": 177,
+      "sampling_stratum": "0_cleaned_data.json|short|medium_engagement|media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "849481474009178112",
+      "sample_rank": 178,
+      "sampling_stratum": "2_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "337358799063097344",
+      "sample_rank": 179,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1398444884122476545",
+      "sample_rank": 180,
+      "sampling_stratum": "3_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1364444425192005639",
+      "sample_rank": 181,
+      "sampling_stratum": "0_cleaned_data.json|short|medium_engagement|no_media|quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1377400889531527170",
+      "sample_rank": 182,
+      "sampling_stratum": "3_cleaned_data.json|short|high_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1422471600088158208",
+      "sample_rank": 183,
+      "sampling_stratum": "2_cleaned_data.json|long|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1301905239491178496",
+      "sample_rank": 184,
+      "sampling_stratum": "3_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1369001473619726340",
+      "sample_rank": 185,
+      "sampling_stratum": "3_cleaned_data.json|long|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1498110049826185218",
+      "sample_rank": 186,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1206467594753998848",
+      "sample_rank": 187,
+      "sampling_stratum": "2_cleaned_data.json|long|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1318184887476645889",
+      "sample_rank": 188,
+      "sampling_stratum": "2_cleaned_data.json|medium|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1309749621233577984",
+      "sample_rank": 189,
+      "sampling_stratum": "2_cleaned_data.json|long|medium_engagement|media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1222156531623268354",
+      "sample_rank": 190,
+      "sampling_stratum": "3_cleaned_data.json|medium|medium_engagement|media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1464366841766334464",
+      "sample_rank": 191,
+      "sampling_stratum": "3_cleaned_data.json|long|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "286301069351452672",
+      "sample_rank": 192,
+      "sampling_stratum": "0_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "337316851791036416",
+      "sample_rank": 193,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1542205180547960834",
+      "sample_rank": 194,
+      "sampling_stratum": "0_cleaned_data.json|short|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1482323670026575873",
+      "sample_rank": 195,
+      "sampling_stratum": "0_cleaned_data.json|long|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "748733398055686144",
+      "sample_rank": 196,
+      "sampling_stratum": "2_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1408905645554810885",
+      "sample_rank": 197,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1265844555628322816",
+      "sample_rank": 198,
+      "sampling_stratum": "3_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1387200029161627648",
+      "sample_rank": 199,
+      "sampling_stratum": "0_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1515889087542177793",
+      "sample_rank": 200,
+      "sampling_stratum": "2_cleaned_data.json|short|medium_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1335619727415271425",
+      "sample_rank": 201,
+      "sampling_stratum": "2_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1244825571730657280",
+      "sample_rank": 202,
+      "sampling_stratum": "2_cleaned_data.json|medium|medium_engagement|media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1541092721913483265",
+      "sample_rank": 203,
+      "sampling_stratum": "2_cleaned_data.json|long|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "979903297346678784",
+      "sample_rank": 204,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1407116526587727877",
+      "sample_rank": 205,
+      "sampling_stratum": "2_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1366203492088639490",
+      "sample_rank": 206,
+      "sampling_stratum": "0_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1542174158301577216",
+      "sample_rank": 207,
+      "sampling_stratum": "0_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1500072865911259137",
+      "sample_rank": 208,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1177572085310377984",
+      "sample_rank": 209,
+      "sampling_stratum": "0_cleaned_data.json|long|medium_engagement|no_media|quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1514258248198766601",
+      "sample_rank": 210,
+      "sampling_stratum": "2_cleaned_data.json|long|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1541124897795178497",
+      "sample_rank": 211,
+      "sampling_stratum": "2_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1161036325149184000",
+      "sample_rank": 212,
+      "sampling_stratum": "0_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1345086157164580865",
+      "sample_rank": 213,
+      "sampling_stratum": "0_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "298069142962044928",
+      "sample_rank": 214,
+      "sampling_stratum": "3_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1541933056906461186",
+      "sample_rank": 215,
+      "sampling_stratum": "3_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1418631654705336329",
+      "sample_rank": 216,
+      "sampling_stratum": "0_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "389781968059371521",
+      "sample_rank": 217,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1430861433256960002",
+      "sample_rank": 218,
+      "sampling_stratum": "2_cleaned_data.json|long|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1408125440699650059",
+      "sample_rank": 219,
+      "sampling_stratum": "3_cleaned_data.json|short|medium_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1465038459509395459",
+      "sample_rank": 220,
+      "sampling_stratum": "0_cleaned_data.json|long|medium_engagement|no_media|quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1273683523514191872",
+      "sample_rank": 221,
+      "sampling_stratum": "3_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1443809102174597124",
+      "sample_rank": 222,
+      "sampling_stratum": "3_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1391275675097595906",
+      "sample_rank": 223,
+      "sampling_stratum": "3_cleaned_data.json|long|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "902955664464588804",
+      "sample_rank": 224,
+      "sampling_stratum": "3_cleaned_data.json|medium|medium_engagement|media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "470187639988289536",
+      "sample_rank": 225,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1283853200609681408",
+      "sample_rank": 226,
+      "sampling_stratum": "2_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "400367202156564481",
+      "sample_rank": 227,
+      "sampling_stratum": "3_cleaned_data.json|medium|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1130954113196412928",
+      "sample_rank": 228,
+      "sampling_stratum": "0_cleaned_data.json|long|high_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1495835713320927244",
+      "sample_rank": 229,
+      "sampling_stratum": "3_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1217258960589377538",
+      "sample_rank": 230,
+      "sampling_stratum": "0_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1483328335329783811",
+      "sample_rank": 231,
+      "sampling_stratum": "3_cleaned_data.json|long|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1028550511291588609",
+      "sample_rank": 232,
+      "sampling_stratum": "2_cleaned_data.json|long|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1436762674122084357",
+      "sample_rank": 233,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1406128329162383362",
+      "sample_rank": 234,
+      "sampling_stratum": "3_cleaned_data.json|long|medium_engagement|no_media|quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1490087733271928843",
+      "sample_rank": 235,
+      "sampling_stratum": "2_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1167001504039014400",
+      "sample_rank": 236,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1528955944285065217",
+      "sample_rank": 237,
+      "sampling_stratum": "2_cleaned_data.json|long|medium_engagement|no_media|quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1542043241583091713",
+      "sample_rank": 238,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1343563921098084352",
+      "sample_rank": 239,
+      "sampling_stratum": "2_cleaned_data.json|medium|medium_engagement|no_media|quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "223311256440930304",
+      "sample_rank": 240,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "350508477514387456",
+      "sample_rank": 241,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1330076380311281664",
+      "sample_rank": 242,
+      "sampling_stratum": "0_cleaned_data.json|long|medium_engagement|media|quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1281394623408156673",
+      "sample_rank": 243,
+      "sampling_stratum": "2_cleaned_data.json|short|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "525400661815742464",
+      "sample_rank": 244,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1503215091990233088",
+      "sample_rank": 245,
+      "sampling_stratum": "3_cleaned_data.json|medium|high_engagement|media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1311850414493462528",
+      "sample_rank": 246,
+      "sampling_stratum": "3_cleaned_data.json|medium|high_engagement|no_media|quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "486617540744196096",
+      "sample_rank": 247,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "959399799723196416",
+      "sample_rank": 248,
+      "sampling_stratum": "0_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "918237695087906816",
+      "sample_rank": 249,
+      "sampling_stratum": "2_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1414306130130620417",
+      "sample_rank": 250,
+      "sampling_stratum": "0_cleaned_data.json|long|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "974442679005253633",
+      "sample_rank": 251,
+      "sampling_stratum": "3_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1149858162696228866",
+      "sample_rank": 252,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1267969990386315265",
+      "sample_rank": 253,
+      "sampling_stratum": "0_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1391327662233333760",
+      "sample_rank": 254,
+      "sampling_stratum": "3_cleaned_data.json|short|medium_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1544144420383010816",
+      "sample_rank": 255,
+      "sampling_stratum": "2_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1544191373066346501",
+      "sample_rank": 256,
+      "sampling_stratum": "3_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1418494435105681410",
+      "sample_rank": 257,
+      "sampling_stratum": "3_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1391512412625461252",
+      "sample_rank": 258,
+      "sampling_stratum": "3_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1239757276484755456",
+      "sample_rank": 259,
+      "sampling_stratum": "2_cleaned_data.json|long|low_engagement|media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1503648053127000073",
+      "sample_rank": 260,
+      "sampling_stratum": "3_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "269686167610474496",
+      "sample_rank": 261,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1454545865650040832",
+      "sample_rank": 262,
+      "sampling_stratum": "2_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1542389455167688704",
+      "sample_rank": 263,
+      "sampling_stratum": "2_cleaned_data.json|long|medium_engagement|no_media|quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "330938549669081088",
+      "sample_rank": 264,
+      "sampling_stratum": "3_cleaned_data.json|medium|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1294367927991275522",
+      "sample_rank": 265,
+      "sampling_stratum": "3_cleaned_data.json|long|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1245416464862994433",
+      "sample_rank": 266,
+      "sampling_stratum": "3_cleaned_data.json|long|low_engagement|media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1514841108483698690",
+      "sample_rank": 267,
+      "sampling_stratum": "3_cleaned_data.json|long|high_engagement|media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1358895921615040519",
+      "sample_rank": 268,
+      "sampling_stratum": "2_cleaned_data.json|medium|high_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "410940226883047424",
+      "sample_rank": 269,
+      "sampling_stratum": "2_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1506859977595826176",
+      "sample_rank": 270,
+      "sampling_stratum": "3_cleaned_data.json|short|medium_engagement|media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1491808427529539585",
+      "sample_rank": 271,
+      "sampling_stratum": "0_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1480909420397801476",
+      "sample_rank": 272,
+      "sampling_stratum": "0_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1287181269697208322",
+      "sample_rank": 273,
+      "sampling_stratum": "0_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1318610736919302144",
+      "sample_rank": 274,
+      "sampling_stratum": "2_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1091105782735749120",
+      "sample_rank": 275,
+      "sampling_stratum": "3_cleaned_data.json|medium|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1468770957003157506",
+      "sample_rank": 276,
+      "sampling_stratum": "0_cleaned_data.json|medium|low_engagement|media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1502672889757249540",
+      "sample_rank": 277,
+      "sampling_stratum": "3_cleaned_data.json|short|medium_engagement|media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1367147850497482762",
+      "sample_rank": 278,
+      "sampling_stratum": "0_cleaned_data.json|long|low_engagement|no_media|quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "321005650358456320",
+      "sample_rank": 279,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1321483833682784256",
+      "sample_rank": 280,
+      "sampling_stratum": "0_cleaned_data.json|long|medium_engagement|media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1513871474741989393",
+      "sample_rank": 281,
+      "sampling_stratum": "3_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1018427337896071168",
+      "sample_rank": 282,
+      "sampling_stratum": "3_cleaned_data.json|long|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1516434732183076869",
+      "sample_rank": 283,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1346084851095461890",
+      "sample_rank": 284,
+      "sampling_stratum": "2_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1513978582422663168",
+      "sample_rank": 285,
+      "sampling_stratum": "2_cleaned_data.json|medium|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1266434668376834051",
+      "sample_rank": 286,
+      "sampling_stratum": "2_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1317198376094425088",
+      "sample_rank": 287,
+      "sampling_stratum": "3_cleaned_data.json|short|medium_engagement|media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1513844797416501253",
+      "sample_rank": 288,
+      "sampling_stratum": "3_cleaned_data.json|long|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1516146005787435010",
+      "sample_rank": 289,
+      "sampling_stratum": "3_cleaned_data.json|short|medium_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1297922127623073792",
+      "sample_rank": 290,
+      "sampling_stratum": "2_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1514504454225027076",
+      "sample_rank": 291,
+      "sampling_stratum": "3_cleaned_data.json|long|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1274115024898928640",
+      "sample_rank": 292,
+      "sampling_stratum": "2_cleaned_data.json|long|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "438924068386275328",
+      "sample_rank": 293,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1351327969671864326",
+      "sample_rank": 294,
+      "sampling_stratum": "3_cleaned_data.json|short|medium_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1416998471056437251",
+      "sample_rank": 295,
+      "sampling_stratum": "2_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1379108643472297985",
+      "sample_rank": 296,
+      "sampling_stratum": "2_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1492199047482032129",
+      "sample_rank": 297,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1312179489095385089",
+      "sample_rank": 298,
+      "sampling_stratum": "2_cleaned_data.json|medium|medium_engagement|media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1359380435902472193",
+      "sample_rank": 299,
+      "sampling_stratum": "3_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1493602280511262730",
+      "sample_rank": 300,
+      "sampling_stratum": "3_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1480324175533420545",
+      "sample_rank": 301,
+      "sampling_stratum": "2_cleaned_data.json|long|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1429636502691143685",
+      "sample_rank": 302,
+      "sampling_stratum": "0_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1344291785929940996",
+      "sample_rank": 303,
+      "sampling_stratum": "0_cleaned_data.json|medium|medium_engagement|media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1416749772648509445",
+      "sample_rank": 304,
+      "sampling_stratum": "2_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "997690384166899713",
+      "sample_rank": 305,
+      "sampling_stratum": "0_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1071317680131661824",
+      "sample_rank": 306,
+      "sampling_stratum": "0_cleaned_data.json|long|medium_engagement|no_media|quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1506671864688508929",
+      "sample_rank": 307,
+      "sampling_stratum": "0_cleaned_data.json|long|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "983084022614994944",
+      "sample_rank": 308,
+      "sampling_stratum": "2_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1244807778075430912",
+      "sample_rank": 309,
+      "sampling_stratum": "3_cleaned_data.json|medium|high_engagement|media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1425985700474785796",
+      "sample_rank": 310,
+      "sampling_stratum": "2_cleaned_data.json|short|medium_engagement|no_media|quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "571304662441308160",
+      "sample_rank": 311,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1154966590338818049",
+      "sample_rank": 312,
+      "sampling_stratum": "2_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "615006242902278144",
+      "sample_rank": 313,
+      "sampling_stratum": "3_cleaned_data.json|short|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1306390823853006848",
+      "sample_rank": 314,
+      "sampling_stratum": "3_cleaned_data.json|short|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1289452234091175938",
+      "sample_rank": 315,
+      "sampling_stratum": "2_cleaned_data.json|long|high_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1316727262256005121",
+      "sample_rank": 316,
+      "sampling_stratum": "0_cleaned_data.json|medium|low_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1044596023442776066",
+      "sample_rank": 317,
+      "sampling_stratum": "3_cleaned_data.json|medium|high_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1540804473135812608",
+      "sample_rank": 318,
+      "sampling_stratum": "0_cleaned_data.json|long|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1223469554107633664",
+      "sample_rank": 319,
+      "sampling_stratum": "2_cleaned_data.json|medium|medium_engagement|no_media|not_quoted",
+      "label": "not_hate_speech",
+      "bucket": "llm_verified_not_identity_hate",
+      "notes": "LLM verified as not author-endorsed hate toward a protected identity group."
+    },
+    {
+      "tweet_id": "1424425799093039110",
+      "sample_rank": 320,
+      "sampling_stratum": "3_cleaned_data.json|long|low_engagement|no_media|not_quoted",
+      "label": "hate_speech",
+      "bucket": "llm_verified_identity_hate",
+      "notes": "LLM verified as author-endorsed hate toward a protected identity group."
+    }
+  ]
+}
