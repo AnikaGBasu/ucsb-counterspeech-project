@@ -269,7 +269,7 @@
             <div class="section">
                 <h2>How to Use the System</h2>
                 <ul>
-                    <li><strong>Annotator hex ID:</strong> Enter an anonymous ID using only 0-9 and a-f characters. The browser remembers it locally.</li>
+                    <li><strong>Annotator ID:</strong> The system randomly generates an anonymous 10-character hex ID and remembers it in the browser.</li>
                     <li><strong>Tweet selector:</strong> Use the Tweet dropdown to switch between the two loaded tweet conversations.</li>
                     <li><strong>Reply selector:</strong> Use the Reply dropdown to jump to a specific reply within the selected tweet.</li>
                     <li><strong>Previous / Next:</strong> Move one reply backward or forward in the full annotation queue.</li>
@@ -293,8 +293,38 @@
                     <li>Yes.</li>
                 </ul>
                 <div class="callout">
-                    <p><strong>Definition:</strong> Mark Yes only if the reply attacks, demeans, stereotypes, excludes, dehumanizes, threatens, or expresses hatred toward a protected identity group, or toward a person because of perceived membership in that group.</p>
-                    <p>Protected identity includes but is not limited to race, ethnicity, nationality, religion, caste, gender, sex, sexual orientation, and disability.</p>
+                    <p><strong>Definition:</strong> The United Nations defines hate speech as "any kind of communication in speech, writing or behaviour, that attacks or uses pejorative or discriminatory language with reference to a person or a group on the basis of who they are, in other words, based on their religion, ethnicity, nationality, race, colour, descent, gender or other identity factor."</p>
+                    <p>In common language, hate speech refers to offensive discourse targeting a group or individual based on inherent characteristics, such as race, religion, or gender, and that may threaten social peace.</p>
+                    <p class="small-note">Source: <a href="https://www.un.org/en/hate-speech/understanding-hate-speech/what-is-hate-speech" target="_blank" rel="noopener noreferrer">United Nations, What is hate speech?</a></p>
+                </div>
+                <div class="callout">
+                    <p><strong>Protected group mentions:</strong> Do not label something as hate speech just because it mentions a protected group. Label it as hate speech only if the attack is aimed at the protected identity itself, not at a specific behavior.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Text</th>
+                                <th>Label</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>"Muslims are evil."</td>
+                                <td>Hate speech</td>
+                            </tr>
+                            <tr>
+                                <td>"Muslims who support terrorism are evil."</td>
+                                <td>Offensive, not hate speech</td>
+                            </tr>
+                            <tr>
+                                <td>"Black people are lazy."</td>
+                                <td>Hate speech</td>
+                            </tr>
+                            <tr>
+                                <td>"Black people who scam others are awful."</td>
+                                <td>Offensive, not hate speech</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
@@ -312,8 +342,7 @@
                 <h3>3. Primary hate target group</h3>
                 <p><strong>Only answer if Q1 = Yes.</strong></p>
                 <ul>
-                    <li>Race / ethnicity.</li>
-                    <li>Nationality / immigration status.</li>
+                    <li>Race / ethnicity / nationality.</li>
                     <li>Religion.</li>
                     <li>Caste.</li>
                     <li>Gender / sex.</li>
@@ -352,46 +381,19 @@
             </div>
 
             <div class="section">
-                <h3>6. Is the target reply counterspeech?</h3>
+                <div class="callout">
+                    <p>Mark Yes when the reply tries to reduce the harm of hateful, abusive, misleading, or harmful content in the original post by challenging, correcting, condemning, warning, supporting the target, mocking the harmful message, or otherwise pushing back against it.</p>
+                    <p>Counterspeech can be polite or impolite, including offensive language, as long as it opposes the harmful original post.</p>
+                </div>
+                <h3>6. Does the target reply contain counterspeech to the original post?</h3>
                 <ul>
                     <li>No.</li>
                     <li>Yes.</li>
                 </ul>
-                <div class="callout">
-                    <p>Mark Yes if the reply responds to hate, abuse, misinformation, or harmful speech by challenging, criticizing, warning, correcting, mocking, or pushing back against it.</p>
-                    <p>Counterspeech can be polite or impolite. A reply can be counterspeech and still be offensive.</p>
-                </div>
             </div>
 
             <div class="section">
-                <h3>7. If counterspeech, what type?</h3>
-                <p><strong>Only answer if Q6 = Yes.</strong></p>
-                <ul>
-                    <li><strong>Direct condemnation:</strong> Clearly calls out the hateful/offensive comment as wrong, unacceptable, racist, antisemitic, etc.</li>
-                    <li><strong>Correction / fact-check:</strong> Responds by correcting false claims, misinformation, stereotypes, or misleading statements.</li>
-                    <li><strong>Warning of consequences:</strong> Points out potential harm, social consequences, policy violations, escalation, or real-world danger.</li>
-                    <li><strong>Support for target:</strong> Defends, comforts, or shows solidarity with the person/group being targeted.</li>
-                    <li><strong>Moral appeal:</strong> Appeals to empathy, fairness, shared values, humanity, or treat people with respect reasoning.</li>
-                    <li><strong>Humor / sarcasm:</strong> Uses jokes, irony, mockery, memes, or sarcasm to challenge the hateful comment.</li>
-                    <li><strong>Insulting pushback:</strong> Pushes back against hate using insults, profanity, or aggressive language toward the speaker.</li>
-                    <li><strong>De-escalation:</strong> Tries to calm the conversation, reduce hostility, redirect, or encourage a more civil discussion.</li>
-                    <li><strong>Other:</strong> Counterspeech that does not fit the categories above.</li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <h3>8. If counterspeech, how polite is it?</h3>
-                <p><strong>Only answer if Q6 = Yes.</strong></p>
-                <ul>
-                    <li>Not polite.</li>
-                    <li>Normal.</li>
-                    <li>Somewhat polite.</li>
-                    <li>Polite.</li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <h3>9. Confidence</h3>
+                <h3>7. Confidence</h3>
                 <ul>
                     <li>Low.</li>
                     <li>Medium.</li>
@@ -400,7 +402,7 @@
             </div>
 
             <div class="section">
-                <h3>10. Flag for review?</h3>
+                <h3>8. Flag for review?</h3>
                 <ul>
                     <li>No.</li>
                     <li>Yes.</li>
@@ -409,7 +411,7 @@
             </div>
 
             <div class="section">
-                <h3>11. Optional notes</h3>
+                <h3>9. Optional notes</h3>
                 <p>Free response.</p>
             </div>
         </div>

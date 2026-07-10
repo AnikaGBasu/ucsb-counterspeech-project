@@ -44,18 +44,22 @@
         }
 
         .topbar {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 18px;
-            align-items: center;
+            display: block;
             margin-bottom: 18px;
             padding-bottom: 18px;
             border-bottom: 1px solid var(--border);
         }
 
         .title-wrap {
-            max-width: 620px;
+            width: 100%;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 18px;
+            width: 100%;
         }
 
         .title-wrap h1 {
@@ -72,26 +76,50 @@
         }
 
         .annotator-box {
+            display: flex;
+            align-items: center;
+            gap: 6px;
             background: var(--surface);
             border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 14px;
+            border-radius: 7px;
+            padding: 6px 8px;
             box-shadow: var(--shadow-soft);
-            min-width: 280px;
+            flex-shrink: 0;
+            margin-top: 2px;
         }
 
         .annotator-box label,
         .thread-nav label {
             display: block;
-            font-size: 12px;
-            font-weight: 700;
+            font-size: 10px;
+            font-weight: 760;
             color: var(--muted);
-            margin-bottom: 6px;
+            margin-bottom: 0;
             text-transform: uppercase;
         }
 
-        .annotator-box input {
-            width: 100%;
+        .generated-id {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            font-size: 13px;
+            line-height: 1;
+            font-weight: 800;
+            color: var(--accent-dark);
+            background: var(--accent-soft);
+            border: 1px solid #bde4df;
+            border-radius: 5px;
+            padding: 4px 6px;
+            word-break: normal;
+        }
+
+        @media (max-width: 700px) {
+            .title-row {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .annotator-box {
+                align-self: flex-start;
+            }
         }
 
         .progress-card,
@@ -514,16 +542,17 @@
     <div class="page">
         <div class="topbar">
             <div class="title-wrap">
-                <h1>Hate Speech Annotation</h1>
+                <div class="title-row">
+                    <h1>Hate Speech Annotation</h1>
+                    <div class="annotator-box">
+                        <label for="annotator-id">Your ID is</label>
+                        <div id="annotator-id" class="generated-id">Generating...</div>
+                    </div>
+                </div>
                 <p>Label one reply at a time using tweet context, abuse, hate speech, and counterspeech guidance.</p>
                 <div style="margin-top: 12px;" id="top-instructions-link">
                     <a class="button-link primary" href="/instructions/back">View annotation instructions</a>
                 </div>
-            </div>
-            <div class="annotator-box">
-                <label for="annotator-id">Annotator hex ID</label>
-                <input id="annotator-id" type="text" placeholder="e.g. a3f9c1" />
-                <div class="small-note" style="margin-top: 8px;">Use an anonymous hex identifier rather than a name. Saved locally in your browser so annotators do not need to re-enter it.</div>
             </div>
         </div>
 
@@ -573,7 +602,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="section-title">Target Reply</div>
+                    <div class="section-title" id="target-section-title">Target Reply</div>
                     <div class="target-post">
                         <div class="target-meta" id="target-meta"></div>
                         <div class="text-content" id="target-text"></div>
@@ -585,7 +614,7 @@
             <div>
                 <form id="annotation-form" class="card">
                     <div class="field">
-                        <label class="main">1. Does the target reply contain identity-based hate speech?</label>
+                        <label class="main" id="identity-hate-label">1. Does the target reply contain identity-based hate speech?</label>
                         <div class="radio-grid">
                             <div class="radio-card">
                                 <input type="radio" id="identity-hate-no" name="identity_hate_speech" value="0" />
@@ -621,8 +650,7 @@
                         <label class="main" for="hate-target-group">3. Primary hate target group</label>
                         <select id="hate-target-group" name="hate_target_group">
                             <option value="">Select target group</option>
-                            <option>Race / ethnicity</option>
-                            <option>Nationality / immigration status</option>
+                            <option>Race / ethnicity / nationality</option>
                             <option>Religion</option>
                             <option>Caste</option>
                             <option>Gender / sex</option>
@@ -635,7 +663,7 @@
                     </div>
 
                     <div class="field">
-                        <label class="main">4. Does the target reply contain offensive, uncivil, or abusive language?</label>
+                        <label class="main" id="abuse-level-label">4. Does the target reply contain offensive, uncivil, or abusive language?</label>
                         <div class="radio-grid">
                             <div class="radio-card">
                                 <input type="radio" id="abuse-none" name="abuse_level" value="none" />
@@ -673,8 +701,8 @@
                         <div class="help">Only answer if Q4 is not None.</div>
                     </div>
 
-                    <div class="field">
-                        <label class="main">6. Is the target reply counterspeech?</label>
+                    <div class="field" id="counter-relation-field">
+                        <label class="main" id="counter-relation-label">6. Does the target reply contain counterspeech to the original post?</label>
                         <div class="radio-grid">
                             <div class="radio-card">
                                 <input type="radio" id="counter-no" name="counterspeech" value="0" />
@@ -685,39 +713,11 @@
                                 <label for="counter-yes">Yes</label>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="field" id="counter-type-field">
-                        <label class="main" for="counter-type">7. If counterspeech, what type?</label>
-                        <select id="counter-type" name="counterspeech_type">
-                            <option value="">Select counterspeech type</option>
-                            <option>Direct condemnation</option>
-                            <option>Correction / fact-check</option>
-                            <option>Warning of consequences</option>
-                            <option>Support for target</option>
-                            <option>Moral appeal</option>
-                            <option>Humor / sarcasm</option>
-                            <option>Insulting pushback</option>
-                            <option>De-escalation</option>
-                            <option>Other</option>
-                        </select>
-                        <div class="help">Only answer if Q6 = Yes.</div>
-                    </div>
-
-                    <div class="field" id="counter-politeness-field">
-                        <label class="main" for="counter-politeness">8. If counterspeech, how polite is it?</label>
-                        <select id="counter-politeness" name="counterspeech_politeness">
-                            <option value="">Select politeness level</option>
-                            <option>Not polite</option>
-                            <option>Normal</option>
-                            <option>Somewhat polite</option>
-                            <option>Polite</option>
-                        </select>
-                        <div class="help">Only answer if Q6 = Yes.</div>
+                        <div class="help" id="counter-relation-help"></div>
                     </div>
 
                     <div class="field">
-                        <label class="main">9. Confidence</label>
+                        <label class="main">7. Confidence</label>
                         <div class="radio-grid">
                             <div class="radio-card">
                                 <input type="radio" id="conf-low" name="confidence" value="low" />
@@ -737,13 +737,13 @@
                     <div class="field">
                         <label class="main review-flag">
                             <input type="checkbox" id="flag-review" name="flag_for_review" />
-                            10. Flag for review?
+                            8. Flag for review?
                         </label>
                         <div class="help">Use this if you are unsure.</div>
                     </div>
 
                     <div class="field">
-                        <label class="main" for="notes">11. Optional notes</label>
+                        <label class="main" for="notes">9. Optional notes</label>
                         <textarea id="notes" name="notes" placeholder="Free response. Use for uncertainty, ambiguity, sarcasm, unclear targets, or context dependence."></textarea>
                     </div>
 
@@ -801,8 +801,12 @@
             hateSeverityField: document.getElementById('hate-severity-field'),
             hateTargetField: document.getElementById('hate-target-field'),
             abuseTargetField: document.getElementById('abuse-target-field'),
-            counterTypeField: document.getElementById('counter-type-field'),
-            counterPolitenessField: document.getElementById('counter-politeness-field')
+            counterRelationField: document.getElementById('counter-relation-field'),
+            targetSectionTitle: document.getElementById('target-section-title'),
+            identityHateLabel: document.getElementById('identity-hate-label'),
+            abuseLevelLabel: document.getElementById('abuse-level-label'),
+            counterRelationLabel: document.getElementById('counter-relation-label'),
+            counterRelationHelp: document.getElementById('counter-relation-help')
         };
 
         function hasContentConsent() {
@@ -846,10 +850,19 @@
             return getItemsInThread(item.thread_id).findIndex(threadItem => threadItem.item_id === item.item_id);
         }
 
+        function isOriginalPost(item) {
+            return !item.is_reply || !(item.context || []).length;
+        }
+
+        function targetNoun(item) {
+            return isOriginalPost(item) ? 'original post' : 'target reply';
+        }
+
         function makeReplyOptionLabel(item, position, total) {
             const username = item.username ? ` @${item.username}` : '';
-            const replyId = item.post_id ? ` ${item.post_id}` : '';
-            return `Reply ${position + 1} of ${total}${username}${replyId}`;
+            const postId = item.post_id ? ` ${item.post_id}` : '';
+            const label = isOriginalPost(item) ? 'Original post' : `Reply ${position + 1} of ${total}`;
+            return `${label}${username}${postId}`;
         }
 
         function defaultAnnotation(item) {
@@ -864,8 +877,6 @@
                 abuse_level: '',
                 abuse_target: '',
                 counterspeech: '',
-                counterspeech_type: '',
-                counterspeech_politeness: '',
                 confidence: '',
                 flag_for_review: false,
                 notes: ''
@@ -897,15 +908,46 @@
         }
 
         function isValidHexIdentifier(value) {
-            return /^[0-9a-fA-F]+$/.test(value);
+            return /^[0-9a-fA-F]{10}$/.test(value);
         }
 
-        function saveAnnotatorIdLocal() {
-            localStorage.setItem(STORAGE_KEYS.annotatorId, DOM.annotatorId.value.trim());
+        function generateAnnotatorId() {
+            const bytes = new Uint8Array(5);
+            if (window.crypto && window.crypto.getRandomValues) {
+                window.crypto.getRandomValues(bytes);
+            } else {
+                for (let i = 0; i < bytes.length; i += 1) {
+                    bytes[i] = Math.floor(Math.random() * 256);
+                }
+            }
+            return Array.from(bytes, byte => byte.toString(16).padStart(2, '0')).join('');
+        }
+
+        function getAnnotatorId() {
+            let annotatorId = localStorage.getItem(STORAGE_KEYS.annotatorId) || '';
+            if (!isValidHexIdentifier(annotatorId)) {
+                annotatorId = generateAnnotatorId();
+                localStorage.setItem(STORAGE_KEYS.annotatorId, annotatorId);
+            }
+            DOM.annotatorId.textContent = annotatorId;
+            return annotatorId;
         }
 
         function loadAnnotatorIdLocal() {
-            DOM.annotatorId.value = localStorage.getItem(STORAGE_KEYS.annotatorId) || '';
+            getAnnotatorId();
+        }
+
+        function normalizeTargetGroup(value) {
+            return ['Race / ethnicity', 'Nationality / immigration status'].includes(value)
+                ? 'Race / ethnicity / nationality'
+                : value;
+        }
+
+        function normalizeCounterspeechValue(value) {
+            if (value === 'Counterspeech to original post' || value === '1') return '1';
+            if (value === 'Aligned with original post' || value === 'Neutral' || value === '0') return '0';
+            if (value === 'Not applicable') return '';
+            return value || '';
         }
 
         function setRadio(name, value) {
@@ -930,7 +972,7 @@
             DOM.contextList.innerHTML = '';
 
             if (visible.length === 0) {
-                DOM.contextList.innerHTML = '<div class="context-post"><div class="context-meta">No earlier tweet context provided.</div></div>';
+                DOM.contextList.innerHTML = '<div class="context-post"><div class="context-meta">No earlier tweet context provided. This item is the original post.</div></div>';
             } else {
                 visible.forEach((ctx, idx) => {
                     const div = document.createElement('div');
@@ -948,11 +990,13 @@
         }
 
         function renderTarget(item) {
+            const originalPost = isOriginalPost(item);
+            DOM.targetSectionTitle.textContent = originalPost ? 'Original Post' : 'Target Reply';
             DOM.targetMeta.textContent = [
                 item.item_id,
                 item.thread_id ? `Tweet ${item.thread_id}` : '',
-                item.post_id ? `Reply ${item.post_id}` : '',
-                item.is_reply ? 'Reply' : 'Original tweet'
+                item.post_id ? `${originalPost ? 'Original post' : 'Reply'} ${item.post_id}` : '',
+                originalPost ? 'Original post' : 'Reply'
             ].filter(Boolean).join(' • ');
 
             DOM.targetText.textContent = item.target_text || '';
@@ -983,29 +1027,44 @@
             if (ann.identity_hate_speech !== '') setRadio('identity_hate_speech', ann.identity_hate_speech);
             if (ann.hate_severity) setRadio('hate_severity', ann.hate_severity);
             if (ann.abuse_level) setRadio('abuse_level', ann.abuse_level);
+            ann.counterspeech = normalizeCounterspeechValue(ann.counterspeech);
             if (ann.counterspeech !== '') setRadio('counterspeech', ann.counterspeech);
             if (ann.confidence) setRadio('confidence', ann.confidence);
 
-            document.getElementById('hate-target-group').value = ann.hate_target_group || '';
+            ann.hate_target_group = normalizeTargetGroup(ann.hate_target_group || '');
+            document.getElementById('hate-target-group').value = ann.hate_target_group;
             document.getElementById('abuse-target').value = ann.abuse_target || '';
-            document.getElementById('counter-type').value = ann.counterspeech_type || '';
-            document.getElementById('counter-politeness').value = ann.counterspeech_politeness || '';
             document.getElementById('flag-review').checked = Boolean(ann.flag_for_review);
             document.getElementById('notes').value = ann.notes || '';
 
-            updateConditionalFields(ann);
+            updateTargetLanguage(item);
+            updateConditionalFields(ann, item);
         }
 
-        function updateConditionalFields(ann) {
+        function updateTargetLanguage(item) {
+            const noun = targetNoun(item);
+            DOM.identityHateLabel.textContent = `1. Does the ${noun} contain identity-based hate speech?`;
+            DOM.abuseLevelLabel.textContent = `4. Does the ${noun} contain offensive, uncivil, or abusive language?`;
+            DOM.counterRelationLabel.textContent = isOriginalPost(item)
+                ? '6. Counterspeech is not applicable for original posts.'
+                : '6. Does the target reply contain counterspeech to the original post?';
+            DOM.counterRelationHelp.textContent = isOriginalPost(item)
+                ? 'Not applicable because this item is the original post and has no prior post to respond to.'
+                : '';
+        }
+
+        function updateConditionalFields(ann, item = getCurrentItem()) {
+            const originalPost = item && isOriginalPost(item);
             const hateYes = ann.identity_hate_speech === '1';
             const abuseHasTarget = ann.abuse_level && ann.abuse_level !== 'none';
-            const counterYes = ann.counterspeech === '1';
-
             DOM.hateSeverityField.classList.toggle('disabled', !hateYes);
             DOM.hateTargetField.classList.toggle('disabled', !hateYes);
             DOM.abuseTargetField.classList.toggle('disabled', !abuseHasTarget);
-            DOM.counterTypeField.classList.toggle('disabled', !counterYes);
-            DOM.counterPolitenessField.classList.toggle('disabled', !counterYes);
+            DOM.counterRelationField.classList.toggle('disabled', originalPost);
+
+            document.querySelectorAll('input[name="counterspeech"]').forEach(el => {
+                el.disabled = originalPost;
+            });
 
             if (!hateYes) {
                 clearRadio('hate_severity');
@@ -1019,11 +1078,9 @@
                 ann.abuse_target = '';
             }
 
-            if (!counterYes) {
-                document.getElementById('counter-type').value = '';
-                document.getElementById('counter-politeness').value = '';
-                ann.counterspeech_type = '';
-                ann.counterspeech_politeness = '';
+            if (originalPost) {
+                clearRadio('counterspeech');
+                ann.counterspeech = '';
             }
         }
 
@@ -1031,12 +1088,10 @@
             const ann = getAnnotation(item.item_id);
             if (ann.identity_hate_speech === '') return false;
             if (ann.abuse_level === '') return false;
-            if (ann.counterspeech === '') return false;
+            if (!isOriginalPost(item) && ann.counterspeech === '') return false;
             if (ann.confidence === '') return false;
             if (ann.identity_hate_speech === '1' && (!ann.hate_severity || !ann.hate_target_group)) return false;
             if (ann.abuse_level !== 'none' && !ann.abuse_target) return false;
-            if (ann.counterspeech === '1' && !ann.counterspeech_type) return false;
-            if (ann.counterspeech === '1' && !ann.counterspeech_politeness) return false;
             return true;
         }
 
@@ -1048,8 +1103,11 @@
             const tweetReplies = item ? getItemsInThread(item.thread_id) : [];
             const replyPosition = item ? getThreadPosition(item) : -1;
 
+            const positionLabel = item && isOriginalPost(item)
+                ? 'Original post'
+                : `Reply ${replyPosition + 1} of ${tweetReplies.length}`;
             DOM.itemCounter.textContent = item
-                ? `Item ${state.currentIndex + 1} of ${total} • Reply ${replyPosition + 1} of ${tweetReplies.length}`
+                ? `Item ${state.currentIndex + 1} of ${total} • ${positionLabel}`
                 : `Item 0 of ${total}`;
             DOM.completionText.textContent = `${completed} / ${total} completed`;
             DOM.progressFill.style.width = `${pct}%`;
@@ -1094,17 +1152,15 @@
 
             ann.identity_hate_speech = checkedValue('identity_hate_speech');
             ann.hate_severity = checkedValue('hate_severity');
-            ann.hate_target_group = document.getElementById('hate-target-group').value;
+            ann.hate_target_group = normalizeTargetGroup(document.getElementById('hate-target-group').value);
             ann.abuse_level = checkedValue('abuse_level');
             ann.abuse_target = document.getElementById('abuse-target').value;
-            ann.counterspeech = checkedValue('counterspeech');
-            ann.counterspeech_type = document.getElementById('counter-type').value;
-            ann.counterspeech_politeness = document.getElementById('counter-politeness').value;
+            ann.counterspeech = isOriginalPost(item) ? '' : normalizeCounterspeechValue(checkedValue('counterspeech'));
             ann.confidence = checkedValue('confidence');
             ann.flag_for_review = document.getElementById('flag-review').checked;
             ann.notes = document.getElementById('notes').value.trim();
 
-            updateConditionalFields(ann);
+            updateConditionalFields(ann, item);
             saveDraftLocal();
             updateProgress();
         }
@@ -1149,13 +1205,13 @@
         async function saveCurrentToServer() {
             captureFormIntoState();
 
-            const annotator_id = DOM.annotatorId.value.trim();
+            const annotator_id = getAnnotatorId();
             if (!annotator_id) {
-                alert('Please enter an annotator hex ID before saving.');
+                alert('Unable to generate an annotator ID. Please refresh and try again.');
                 return;
             }
             if (!isValidHexIdentifier(annotator_id)) {
-                alert('Annotator hex ID must use only 0-9 and a-f characters.');
+                alert('Annotator ID must be exactly 10 hex characters.');
                 return;
             }
 
@@ -1179,13 +1235,13 @@
         async function submitAll() {
             captureFormIntoState();
 
-            const annotator_id = DOM.annotatorId.value.trim();
+            const annotator_id = getAnnotatorId();
             if (!annotator_id) {
-                alert('Please enter an annotator hex ID before submitting.');
+                alert('Unable to generate an annotator ID. Please refresh and try again.');
                 return;
             }
             if (!isValidHexIdentifier(annotator_id)) {
-                alert('Annotator hex ID must use only 0-9 and a-f characters.');
+                alert('Annotator ID must be exactly 10 hex characters.');
                 return;
             }
 
@@ -1221,11 +1277,6 @@
         }
 
         function bindFormEvents() {
-            DOM.annotatorId.addEventListener('input', () => {
-                DOM.annotatorId.value = DOM.annotatorId.value.replace(/[^0-9a-fA-F]/g, '');
-                saveAnnotatorIdLocal();
-            });
-
             DOM.toggleContextBtn.addEventListener('click', () => {
                 state.showFullContext = !state.showFullContext;
                 renderContext(getCurrentItem());

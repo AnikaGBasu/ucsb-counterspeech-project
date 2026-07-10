@@ -11,6 +11,12 @@ uv run flask --app annotation_app.app run
 
 Open the local Flask URL and read the instructions page before starting annotation. The app loads annotation items from `annotation_app/data/items.json` and writes submissions to dated CSV and JSONL files in `annotation_storage/`.
 
+To share the local app through ngrok, start Flask first, then run this in another terminal and share the forwarding URL:
+
+```bash
+ngrok http 5000
+```
+
 If you are not using `uv`, install the Python dependencies with:
 
 ```bash
@@ -58,11 +64,31 @@ Run the thread-context classifier:
 python scripts/classify_thread_context.py
 ```
 
+Reproduce the manually curated 50 hate-speech / 50 non-hate original-post annotation set from `data/full_data/`:
+
+```bash
+python scripts/select_original_posts_for_annotation.py
+```
+
+The script first writes an unlabeled outermost-post review pool to `data/annotation_selection/original_post_review_pool.csv`, then applies `data/annotation_selection/manual_curation_plan.json`. It intentionally does not keyword-sample or auto-label posts. To make the selected set the live Flask annotation queue, run:
+
+```bash
+python scripts/select_original_posts_for_annotation.py --install
+```
+
 Extract thread features:
 
 ```bash
 python scripts/extract_features.py
 ```
+
+Check inter-annotator agreement for one or more annotation exports:
+
+```bash
+python scripts/check_inter_annotator_agreement.py annotation_storage/annotations_20260709.csv
+```
+
+The agreement script compares the latest saved row for each annotator/item pair, reports pairwise percent agreement and mean pairwise Cohen kappa by label field, and prints example disagreements for inspection.
 
 ## Data Conventions
 

@@ -19,7 +19,7 @@ ITEMS_FILE = os.path.join(DATA_DIR, "items.json")
 os.makedirs(DATA_DIR, exist_ok=True)
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-HEX_ID_RE = re.compile(r"^[0-9a-fA-F]+$")
+HEX_ID_RE = re.compile(r"^[0-9a-fA-F]{10}$")
 
 CSV_FIELDS = [
     "timestamp",
@@ -35,12 +35,29 @@ CSV_FIELDS = [
     "abuse_level",
     "abuse_target",
     "counterspeech",
-    "counterspeech_type",
-    "counterspeech_politeness",
     "confidence",
     "flag_for_review",
     "notes",
 ]
+
+MERGED_TARGET_GROUP = "Race / ethnicity / nationality"
+OLD_TARGET_GROUPS = {"Race / ethnicity", "Nationality / immigration status"}
+
+
+def normalize_target_group(value):
+    value = value or ""
+    return MERGED_TARGET_GROUP if value in OLD_TARGET_GROUPS else value
+
+
+def normalize_counterspeech(value):
+    value = str(value or "").strip()
+    if value in {"1", "Counterspeech to original post"}:
+        return "1"
+    if value in {"0", "Aligned with original post", "Neutral"}:
+        return "0"
+    if value == "Not applicable":
+        return ""
+    return value
 
 def is_valid_hex_identifier(value: str) -> bool:
     return bool(HEX_ID_RE.fullmatch(value or ""))
@@ -83,12 +100,10 @@ def normalize_annotation(annotator_id, confirmation_code, timestamp, annotation)
         "parent_id": annotation.get("parent_id", ""),
         "identity_hate_speech": annotation.get("identity_hate_speech", ""),
         "hate_severity": annotation.get("hate_severity", ""),
-        "hate_target_group": annotation.get("hate_target_group", ""),
+        "hate_target_group": normalize_target_group(annotation.get("hate_target_group", "")),
         "abuse_level": annotation.get("abuse_level", ""),
         "abuse_target": annotation.get("abuse_target", ""),
-        "counterspeech": annotation.get("counterspeech", ""),
-        "counterspeech_type": annotation.get("counterspeech_type", ""),
-        "counterspeech_politeness": annotation.get("counterspeech_politeness", ""),
+        "counterspeech": normalize_counterspeech(annotation.get("counterspeech", "")),
         "confidence": annotation.get("confidence", ""),
         "flag_for_review": annotation.get("flag_for_review", False),
         "notes": annotation.get("notes", ""),
@@ -126,7 +141,7 @@ def save_item():
         if not annotator_id or not annotation:
             return jsonify({"error": "Missing annotator_id or annotation"}), 400
         if not is_valid_hex_identifier(annotator_id):
-            return jsonify({"error": "annotator_id must be a hex identifier"}), 400
+            return jsonify({"error": "annotator_id must be exactly 10 hex characters"}), 400
 
         timestamp = datetime.now().isoformat()
         confirmation_code = str(uuid.uuid4())
@@ -159,7 +174,7 @@ def submit_all():
         if not annotator_id or not annotations:
             return jsonify({"error": "Missing annotator_id or annotations"}), 400
         if not is_valid_hex_identifier(annotator_id):
-            return jsonify({"error": "annotator_id must be a hex identifier"}), 400
+            return jsonify({"error": "annotator_id must be exactly 10 hex characters"}), 400
 
         timestamp = datetime.now().isoformat()
         confirmation_code = str(uuid.uuid4())

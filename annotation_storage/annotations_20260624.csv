@@ -1,3 +1,0 @@
-timestamp,annotator_id,confirmation_code,item_id,thread_id,post_id,parent_id,identity_hate_speech,hate_severity,hate_target_group,abuse_level,abuse_target,counterspeech,counterspeech_type,counterspeech_politeness,confidence,flag_for_review,notes
-2026-06-24T17:51:41.178169,aaa12345,9e640727-e8fe-46db-bb1b-4356c46635f7,selected_threads_1243374808030572544_1243374808030572544,1243374808030572544,1243374808030572544,,1,medium,Race / ethnicity,severe,Protected identity group,0,,,high,False,
-2026-06-24T17:54:06.577721,bbbb12345,c58f71ed-d347-4fea-9a86-771e66b55d1e,selected_threads_1243374808030572544_1243374808030572544,1243374808030572544,1243374808030572544,,1,high,Race / ethnicity,severe,Protected identity group,0,,,high,False,
