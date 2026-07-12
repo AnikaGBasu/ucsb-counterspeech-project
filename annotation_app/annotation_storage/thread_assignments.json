@@ -1,0 +1,39 @@
+{
+  "assignments": {
+    "01937c8cb6": {
+      "assigned_at": "2026-07-12T13:13:44.206045",
+      "assignment_id": "661c0a90-2801-419a-9e7b-40188dc7d75c",
+      "thread_key": "4chan:509740126"
+    },
+    "57550c8340": {
+      "assigned_at": "2026-07-10T14:47:24.667934",
+      "assignment_id": "48d90f77-6adf-4b9b-9eb4-414356bf4e40",
+      "thread_key": "4chan:509740268"
+    },
+    "8b7e529383": {
+      "assigned_at": "2026-07-12T13:29:16.050856",
+      "assignment_id": "0b1cf9ca-4cb5-4a90-9864-6e58186e3977",
+      "thread_key": "4chan:509740268"
+    },
+    "bfff806a32": {
+      "assigned_at": "2026-07-12T13:46:31.123145",
+      "assignment_id": "4c6f9bbd-ec49-4ed5-bb55-9f357039f7ab",
+      "thread_key": "4chan:509744030"
+    },
+    "c6c2892d74": {
+      "assigned_at": "2026-07-12T15:29:37.045580",
+      "assignment_id": "4f226bc9-5dec-4a9e-961b-3c83ee144903",
+      "thread_key": "4chan:509744030"
+    },
+    "cc790fc8d2": {
+      "assigned_at": "2026-07-10T14:16:46.938659",
+      "assignment_id": "11847104-cc49-4d5c-8406-ae7ee48160f1",
+      "thread_key": "4chan:509740268"
+    },
+    "dda6588141": {
+      "assigned_at": "2026-07-10T14:49:50.427169",
+      "assignment_id": "12fbcc66-a6f9-43e4-b100-7b9979e125ab",
+      "thread_key": "4chan:509740126"
+    }
+  }
+}

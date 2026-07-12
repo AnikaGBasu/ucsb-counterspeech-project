@@ -1,0 +1,2597 @@
+[
+  {
+    "post_id": "1426226403381493765",
+    "text": "Trillions of dollars have been spent on this fucking Chinese virus with a plus 90 % survival rate.. 9.9  million died 2020 from cancer..I watched my daughter die from cancer..3 months of suffering..fuck the virus..fuck the Chinese..fuck the pharma companies...fuck the lockdown..",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "low",
+      "hate_target_group": "Race / ethnicity / nationality",
+      "abuse_level": "mild",
+      "abuse_target": "Protected identity group",
+      "counterspeech": null,
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Post includes explicit hostility toward Chinese people (“fuck the Chinese”), which is identity-based hate; the rest is criticism of the virus, pharma companies, and lockdowns."
+  },
+  {
+    "post_id": "1426232240170807296",
+    "text": "And the tens of thousands of people who have lost their income here  in South Africa..fuck the anc theives..thats all I want to say..so",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Political belief or ideology",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply criticizes the ANC and uses profanity, but does not attack a protected identity. It does not push back against the original anti-Chinese content."
+  },
+  {
+    "post_id": "1426239069563101184",
+    "text": "@RobPadoa Its wrong on so many levels Rob. No words can help take away your pain and anger 💔💔",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "1",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply condemns the prior post as wrong and offers sympathy; it does not attack any protected group or use abusive language."
+  },
+  {
+    "post_id": "1426233913068953604",
+    "text": "Died from cancer not virus.. https://t.co/A9N1zkgYvV",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "1",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply corrects the original post’s claim about cause of death and does not attack a protected identity or include abusive language."
+  },
+  {
+    "post_id": "1426237701670457351",
+    "text": "@RobPadoa So sad, lost both my parents to cancer 30 years ago, and my brother to cancer last year.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply shares a personal loss/sympathy comment and does not attack any protected group or individual. It does not push back against the harmful original post."
+  },
+  {
+    "post_id": "1426239426527629312",
+    "text": "@SanzJC7 🥺🥺🥺🙏🙏",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "Target reply contains only emojis and no explicit text. It does not directly challenge the harmful original post; it reads as sympathy/concern rather than counterspeech."
+  },
+  {
+    "post_id": "1427039837039775746",
+    "text": "@RobPadoa Rob, 15th of August is a particular day in my country. We celebrate an Assumption of the Holy Virgin, one of the most important Catholic celebrations, and the Day of the Polish Army. I remember and pray for Your both Women during the holy masses.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "The reply is a polite, unrelated religious/national observance message and does not attack any protected group or person. It does not push back against the harmful content in the original post, so it is not counterspeech."
+  },
+  {
+    "post_id": "1427245564962410496",
+    "text": "@MarcinP53965249 Thank you Marcin 🤝",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Target post is a brief thank-you reply with no hateful or abusive language. It does not push back against the directly replied-to post, which is supportive rather than harmful."
+  },
+  {
+    "post_id": "1427395196963196928",
+    "text": "@RobPadoa It’s my honour.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "Target post is a brief polite reply (“It’s my honour”) with no hateful or abusive language. It does not challenge the harmful content in the supplied original post, though the reply chain is somewhat unclear."
+  },
+  {
+    "post_id": "1426237864900272133",
+    "text": "@RobPadoa @1Gatskop 💔",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply contains only mentions and a heart emoji, with no identity-directed attack or substantive pushback against the original post."
+  },
+  {
+    "post_id": "1426236863245922305",
+    "text": "@RobPadoa 😥🤗",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "The reply only contains a mention and sympathetic emojis, with no identity-based attack or abusive language. It does not clearly push back against the original post, so it is not counterspeech."
+  },
+  {
+    "post_id": "1427312661105102850",
+    "text": "@RobPadoa :(",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply is just a sad-face response to the original post and does not challenge the original’s harmful language. No identity-based attack or abusive wording in the target post itself."
+  },
+  {
+    "post_id": "1426250318233354247",
+    "text": "@RobPadoa So sad Rob..... 🙏",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply is a brief sympathetic response to the named user; it does not attack any protected group or push back against the original post's harmful content."
+  },
+  {
+    "post_id": "1426574897900396549",
+    "text": "@RobPadoa 😭",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply only mentions a user and includes a crying emoji; it does not clearly challenge or condemn the harmful original post."
+  },
+  {
+    "post_id": "1426264223999578118",
+    "text": "@RobPadoa 🙏❤🙏",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply contains only a mention and supportive emojis. It does not attack any protected group or person, and it does not push back against the harmful original post."
+  },
+  {
+    "post_id": "1426238767833223176",
+    "text": "@RobPadoa 😢😢so sad to hear. Memories will be forever. Lost my mother,the inspiration and backbone of our family an my life💔",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "The reply offers sympathy and condolences about a personal loss; it does not attack a protected group or push back against the hateful language in the original post."
+  },
+  {
+    "post_id": "1426234510207762435",
+    "text": "@RobPadoa Thoughts are with you a very tough loss💖",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Supportive reply expressing sympathy; it does not challenge or push back against the harmful content in the original post."
+  },
+  {
+    "post_id": "1426253711161110528",
+    "text": "@RobPadoa Hi Rob dis nie maklik nie ek weet  is daar deur",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply expresses sympathy/support and does not attack any protected group. It does not push back against the original post’s hateful language, so it is not counterspeech."
+  },
+  {
+    "post_id": "1426251921132818433",
+    "text": "@RobPadoa Geoot druk vir jou! Sy was pragtig 🤗",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "The reply is a supportive condolence (“big hug for you,” “she was beautiful”) and does not attack any protected group or person. It does not push back against the harmful original post, so it is not counterspeech."
+  },
+  {
+    "post_id": "1426494876741513224",
+    "text": "@RobPadoa Beautiful good young woman. I pray for Her. Amen.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "1",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply offers sympathy and praise without attacking any person or protected group. It appears to support the person referenced in the original post rather than repeat or endorse harm."
+  },
+  {
+    "post_id": "1426492533320921099",
+    "text": "@RobPadoa 🙏💕💕",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "The reply only mentions the user handle with emoji and does not add criticism, hate, or abusive language. It does not push back against the original post."
+  },
+  {
+    "post_id": "1431132246422040578",
+    "text": "@RobPadoa Sorry for your loss 😔🙏",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply offers condolences and does not contain identity-based attacks or abusive language. It does not push back against the harmful content in the original post."
+  },
+  {
+    "post_id": "1426227282339934208",
+    "text": "@RobPadoa Fuck the ANC government too.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Political belief or ideology",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply uses profanity to attack the ANC government; no protected identity is targeted. It does not push back against the original post."
+  },
+  {
+    "post_id": "1426230649522999307",
+    "text": "@unique_saffa Ja I was just going to say that.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Target post is a brief agreement with the prior anti-government comment and does not contain an attack on a protected identity or other abusive language."
+  },
+  {
+    "post_id": "1426315640428797952",
+    "text": "@RobPadoa So sorry for your loss 🙏",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply expresses sympathy only and does not attack any protected group or person. It does not directly push back against the hateful original post."
+  },
+  {
+    "post_id": "1426625733783343108",
+    "text": "@RobPadoa And fuck everyone who went along with this insanity.\n\nMy condolences",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Behavior / actions",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "The reply uses profanity toward people who 'went along with this insanity,' but it does not attack a protected identity. It does not push back against the original post's hateful language; it responds with hostility and sympathy instead."
+  },
+  {
+    "post_id": "1426256519755091980",
+    "text": "@RobPadoa @tsisar3 So sad . Sorry to hear sir",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply expresses sympathy and does not challenge or correct the hateful language in the original post."
+  },
+  {
+    "post_id": "1426533472160583692",
+    "text": "@RobPadoa And fuck the arse holes trying to force us to do this https://t.co/iym1MbcwTF",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Behavior / actions",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply uses mild profanity to insult unspecified people “trying to force us to do this.” It does not directly attack a protected identity, and it does not push back against the original post’s anti-Chinese language."
+  },
+  {
+    "post_id": "1426471840218759168",
+    "text": "@RobPadoa My condolances",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply only expresses condolences and does not contain identity-based attack, abuse, or pushback against the original post's harmful language."
+  },
+  {
+    "post_id": "1426258030610591752",
+    "text": "@RobPadoa Cancer are more a money making game \n\nSorry to say",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "Reply makes a general claim about cancer being profit-driven; it does not attack a protected identity group and does not clearly push back against the original post's harmful language."
+  },
+  {
+    "post_id": "1426253799765729282",
+    "text": "@RobPadoa 😥",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Target reply is only a mention plus a sad emoji. It does not contain identity-based attacks, abuse, or any clear pushback against the original post."
+  },
+  {
+    "post_id": "1426569296923201544",
+    "text": "@RobPadoa Well said sir",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply expresses agreement with the original post and does not itself contain identity-based attacks or abuse."
+  },
+  {
+    "post_id": "1426370436238041090",
+    "text": "@RobPadoa I'm sorry I fought that shit over half of 2020 I had lung cancer at 37 years old not from smoking from the shit they putting in out food and air hell no they don't care about us the virus cancer or any of it once the money is gone and they got the power what they need all us for.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Unclear",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply expresses agreement with the thread’s general grievance/conspiracy framing and does not challenge the original anti-Chinese language. It contains mild profanity and hostility, but no clear identity-based attack in the reply itself."
+  },
+  {
+    "post_id": "1539263007762563072",
+    "text": "Shut up.\n\nI'm sick of white people who expect Democrats to do the job they themselves cannot or will not do.\n\nThese are YOUR friends, family, neighbors and coworkers falling for this stupid RW propaganda.\n\nMaybe get off your mayonnaise asses, confront them and stop being cowards",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "medium",
+      "hate_target_group": "Race / ethnicity / nationality",
+      "abuse_level": "moderate",
+      "abuse_target": "Protected identity group",
+      "counterspeech": null,
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "Directly addresses “white people” with insulting generalizations and derogatory language (“mayonnaise asses,” “cowards”), making the post identity-directed rather than only criticism of behavior."
+  },
+  {
+    "post_id": "1539264265747677184",
+    "text": "Republicans win elections running on the stupidest shit ever like critical race theory hysteria, homophobia and xenophobic fears about the border. \n\nAll of this shit is easily debunked but the truth is white people WANT to believe this shit.\n\nIt's not about \"messaging\"",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "low",
+      "hate_target_group": "Race / ethnicity / nationality",
+      "abuse_level": "mild",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "The post makes a negative generalization about white people, a protected racial group. It also criticizes Republicans and propaganda, but the group-based claim about white people is the clearest identity-directed element. As a reply, it does not push back against the original post."
+  },
+  {
+    "post_id": "1539265164889018368",
+    "text": "It doesn't matter how many facts you have if a racist white woman in Southlake, TX believes that the mere mention of Martin Luther King Jr. in Mopsy and Flopsy's kindergarten class is critical race theory there's no messaging that's overcoming that. Sorry.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Behavior / actions",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "The post insults a “racist white woman” and criticizes her beliefs/actions, but it does not attack white women or white people as a protected group. It does not push back against the original post’s content."
+  },
+  {
+    "post_id": "1539266203423756290",
+    "text": "To get the results we need white racist conservatives to be told in no uncertain terms to fuck off and take their regressive culture warrior bullshit with them.\n\nBut as we've seen through the decades the so called \"good\" white people don't have the stomach or the spine for that.",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "low",
+      "hate_target_group": "Race / ethnicity / nationality",
+      "abuse_level": "moderate",
+      "abuse_target": "Political belief or ideology",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "Reply continues a hostile discussion about white people and white conservatives, including a broad negative generalization that white people lack courage. It attacks the group and their politics, but does not threaten violence."
+  },
+  {
+    "post_id": "1539272596117651457",
+    "text": "It's not the \"economy\" that's just the excuse.\n\nTo defeat RW propaganda it's going to require sweat equity and effort that the white liberal (not all but way too many) simply doesn't want to give.\n\nProtest, howl \"not all\" to the high heavens but the results speak for themselves.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Political belief or ideology",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "The post criticizes white liberals for lack of effort in opposing propaganda; it does not directly attack white people as a protected identity. The language is dismissive and mildly insulting, but primarily targets a political group/position. It supports rather than pushes back against the original post."
+  },
+  {
+    "post_id": "1539273083181314048",
+    "text": "I'm done but I'm sick of the crying about messaging. \n\nStop being lazy cowards and get to work.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Behavior / actions",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "The reply uses mild insults ('lazy cowards') aimed at complaining about messaging/work, but it does not explicitly attack a protected identity in the target post itself. It does not push back against the original post's harmful stance."
+  },
+  {
+    "post_id": "1539299737311977473",
+    "text": "@Kennymack1971 Messaging &amp; framing is still important for winning elections, but you’re right we should expect more “sweat equity” from white liberals who are pretty lazy &amp; self-focused 👍\n\nWe need to throw a lot more picnics in the summer, festivals in the other months &amp; get people involved",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "low",
+      "hate_target_group": "Race / ethnicity / nationality",
+      "abuse_level": "mild",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply endorses the thread’s criticism and adds a negative generalization about white liberals being lazy and self-focused. No pushback against the original post."
+  },
+  {
+    "post_id": "1539300240745824261",
+    "text": "@Kennymack1971 We need to get white people off the couch &amp; rehabituate them to their communities. Many conservatives &amp; leftists are being sucked into social media hysterics\n\nWith the ongoing pandemic that’s very difficult, but surely with the right masking rules we can do both 🤔",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Behavior / actions",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply criticizes conservatives and leftists for social media hysterics and tells white people to get off the couch, but does not attack a protected identity. It does not push back against the original post's hostile framing; it mostly continues the same discussion."
+  },
+  {
+    "post_id": "1539301041233006592",
+    "text": "@Kennymack1971 Persuasion over the screen with friends &amp; family seems to have had a low success rate to me as an online LW activist over the last 10 years\n\nThe huge majority of my family members remain conservatives despite my attempts, but many of them still at least see Trump for who he is 🤷‍♂️",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "The reply discusses persuasion and personal experience with conservative family members; it does not attack a protected identity group or contain abusive language."
+  },
+  {
+    "post_id": "1539277091442679810",
+    "text": "@Kennymack1971 You nailed it!",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply expresses agreement with the preceding post and does not itself contain identity-directed attack or abusive language."
+  },
+  {
+    "post_id": "1539276806129328128",
+    "text": "@Kennymack1971 Agree. Voting isn't hiring a contractor or a concierge. R voters go out and fuck shit up according to their leaders' rhetoric, which is bad. But too many of \"us\" just whine about the people we voted for while hanging them out to dry.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Behavior / actions",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Criticizes Republican voters and 'us' for behavior and rhetoric; no attack on a protected identity. The reply agrees with the prior complaint rather than pushing back against it."
+  },
+  {
+    "post_id": "1539278586980536320",
+    "text": "@Kennymack1971 Challenging our white peers is a social and political task that, to be honest, most of us aren't built for. If we faced threats and discrimination every day, it might be different. This is where I start when I talk to friends and family about privilege.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "The reply discusses white peers, privilege, and social/political challenge without attacking a protected identity group or using insulting language."
+  },
+  {
+    "post_id": "1539280961745084420",
+    "text": "@Kennymack1971 In my circles there are conservative types who now have gay, trans, and mixed-race kids. Do I know for sure they have begun voting against R's? Not really. We gotta start these conversations, or we all lose.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "The reply discusses political conversations and mentions gay, trans, and mixed-race kids without attacking those identities. It does not contain abuse or push back against the original post's claims."
+  },
+  {
+    "post_id": "1539288372669300736",
+    "text": "@Kennymack1971 My demographic sucks. The reds vote according to gas prices and CRT while too many blues want a fairy godmother. Thanks for calling out people who suppress votes for clout. They're the worst. Avoiding responsibility is all they're doing.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Political belief or ideology",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply criticizes political groups and people who suppress votes, using mild dismissive language. It does not directly attack a protected identity in the reply itself, and it does not clearly push back against the original post's identity-focused criticism."
+  },
+  {
+    "post_id": "1540510883289473025",
+    "text": "@Kennymack1971 You are right. 💯",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "low",
+      "hate_target_group": "Race / ethnicity / nationality",
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "Reply explicitly agrees with an original post that makes negative generalizations about white people; the reply itself contains no direct slur or insult."
+  },
+  {
+    "post_id": "1539307981254189064",
+    "text": "@Kennymack1971 Equality, not equity.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "1",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply is a brief ideological rebuttal ('Equality, not equity') to the original post; it does not attack a protected identity or use abusive language."
+  },
+  {
+    "post_id": "1539323323334774786",
+    "text": "@Kennymack1971 @PragmaticObot Who cares? Right is right and we are more than them.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Unclear",
+      "counterspeech": "0",
+      "confidence": "low",
+      "flag_for_review": true
+    },
+    "reasoning": "Reply is dismissive and mildly hostile, but it does not explicitly name a protected group. Context suggests it may refer to the prior discussion about white people, but the target of 'them' is ambiguous, so no identity-hate label is supported."
+  },
+  {
+    "post_id": "1539267799863939074",
+    "text": "@Kennymack1971 Right! These same deplorable people are still pushing things like birtherism and QAnon after it being completely discredited. Even though it was obvious BS from the start. They either want to believe the BS or they simply do it to serve their extremist goals.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Political belief or ideology",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "The reply criticizes birtherism, QAnon, and extremist goals; it does not attack a protected identity group itself. It uses mild hostile wording like 'deplorable' while supporting the original post rather than pushing back."
+  },
+  {
+    "post_id": "1539275588183244806",
+    "text": "@Kennymack1971 @NR_Garrett They care more about the status of inflation and the economy more than about BIPOC… that’s just the sad truth",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "The reply comments on voters prioritizing inflation/economy over BIPOC, but does not attack a protected group or use abusive language. It does not push back against the original post."
+  },
+  {
+    "post_id": "1539275291364818945",
+    "text": "@Kennymack1971 @NR_Garrett Dems should start playing dirty… racism wins votes in America…. Denouncing white supremacy loses votes… it’s messed up but that’s the way it is",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Post discusses political strategy and racism/white supremacy in elections without attacking a protected identity group."
+  },
+  {
+    "post_id": "1539269932051054593",
+    "text": "@Kennymack1971 I followed her awhile back and it lasted about a day. I can’t stand when republicans do something wrong and people go right to criticizing Dems over it. Do they ever think that THEIR messaging of constant criticism about dem messaging might be part of the problem? 😒",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Political belief or ideology",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply criticizes Republicans/Democratic messaging and includes mild hostility, but does not attack a protected identity."
+  },
+  {
+    "post_id": "1539362016154071040",
+    "text": "@maudi63 @Kennymack1971 Dems get the Dem message just fine. It's just everything in the msm has to be run through the filters of the 60% of White males who voted for Trump. They get to frame the message anyway they choose. And the majority of them choose to make Dems look weak and ineffectual.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Behavior / actions",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "Mentions white males who voted Trump, but the post criticizes their voting behavior and media framing rather than attacking the identity itself. It does not clearly push back against the hostile original reply."
+  },
+  {
+    "post_id": "1539263649767899145",
+    "text": "@Kennymack1971 Exactly. She has a large follower base and yet is suppressing votes far more than any Republican because she's not educating her follower base on what President Biden and the Democrats have accomplished with a slim House majority and 50/50 Senate.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply praises and agrees with the original post, then criticizes a political figure’s actions and messaging. No identity-based attack or uncivil language in the target post."
+  },
+  {
+    "post_id": "1539279383206281217",
+    "text": "@KUnleashed2020 @Kennymack1971 https://t.co/tOVOd32yvD",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Target post contains only mentions and a link, with no visible insulting or identity-based language."
+  },
+  {
+    "post_id": "1539905282737725440",
+    "text": "@KUnleashed2020 @Kennymack1971 Please do share with us uneducated folks, what exactly are some of these accomplishments you speak of? Record low approval ratings? Economic recession? Gas fast approaching $7/gal? $55+ billion (so far) for Ukraine? Almost 9% yearly inflation?",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Intelligence / competence",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply uses sarcastic, dismissive language ('uneducated folks') in a political exchange. It does not attack a protected identity, and it does not clearly push back against the original post's harmful language."
+  },
+  {
+    "post_id": "1539273403408044032",
+    "text": "@Kennymack1971 TALK......",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Individual person",
+      "counterspeech": "0",
+      "confidence": "low",
+      "flag_for_review": true
+    },
+    "reasoning": "Reply is a terse 'TALK......' addressed to @Kennymack1971; no protected-group attack in the target post. Insufficient context to tell whether it is criticism, command, or counterspeech against the original post."
+  },
+  {
+    "post_id": "1539305655021936640",
+    "text": "@Kennymack1971 Been confronting that crowd since I was a CHILD and they got my gifted class teacher FIRED because she played us a film about how not to be recruited by the KKK.\n\nIt's easier to get a donkey into a beauty parlor than to get any new ideas into their heads.",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "low",
+      "hate_target_group": "Race / ethnicity / nationality",
+      "abuse_level": "moderate",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "Reply appears to continue the original post’s negative generalization about white people, using derogatory language about 'that crowd' and their intelligence/ideas. It does not push back against the original, so it is not counterspeech."
+  },
+  {
+    "post_id": "1539306004017319936",
+    "text": "@Kennymack1971 She’s a white supremacist I. disguise I learned recently.  She does the 👌🏾 signal all thru her videos. Another 🪴",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Individual person",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "The reply accuses a specific person of being a white supremacist in disguise and using signals, which is an attack on the individual/ideology rather than a protected group. No direct identity-based slur or generalization against a protected group is present."
+  },
+  {
+    "post_id": "1539371398405267457",
+    "text": "@Kennymack1971 @pareising Shut up yourself.  Some of us Mayo butts have voted democrat in every election since we were 18.  I am 70.  Fight me. Damn.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Individual person",
+      "counterspeech": "1",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply pushes back against the original post’s generalization about white people and uses mild profanity/insult toward the other user. No identity-directed attack in the target post."
+  },
+  {
+    "post_id": "1539706802949996546",
+    "text": "@shay20211 @Kennymack1971 @pareising And how many of ur conservative family members and friends have u schooled? Bc if voting is all that u do, it’s pretty weak sauce. Which was part of the point of the OP and u clearly missed it.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Intelligence / competence",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply criticizes another user’s response as missing the point and calls it weak sauce; no attack on a protected identity group in the target post. It supports the original post rather than pushing back."
+  },
+  {
+    "post_id": "1539274581969608706",
+    "text": "@Kennymack1971 @NR_Garrett You win elections in America by normalizing  racism as long as the economy is okay…. that’s just the way it is… Democrats should start playing dirty like Republicans",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Political belief or ideology",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "The reply criticizes political strategy and mentions racism in a general way, but does not attack a protected identity group. It contains mild hostile political commentary rather than identity-based hate."
+  },
+  {
+    "post_id": "1539313517529968648",
+    "text": "@Kennymack1971 You don’t talk sh¡t to PoliticsGirl. You can shut the f*ck up.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Individual person",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply uses a direct insult toward the other user and tells them to shut up. It does not attack a protected identity or clearly push back against the original post’s content."
+  },
+  {
+    "post_id": "1539307512888930305",
+    "text": "@Kennymack1971 Biden's approval with Latinos.\n26%\n\nRed tsunami in the November midterms.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "The reply mentions Latinos in a political-statistics context but does not attack a protected group. No abusive or threatening language is present, and it does not push back against the original post's harmful content."
+  },
+  {
+    "post_id": "1539296307491262470",
+    "text": "@Kennymack1971 @noxiloveschichi 💯Why is it that ONE voting bloc has gotten the message since they got the right to vote, but others seem to need a lengthy explanation on why they should evacuate during a hurricane?🤔",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Behavior / actions",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "The reply uses a dismissive, generalized comparison about voting blocs and behavior, but it does not explicitly attack a protected identity. It appears insulting/snarky rather than counterspeech to the original post."
+  },
+  {
+    "post_id": "509750664",
+    "text": "/v/ideogamer here, how do I cure AGP, bros?\nPlease help, this shit is ruining my life.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": null,
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "The post asks for help with 'AGP' and describes personal distress; it does not attack a protected group or direct abuse at another person or group."
+  },
+  {
+    "post_id": "509750804",
+    "text": "Here is your TL;DR on gender transition so you can get started as soon as possible.\nStop being a chud.\n\nBILLIONS.\nSHALL.\n\nTROON.\n\nWhat should I expect as a MtF?: https://transcare.ucsf.edu/article/information-estrogen-hormone-therapy\nHow do I know I have the mental illness gender dysphoria?: https://genderdysphoria.fyi/\nWhat to know to do it on my own?: https://diyhrt.wiki/\nWhere to buy bathtub estrogen?: https://astrovials.com/product/estradiol-enanthate/\nHow do even I know bathtub estrogen is safe?: https://transharmreduction.org/hrt-testing\nWhere to find other stuff?: https://hrtcafe.net/\nTestosterone is more difficult to get a hold of because it is a very controlled substance, unlike estradiol. The difficulty will vary greatly depending on your geographical location. I'd pay a visit to the local gym and ask the gymbros there where they got their testosterone from.\nFor all else you can ask /hrtgen/ on the catalog, make a thread on /lgbt/ and post on /r/TransDIY on Reddit.\n\"I'm AGP. Am I valid? Should I troon? Yes, if you have dysphoria. I don't think it's a good idea to transition purely out of a fetish. Seek guidance on /r/askAGP. It is full of dysphoric AGPs such as yourself. Same for AAPs: /r/autoandrophilia.\n\"I'm a low quality male without dysphoria and AGP. Should I troon out?\" Yes, definitely. If you are short, ugly, autistic and unfit for being a man in general, no amount of self improvement will save you. Transition now if you seek a survival level of dignity and quality of life. You aren't fit for male social roles and will likely kill yourself if you don't transition because your life will be miserable as a man.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "moderate",
+      "abuse_target": "Body size / appearance",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "Reply gives pro-transition advice and uses derogatory language like 'chud' and 'short, ugly,' but it does not attack a protected identity group. 'Autistic' appears as a descriptor rather than a direct attack."
+  },
+  {
+    "post_id": "509750892",
+    "text": ">>509750664\n>>509750804\nwhy are you like this",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Individual person",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply is a brief mocking remark directed at the OP; it does not attack a protected identity or offer pushback against the original post."
+  },
+  {
+    "post_id": "509750896",
+    "text": ">>509750664\nof course a german wants to be a sissy",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "low",
+      "hate_target_group": "Race / ethnicity / nationality",
+      "abuse_level": "mild",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "Targets Germans with a derogatory stereotype about wanting to be 'sissy'; no violence or severe dehumanization."
+  },
+  {
+    "post_id": "509750921",
+    "text": "Here is your TL;DR on gender transition so you can get started as soon as possible.\nStop being a chud.\n\nBILLIONS.\nSHALL.\n\nTROON.\n\nWhat should I expect as a MtF?: https://transcare.ucsf.edu/article/information-estrogen-hormone-therapy\nHow do I know I have the mental illness gender dysphoria?: https://genderdysphoria.fyi/\nWhat to know to do it on my own?: https://diyhrt.wiki/\nWhere to buy bathtub estrogen?: https://astrovials.com/product/estradiol-enanthate/\nHow do even I know bathtub estrogen is safe?: https://transharmreduction.org/hrt-testing\nWhere to find other stuff?: https://hrtcafe.net/\nFor all else you can ask /hrtgen/ on the catalog, make a thread on /lgbt/ and post on /r/TransDIY on Reddit.\n\"I'm AGP. Am I valid? Should I troon? Yes, if you have dysphoria. I don't think it's a good idea to transition purely out of a fetish. Seek guidance on /r/askAGP. It is full of dysphoric AGPs such as yourself. Same for AAPs: /r/autoandrophilia.\n\"I'm a low quality male without dysphoria and AGP. Should I troon out?\" Yes, definitely. If you are short, ugly, autistic and unfit for being a man in general, no amount of self improvement will save you. Transition now if you seek a survival level of dignity and quality of life. You aren't fit for male social roles and will likely kill yourself if you don't transition because your life will be miserable as a man.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "moderate",
+      "abuse_target": "Individual person",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "The reply is insulting and demeaning toward the addressee ('chud', 'low quality male') and gives harsh advice, but it does not attack a protected group as such. The trans-related slur/meme language appears in a supportive or advisory context rather than as anti-trans hate."
+  },
+  {
+    "post_id": "509750928",
+    "text": ">>509750664\nPimozide? Pimozine?\n\nCures AGP",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply mentions a medication for AGP and does not attack a protected identity or contain abusive language."
+  },
+  {
+    "post_id": "509751011",
+    "text": ">>509750921\nGay",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Individual person",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "Single-word reply is a dismissive insult. Context suggests it is likely used as a generic put-down rather than a clear attack on a protected identity, though ambiguity remains."
+  },
+  {
+    "post_id": "509751204",
+    "text": "wtf is AGP?",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "The reply only asks for clarification about “AGP” and does not attack any person or group."
+  },
+  {
+    "post_id": "509751328",
+    "text": ">>509751204\ngetting horny imagining yourself as a woman",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply gives a definition of AGP; it does not attack a protected identity or contain abusive language."
+  },
+  {
+    "post_id": "509751410",
+    "text": ">>509750921\njewish poison",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "medium",
+      "hate_target_group": "Religion",
+      "abuse_level": "moderate",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply uses a derogatory phrase targeting Jews/Jewish identity. It is an identity-based insult without an explicit threat or violence."
+  },
+  {
+    "post_id": "509751436",
+    "text": ">>509751204\nAge Gap Preference\nOP likes hags",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "low",
+      "hate_target_group": "Gender / sex",
+      "abuse_level": "mild",
+      "abuse_target": "Body size / appearance",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "Reply uses a derogatory term for women/older women in a shorthand definition. It is mildly insulting, but the main ambiguity is whether this is identity hate or just pejorative description, so I marked it as low-severity gender-directed hate with review flagged."
+  },
+  {
+    "post_id": "509751485",
+    "text": ">>509750664\nWhy not quit fighting it and be my gf",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Individual person",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply is a joking/teasing offer rather than an attack on a protected identity; no identity-directed hostility is expressed."
+  },
+  {
+    "post_id": "509751530",
+    "text": ">>509750664\nPlay jrpgs and hentai games with male main characters. I went from only ever playing a female character to only ever playing a male one due to this diet.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply gives advice about playing games with male protagonists as a way to address the OP’s issue; it does not attack any protected identity or use abusive language."
+  },
+  {
+    "post_id": "509751633",
+    "text": ">>509750664\nCan't really help you, the only thing that helped me was connection, comradery and purpose, but all that evaporated in 2020, and then relationships helped, but when those end and the despair comes back, so do the feelings. Being able to dedicate yourself to something external to yourself helps you see yourself from the eyes of others and you can respect yourself as the man you are because without the power you possess the people who count on you would have nothing.\nIt only helps as long as you can keep the purpose going... keep it going long enough and maybe you can rewire your fried brain, didn't help me though.. but then I use it as a cope and a crutch to escape the abyss, it's comforting to drown yourself and feel the cool waters of oblivion overtake you.\nGood luck, Krautfag.",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "medium",
+      "hate_target_group": "Race / ethnicity / nationality",
+      "abuse_level": "moderate",
+      "abuse_target": "Individual person",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply gives supportive advice but ends with an explicit ethnic slur directed at the addressed user. No pushback against the original post."
+  },
+  {
+    "post_id": "509751656",
+    "text": ">>509750664\nStop consuming pornography and start lifting. Once you start seeing yourself getting a more muscular physique it should stop entirely",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "The reply gives advice about pornography and exercise; it does not attack a protected identity or use abusive language."
+  },
+  {
+    "post_id": "509751796",
+    "text": ">>509750664\nYou just sort of have to realize you are not a woman. That it is a sick kink and no one will ever see you as a woman. I too was once a transwoman when i was younger. I thought i passed and everything but everyone knew i was a man but was just nice to me. That is the secret thing no one tells you is that you never actually become a woman and everyone knows it. Like the actual answer to your question is hang out with transwomen for a week and you will quickly realize how insane they are. They believe that you can have different people inside of you, that they can have periods, that they get are actually women despite acting like autistic nerds, and nearly all of them have autism. Watch this video.\n\nhttps://youtu.be/z24cFBf5gbw\n\n>>509750921\nAll transwomen are men and stop encourging this false hope that you give these men who are lonely. You can't become a woman. You are autistic and you can get help ffs.",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "medium",
+      "hate_target_group": "Gender / sex",
+      "abuse_level": "moderate",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply attacks trans women as a group with repeated derogatory claims and dismissal of their identity. No violence or elimination language, but the language is clearly demeaning."
+  },
+  {
+    "post_id": "509751896",
+    "text": ">>509751328\nWhy does he speak in perfect king’s English for most of it and then in the next to last paragraph he starts writing like an ESL retard?",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "moderate",
+      "abuse_target": "Intelligence / competence",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Uses an ableist slur to insult the writing quality/competence of the referenced post. No clear attack on a protected identity group; 'ESL' appears descriptive here."
+  },
+  {
+    "post_id": "509751898",
+    "text": ">>509750664\n>\"help I watch too much porn!\"\n>includes pornographic image with his post",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Behavior / actions",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply quotes the original concern and mocks it as porn use; no attack on a protected identity and no clear pushback against harm in the original post."
+  },
+  {
+    "post_id": "509752033",
+    "text": ">>509751328\n>tell the AI it’s you but girl\n>image of a girl\n>he just assumes it’s him because ego\nEveryone who is vain is willing to be gay if it compliments their ego.\nOh I just found the Achilles heel of faggotry didn’t I?",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "medium",
+      "hate_target_group": "Sexual orientation",
+      "abuse_level": "moderate",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "Uses a clear anti-gay slur and a derogatory generalization about being gay; no countering stance is present. The exact target is somewhat meme-like, so review may help."
+  },
+  {
+    "post_id": "509752173",
+    "text": ">>509751896\nI guess it is a mixture of being horny for the new toy and an underlying realization that this way leads nowhere.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply comments on the person’s motivation and trajectory, not a protected identity. No clear abusive or counterspeech content in the target post."
+  },
+  {
+    "post_id": "509752481",
+    "text": ">>509750664\nAnon, the AGP slot is quite outdated. You need to move on.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Behavior / actions",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply appears to make a wordplay joke about the AGP hardware slot rather than attack a protected identity. It includes a mild dismissive remark telling OP to move on, but no identity-based hostility."
+  },
+  {
+    "post_id": "509753605",
+    "text": ">>509750664\nStop playing gay games? You know the gameplay is mediocre and the main selling point is the characters.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Behavior / actions",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply uses a dismissive insult and pejorative use of \"gay\" toward games, but it does not clearly attack a protected group itself; main attack is on the games/behavior rather than an identity."
+  },
+  {
+    "post_id": "509754462",
+    "text": ">>509750921\nwhy would anyone want to be weak? women are weak you know? a manlet jeet can easily kill a fat 6 ft dutch woman. why would you want to be more inferior than a jeet?",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "medium",
+      "hate_target_group": "Gender / sex",
+      "abuse_level": "moderate",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "Targets women with a broad claim that they are weak and inferior; also includes an ethnic slur used as part of the insult. No explicit threat or violence, so severity is medium."
+  },
+  {
+    "post_id": "509754620",
+    "text": ">>509750664\n>play with dolls too much and start seeing yourself as one of the dolls\nSkill issue on your part, faggot. Just cum on them and move on like a white man should do.",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "medium",
+      "hate_target_group": "Sexual orientation",
+      "abuse_level": "moderate",
+      "abuse_target": "Individual person",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "Uses a homophobic slur aimed at the addressee; no threat or violent language. The rest of the reply is insulting advice, not counterspeech."
+  },
+  {
+    "post_id": "509754741",
+    "text": ">>509750664\nEstrogen helps",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply is a brief suggestion ('Estrogen helps') in response to a self-help question; it does not attack a protected identity or contain abuse."
+  },
+  {
+    "post_id": "509755066",
+    "text": ">>509750664\n>\"X\" here...\n>1 post by the faggot OP\n>Forcing the gaming = troon meme\nIf you keep replying to bait it will keep getting posted",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "medium",
+      "hate_target_group": "Sexual orientation",
+      "abuse_level": "moderate",
+      "abuse_target": "Individual person",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "The reply uses an anti-gay slur directly toward the OP; it also mentions a trans-coded meme, but the clearest identity target is sexual orientation. The final sentence is more about baiting than pushback, so it is not counterspeech."
+  },
+  {
+    "post_id": "509756366",
+    "text": ">>509750664\nPimozide, fenbendazole, a tifungals, or antiparasitics",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply lists possible medications/treatments and does not attack a protected identity or contain abusive language."
+  },
+  {
+    "post_id": "509756407",
+    "text": "This thread was moved to >>>/bant/22908884",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Target post is only a thread-moved notice and contains no attack on a protected group or other abusive language."
+  },
+  {
+    "post_id": "509757402",
+    "text": "You visit Belgium\nGet on the bus\nNext station bus gets infested with niggers",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "high",
+      "hate_target_group": "Race / ethnicity / nationality",
+      "abuse_level": "severe",
+      "abuse_target": "Protected identity group",
+      "counterspeech": null,
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Uses an explicit racial slur and dehumanizing language about Black people, framed as contamination/infestation."
+  },
+  {
+    "post_id": "509757680",
+    "text": ">>509757402\n>Noooo stop having fun on the bus be quiet and white and miserable!",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Political belief or ideology",
+      "counterspeech": "1",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply quotes a racist original and appears to mock that stance by reversing the wording; no clear attack on a protected group in the reply itself."
+  },
+  {
+    "post_id": "509760044",
+    "text": ">>509757680\n>Noooo stop behaving in a civilised manner. You must ooga booga to loud bass whenever in public!",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "medium",
+      "hate_target_group": "Race / ethnicity / nationality",
+      "abuse_level": "moderate",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "1",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "Reply is sarcastic and appears to mock the racist original, but it still uses a demeaning racial caricature/stereotype directed at black people. Counterspeech vs. endorsement is somewhat ambiguous."
+  },
+  {
+    "post_id": "509760279",
+    "text": ">>509757402\n>i pull out my bottle of anti-nigger\n>i set it alight",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "high",
+      "hate_target_group": "Race / ethnicity / nationality",
+      "abuse_level": "severe",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply repeats a racial slur and adds violent imagery by describing lighting it on fire, which indicates hostility toward Black people rather than counterspeech."
+  },
+  {
+    "post_id": "509760289",
+    "text": ">>509757402\n>You visit Belgium\n\nwhy anyone would visit that souless no country half-arab shithole?",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "medium",
+      "hate_target_group": "Race / ethnicity / nationality",
+      "abuse_level": "moderate",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "Reply continues the hostile framing of Belgium and uses a derogatory ethnic/racial descriptor (“half-arab”), which makes it identity-directed. It does not challenge the racist original post."
+  },
+  {
+    "post_id": "509760552",
+    "text": ">>509757402\nLife is the 5th elements after earth, water, wind and fire. Life can be a natural disaster for destruction or a tool for building something good",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "Reply does not contain identity-based attacks. It is a vague philosophical statement and does not clearly push back on the hateful original, so counterspeech is not strongly supported."
+  },
+  {
+    "post_id": "509760632",
+    "text": ">>509757680\nShut the fuck up go be niggers back to your own home",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "medium",
+      "hate_target_group": "Race / ethnicity / nationality",
+      "abuse_level": "moderate",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply uses an explicit racial slur and tells the addressed group to leave, attacking a protected identity. It does not push back against the harmful original; it repeats similar hostility."
+  },
+  {
+    "post_id": "509760729",
+    "text": ">>509757680\nBeing on the bus is miserable enough. Don't increase the misery.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "Target post makes a general complaint about bus travel and does not attack a protected identity. It also does not clearly push back against the racist original post, so counterspeech is not supported."
+  },
+  {
+    "post_id": "509760790",
+    "text": ">>509760279\nIf everyone of us do that maybe we can outnumber shitskins",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "medium",
+      "hate_target_group": "Race / ethnicity / nationality",
+      "abuse_level": "moderate",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply uses a racial slur to refer to black people and endorses the racist framing of the parent post. No direct threat or call for violence in the target text itself."
+  },
+  {
+    "post_id": "509760893",
+    "text": ">>509760279\nWas that portable nerve gas he lit.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Target post asks a question about what was lit and does not itself attack a protected group. It does not challenge the hateful original post, so it is not counterspeech."
+  },
+  {
+    "post_id": "509762226",
+    "text": "Migrants will sleep with your sister, your mom and your gf. Equal opportunity",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "moderate",
+      "abuse_target": "Family or personal life",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "The reply uses a vulgar, degrading remark about migrants and the recipient's family/partners, but it does not clearly attack a protected identity itself. It does not appear to push back against the original hateful post; it responds with more abuse."
+  },
+  {
+    "post_id": "509762349",
+    "text": ">>509760044\nKek",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Target reply is only a reaction (“Kek”) and does not itself attack a protected group or push back against the hateful original post."
+  },
+  {
+    "post_id": "509762724",
+    "text": "No way I would ever get into some overpacked subhuman filthy cuckbus mobile zoo with people acting like that...not happening....",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "moderate",
+      "abuse_target": "Behavior / actions",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "The reply uses strong derogatory language about the bus scene and people’s conduct, but it does not directly attack a protected identity. It appears to react negatively to the described behavior rather than clearly countering the original post."
+  },
+  {
+    "post_id": "509764675",
+    "text": ">>509757680\n>fun\n>on public transport\nretarded",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "moderate",
+      "abuse_target": "Behavior / actions",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "Reply does not address the protected group in the original post. It uses a derogatory slur as a general insult toward the idea of having fun on public transport, not as an explicit attack on disabled people."
+  },
+  {
+    "post_id": "509765336",
+    "text": ">>509757680\nas a Swiss... I want to kill you... subhuman.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "severe",
+      "abuse_target": "Individual person",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "Reply threatens the addressed user and calls them subhuman. The target is an individual rather than a clearly identified protected group, so no identity-hate label is applied."
+  },
+  {
+    "post_id": "114827438940651821",
+    "text": "Your tribe made the decision, Zion Don, and you followed orders. Julani is a human rights violator and is not the leader of Syria. He is an invader, his army is an invader occupying army, and nothing they do will ever make them legitimate.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Individual person",
+      "counterspeech": null,
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "The post attacks a named person and his forces as invaders and illegitimate, but does not clearly attack a protected identity. The phrase \"your tribe\" is ambiguous and could be coded, but the context is insufficient to पुष्टि identity-based hate."
+  },
+  {
+    "post_id": "114827450207963696",
+    "text": "@WendyMilling Got to get somr kind of head way to peace!",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "1",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "Reply does not attack a protected group or individual; it appears to de-escalate by calling for peace in response to the hostile original post, though the intent is somewhat ambiguous."
+  },
+  {
+    "post_id": "114827464468226738",
+    "text": "@WendyMilling I wouldn't believe the \"pathological\" liar \"Donald Trump\" should her \"tongue\" be \"notarized\" by \"Jesus Christ\" himself! We all know that those two would never be found in the same space, at the same time under any circumstances!",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Individual person",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "The reply insults Donald Trump as a liar but does not attack a protected identity. It does not clearly push back against the original post’s identity-based language, so counterspeech is not supported."
+  },
+  {
+    "post_id": "gab-ad-comment",
+    "text": "No text found (Timeout/Not Found).",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "low",
+      "flag_for_review": true
+    },
+    "reasoning": "Target post text was unavailable, and no OCR or media description was provided, so the reply cannot be reliably assessed for hate, abuse, or counterspeech."
+  },
+  {
+    "post_id": "114827502200112991",
+    "text": "@WendyMilling\nI still trust elmo more than any of these puppets",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Individual person",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply uses a mild dismissive insult ('puppets') toward the people being discussed, but does not attack a protected identity and does not push back against the original post's harmful content."
+  },
+  {
+    "post_id": "114828437692216161",
+    "text": "@WendyMilling Oh...yesss....! Believe an Islamist biased news source..! LOL...!",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Political belief or ideology",
+      "counterspeech": "1",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply dismisses the original claim by mocking an alleged biased news source; it does not attack a protected identity. Mild uncivil language/sarcasm only."
+  },
+  {
+    "post_id": "114823268206085862",
+    "text": "When people are seeding clouds to make it rain, and then it rains at such an abnormal level of intensity (excluding hurricanes) , people are naturally going to connect the dots, whether legit or not. Hard to blame them, maybe we shouldn't seed clouds when heavy rains are forecast for an area.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": null,
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Post discusses cloud seeding and heavy rain, expressing skepticism about the practice; no attack on a protected identity or abusive language toward a person/group."
+  },
+  {
+    "post_id": "114823289490463849",
+    "text": "@waltemyer maybe we shouldnt be trying to modify the weather at all. When I hear of \"man made climate change\", this is what I think of....",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply criticizes weather modification and expresses skepticism about ‘man made climate change,’ but does not attack a protected identity or use abusive language."
+  },
+  {
+    "post_id": "114823284923894168",
+    "text": "@waltemyer we've been doing a lot of stupid things since the 40s",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Behavior / actions",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply uses dismissive language ('stupid things') but does not attack a protected identity. It appears to criticize the idea/actions rather than a protected group; no clear counterspeech against harmful content in the original post."
+  },
+  {
+    "post_id": "gab-ad-comment",
+    "text": "No text found (Timeout/Not Found).",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "low",
+      "flag_for_review": true
+    },
+    "reasoning": "Target post text was unavailable/empty, so no identity hate or abuse is evident. As a reply, it does not provide discernible counterspeech."
+  },
+  {
+    "post_id": "114823352682111853",
+    "text": "@waltemyer Aren't the floods in NC, TX and now NM caused by DEWs?",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "The reply asks a conspiracy-style question about flood causes and does not attack any protected identity or contain abusive language. It does not counter the original post."
+  },
+  {
+    "post_id": "114823358177993725",
+    "text": "@waltemyer Yes, indeed, and many more \"tumultuous\" occurrences to \"cull the herd\", and keep us in line with what the \" Jew Overlords\" wish us to be! It's the caucasian,\"Jewish \" \"minions\" of this lame ass \"criminal government\" that make ever thing as horrible as it is, always has been! If not for them, the \"Middle East\" countries would have done away with the \"Jew\" infestation long ago!",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "high",
+      "hate_target_group": "Religion",
+      "abuse_level": "severe",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Targets Jews with dehumanizing and eliminationist language (\"infestation,\" \"do away with\") and blames them for societal problems. The reply does not push back against the original post."
+  },
+  {
+    "post_id": "114823360436808571",
+    "text": "@waltemyer\nSeeding clouds has lead to more destructive hail storms than ever before. Who do these people think they are screwing with God's handy work? They are no different than the assholes who want to block out the sun. It's not theirs to fuck with!",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Behavior / actions",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply criticizes cloud seeding and similar activity with profanity, but does not attack a protected identity. The abuse is aimed at the actions/behavior of the people involved."
+  },
+  {
+    "post_id": "114823406001760768",
+    "text": "https://getpocket.com/explore/item/can-medieval-sleeping-habits-fix-america-s-insomnia?utm_source=firefox-newtab-en-us",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Target post is only an unrelated URL with no hateful or abusive language. It does not push back against the original post, so counterspeech is 0."
+  },
+  {
+    "post_id": "114823492483944992",
+    "text": "@waltemyer So if that's not what caused it, what was Mr Expert?? You seem to have the answers so tell us what caused it? Do YOU know how long it takes cloud seeding to work? I doubt it very much.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Individual person",
+      "counterspeech": "1",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply is sarcastic and dismissive toward the named user, but it does not attack any protected identity. It challenges the prior cloud-seeding claim rather than endorsing it."
+  },
+  {
+    "post_id": "114823536480111363",
+    "text": "@waltemyer you dont think theyre not seedi g the hurricanes. Helen is a perfect example.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply repeats and amplifies a conspiracy claim about hurricane seeding; it does not attack a protected identity or contain abusive language."
+  },
+  {
+    "post_id": "114823653767287350",
+    "text": "@waltemyer\nAir pressure controls cloud movement.\nClouds don’t sit over one location for days.\nCloud movement is highly unpredictable.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "1",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply corrects the original post’s weather claim and pushes back against it; no protected-identity attack or abusive language present."
+  },
+  {
+    "post_id": "114823672318417472",
+    "text": "@waltemyer It is very simple to blame them. Playing God affects so many others. They must be prosecuted.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Behavior / actions",
+      "counterspeech": "1",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply pushes back on the prior post and argues people seeding clouds should be prosecuted. No protected group is targeted; criticism is directed at the action."
+  },
+  {
+    "post_id": "1409662",
+    "text": "Some Quotes on Trump by Tim Allen... July 12, 2024 Tim Allen... (via Email) Here are some interesting points to consider prior to the November election, especially for my friends on the fence, like moderate Democrats, Libertarians, and Independents, the never-Trump Republicans, and those thinking of \"walking away\" from the Democratic party. Women are upset at Trump's naughty words, but they also bought 80 million copies of 50 Shades of Gray. Not one feminist has defended Sarah Sanders. It seems women's rights only matter if those women are liberal. Chelsea Clinton got out of college and got a job at NBC that paid  $900,000  per year. Her mom flies around the country, speaking out about white privilege. And just like that, they went from being against foreign interference in our elections to allowing non-citizens to vote in our elections. President Trump's wall costs less than the Obamacare website. Let that sink in, America. We are one election away from open borders, socialism, gun confiscation, and full-term abortion nationally. We are fighting evil. They sent more troops and armament to arrest Roger Stone than they sent to defend Benghazi. 60 years ago, Venezuela was 4th on the world economic freedom index. Today, they are 179th and their citizens are dying of starvation. In only 10 years, Venezuela was destroyed by democratic socialism. Russia donated $0.00  to the Trump campaign.  Russia donated $145,600,000 to the Clinton Foundation. But Trump was the one investigated! Nancy  Pelosi invited illegal aliens to the State of the Union. President Trump  Invited victims of illegal aliens to the State of the Union. Let that sink in. A socialist is basically a communist who doesn't have the power to take everything from their citizens at gunpoint ... Yet! How do you walk 3000 miles across Mexico without food or support and show up at our border 100 pounds overweight and with a cellphone? Alexandria Ocasio Cortez wants to ban cars, ban planes, give out universal income, and thinks socialism works. She calls Donald Trump crazy. Bill Clinton paid $850,000 to Paula Jones To get her to go away. I don't remember the FBI raiding his lawyer's office. I wake up every day and I am grateful that Hillary Clinton is not the president of the United States of America. The same media that told me Hillary Clinton had a 95% chance of winning now tells me Trump's approval ratings are low. The problem with socialism is that sooner or later, you run out of other people's money.... Margaret Thatcher... Maxine Waters opposes voter ID laws; She thinks that they are racist. You need to have a photo ID to attend her town hall meetings. President Trump said, \"They're not after me. They're after you.  I'm just in their way.\"",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Political belief or ideology",
+      "counterspeech": null,
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "Primarily a partisan political rant attacking liberals/socialists/feminists and several public figures. It includes some derogatory and mocking language, but no clear attack on a protected identity as such."
+  },
+  {
+    "post_id": "reply-1",
+    "text": "Do you have proof he sent this email. Good post either way.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply asks for proof the email was sent and then endorses the post; it does not challenge the original content or attack a protected group."
+  },
+  {
+    "post_id": "reply-2",
+    "text": "Quote: Originally Posted by BoyHowdy Some Quotes on Trump by Tim Allen... July 12, 2024 Tim Allen... (via Email) Here are some interesting points to consider prior to the November election, especially for my friends on the fence, like moderate Democrats, Libertarians, and Independents, the never-Trump Republicans, and those thinking of \"walking away\" from the Democratic party. Women are upset at Trump's naughty words, but they also bought 80 million copies of 50 Shades of Gray. Not one feminist has defended Sarah Sanders. It seems women's rights only matter if those women are liberal. Chelsea Clinton got out of college and got a job at NBC that paid  $900,000  per year. Her mom flies around the country, speaking out about white privilege. And just like that, they went from being against foreign interference in our elections to allowing non-citizens to vote in our elections. President Trump's wall costs less than the Obamacare website. Let that sink in, America. We are one election away from open borders, socialism, gun confiscation, and full-term abortion nationally. We are fighting evil. They sent more troops and armament to arrest Roger Stone than they sent to defend Benghazi. 60 years ago, Venezuela was 4th on the world economic freedom index. Today, they are 179th and their citizens are dying of starvation. In only 10 years, Venezuela was destroyed by democratic socialism. Russia donated $0.00  to the Trump campaign.  Russia donated $145,600,000 to the Clinton Foundation. But Trump was the one investigated! Nancy  Pelosi invited illegal aliens to the State of the Union. President Trump  Invited victims of illegal aliens to the State of the Union. Let that sink in. A socialist is basically a communist who doesn't have the power to take everything from their citizens at gunpoint ... Yet! How do you walk 3000 miles across Mexico without food or support and show up at our border 100 pounds overweight and with a cellphone? Alexandria Ocasio Cortez wants to ban cars, ban planes, give out universal income, and thinks socialism works. She calls Donald Trump crazy. Bill Clinton paid $850,000 to Paula Jones To get her to go away. I don't remember the FBI raiding his lawyer's office. I wake up every day and I am grateful that Hillary Clinton is not the president of the United States of America. The same media that told me Hillary Clinton had a 95% chance of winning now tells me Trump's approval ratings are low. The problem with socialism is that sooner or later, you run out of other people's money.... Margaret Thatcher... Maxine Waters opposes voter ID laws; She thinks that they are racist. You need to have a photo ID to attend her town hall meetings. President Trump said, \"They're not after me. They're after you.  I'm just in their way.\" Great job Tim Allen. Let's hope more White celebrities think this way.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply endorses the quoted political content and praises white celebrities, but does not attack a protected group."
+  },
+  {
+    "post_id": "reply-3",
+    "text": "Bahhaha... (i like them) ~ Some true to life sayings ... Good work BH !",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply is approving/laughing at the original post and gives praise, but it does not itself attack any protected identity group or contain abusive language."
+  },
+  {
+    "post_id": "reply-4",
+    "text": "Quote: Originally Posted by NationalCrusader14 Do you have proof he sent this email. Good post either way. it was Wilson who told him this",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply endorses the quoted post and addresses attribution/proof; it contains no attack on a protected identity or other abusive language."
+  },
+  {
+    "post_id": "1416380",
+    "text": "Quote: (Joe Biden's military) REPORT: President Trump to Remove Transgender Servicemembers from Military on Day One by Cristina Laila Nov. 24, 2024 7:20 pm President Trump will remove transgender servicemembers from the military by executive order on day one of his presidency. “The ban is expected to be wider ranging than a similar order made during his first term in office, when Trump prevented transgender people joining the armed forces, but allowed those already serving to keep their jobs. President Biden rescinded the order, but this time even those with decades of service will be removed from their posts, according to several sources,” The Times reported. The Times reported: Donald Trump is planning an executive order that would lead to the removal of all transgender members of the US military, defence sources say. The order could come on his first day back in the White House, January 20. .... Good riddance. Talk about a collection of degenerate garbage.",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "high",
+      "hate_target_group": "Gender / sex",
+      "abuse_level": "moderate",
+      "abuse_target": "Protected identity group",
+      "counterspeech": null,
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Targets transgender people with dismissive and dehumanizing language ('good riddance,' 'degenerate garbage'). No explicit threat, but the protected group is attacked directly."
+  },
+  {
+    "post_id": "reply-1",
+    "text": "Big mistake to remove them.  Put them in Gaza on the front line and let them perish.",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "high",
+      "hate_target_group": "Gender / sex",
+      "abuse_level": "severe",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Targets transgender people with a call for them to be sent into lethal frontline combat and to perish. It does not push back against the harmful original post; it adds violence."
+  },
+  {
+    "post_id": "reply-2",
+    "text": "Quote: Originally Posted by Gelatinous Cube Big mistake to remove them.  Put them in Gaza on the front line and let them perish. No doubt. At least the race-mixing and queer race-mixing Hoft brothers of the Gateway Pundit don't seem to be shills for the transgender industrial complex... The Transgender-Industrial Complex by Scott Howard – Antelope Hill Publishing",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "high",
+      "hate_target_group": "Gender / sex",
+      "abuse_level": "severe",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "Reply quotes a call for transgender servicemembers to be sent to Gaza to perish and adds agreement with 'No doubt,' indicating endorsement of violent anti-trans sentiment. The post also uses derogatory language about the group."
+  },
+  {
+    "post_id": "reply-3",
+    "text": "I hope the Homosexuals too. There are probably many more of them. BTL",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "medium",
+      "hate_target_group": "Sexual orientation",
+      "abuse_level": "moderate",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply explicitly expresses hostility toward homosexuals as a group and supports their removal, which is identity-based hate. No direct threat or violence is stated."
+  },
+  {
+    "post_id": "reply-4",
+    "text": "Are they going to be discharged with full benefits?",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "The reply asks about discharge benefits for transgender servicemembers; it does not attack a protected identity or push back against the original post's hostility."
+  },
+  {
+    "post_id": "reply-5",
+    "text": "They should form them all into an \"elite\" tranny brigade and send them as reinforcements to the IDF. With a tad bit of luck they will dispose of themselves in Gaza and few few kike troops through sheer incompetency.",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "high",
+      "hate_target_group": "Gender / sex",
+      "abuse_level": "severe",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "Uses a slur for transgender people and expresses hope they die in Gaza; also includes an antisemitic slur, but the main target appears to be transgender people."
+  },
+  {
+    "post_id": "reply-6",
+    "text": "Quote: Originally Posted by panzer88 They should form them all into an \"elite\" tranny brigade and send them as reinforcements to the IDF. With a tad bit of luck they will dispose of themselves in Gaza and few few kike troops through sheer incompetency. Yes, why should we send our best to die for “our greatest ally” (our greatest enemy)?",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "high",
+      "hate_target_group": "Other protected identity",
+      "abuse_level": "severe",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": true
+    },
+    "reasoning": "The reply quotes and endorses slurs against transgender people and Jews, and wishes the targeted group would die in Gaza. It is identity-based hate with violent/eliminationist framing. The main protected target is somewhat mixed, so I flagged for review."
+  },
+  {
+    "post_id": "reply-7",
+    "text": "https://www.youtube.com/watch?v=h_62OuECC7Q (Skip ahead to 2:20) The Biden regime allowed in as many as 15,000 transgenders into the military --almost a whole division. No doubt they were all hoping to get transgender surgeries and hormone therapy at taxpayers' expense. Were any of them of any value to the military? Probably not. Overall a huge negative for the military.",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "medium",
+      "hate_target_group": "Gender / sex",
+      "abuse_level": "moderate",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Targets transgender people as a group, calling them a negative for the military and implying they have no value; no countering language present."
+  },
+  {
+    "post_id": "reply-8",
+    "text": "Thank god. I thought it wouldn't be that easy.",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "medium",
+      "hate_target_group": "Gender / sex",
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "Reply expresses approval of removing transgender servicemembers and follows a clearly anti-trans original post. It does not add explicit slurs, but it endorses discriminatory exclusion of a protected group."
+  },
+  {
+    "post_id": "reply-9",
+    "text": "It’s good that Trump wants to clean up the armed forces but I hope not in plans for a war.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "Reply appears to endorse the earlier anti-trans post by praising removing people from the armed forces, but the target text itself does not explicitly attack a protected identity or use overt slurs. No direct abusive language in the reply."
+  },
+  {
+    "post_id": "reply-10",
+    "text": "Quote: Originally Posted by WhiteRights https://www.youtube.com/watch?v=h_62OuECC7Q (Skip ahead to 2:20) The Biden regime allowed in as many as 15,000 transgenders into the military --almost a whole division. No doubt they were all hoping to get transgender surgeries and hormone therapy at taxpayers' expense. Were any of them of any value to the military? Probably not. Overall a huge negative for the military. The horrifying part is they could actually find 15,000 transgenders in the first place.",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "medium",
+      "hate_target_group": "Gender / sex",
+      "abuse_level": "moderate",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Targets transgender people with demeaning generalizations about their worth and existence, framed as a group-based negative claim about service members. The reply supports rather than challenges the harmful original post."
+  },
+  {
+    "post_id": "reply-11",
+    "text": "The US military as it currently stands is an armed farces.  They're as gay as a music video of the Village People. They got whipped by the Taliban after 20 years of fighting. They're currently getting whipped by those sandal-wearing Moslems in Yemen. They're the greatest funded losers of the century.  Who can they actually beat?  They got more problems than just troons.",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "medium",
+      "hate_target_group": "Religion",
+      "abuse_level": "moderate",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "The post uses derogatory group references toward Muslims and transgender people. The clearest protected-identity attack is the pejorative reference to Muslims; it also contains a slur for transgender people. It is insulting and degrading but not a threat or call for violence."
+  },
+  {
+    "post_id": "reply-12",
+    "text": "This thread is just more fake news: Spox Shoots Down Report Claiming Trump Would Remove All Transgender Troops Quote: Trump transition team spokeswoman Karoline Leavitt said in a statement to the paper and other news outlets: \"These unnamed sources are speculating and have no idea what they are actually talking about. No decisions on this issue have been made. No policy should ever be deemed official unless it comes directly from President Trump or his authorized spokespeople.\" Quote: There have been a number of inaccurate reports about what the incoming Trump administration will do. The Times, citing unnamed sources “familiar with Trump’s plans” complained that “people will be forced out at a time when the military can’t recruit enough people. It is unknown how many transgender troops are currently serving in the military, out of 1.3 million active-duty members.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Behavior / actions",
+      "counterspeech": "1",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "The reply rejects the report as fake/inaccurate and quotes a spokesperson denying any decision; it does not attack transgender people. Mild dismissive language is aimed at the thread/report rather than a protected group."
+  },
+  {
+    "post_id": "reply-13",
+    "text": "Quote: Originally Posted by Dietl This thread is just more fake news: Spox Shoots Down Report Claiming Trump Would Remove All Transgender Troops This wouldn't be surprising considering the source of the OP. The race-mixers and queers at the Gateway Pundit are known for poisoning the well and muddying the waters, mixed in with some truth, in order to legitimize the other sensationalized disinformation and misinformation.",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "medium",
+      "hate_target_group": "Sexual orientation",
+      "abuse_level": "moderate",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply uses a derogatory slur for gay/queer people and hostilely labels them as a group; it criticizes the source rather than pushing back against the original post."
+  },
+  {
+    "post_id": "reply-14",
+    "text": "Quote: Originally Posted by RJM Brigade This wouldn't be surprising considering the source of the OP. The race-mixers and queers at the Gateway Pundit are known for poisoning the well and muddying the waters, mixed in with some truth, in order to legitimize the other sensationalized disinformation and misinformation. The Gateway Pundit relies on mainstream news.  They cited TheTimes.com link. Donald Trump ‘to kick transgender troops out of US military’ And in Dr. Steve Turley showed an article from the British newspaper The Telegram saying the same thing.",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "medium",
+      "hate_target_group": "Sexual orientation",
+      "abuse_level": "moderate",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply uses a slur ('queers') and hostile generalized language toward people associated with the outlet, with the clearest protected-identity target being sexual orientation. It also criticizes the source's reliability, but does not push back against the hateful original post."
+  },
+  {
+    "post_id": "reply-15",
+    "text": "Quote: Originally Posted by vikingcelt The Gateway Pundit relies on mainstream news.  They cited TheTimes.com link. Donald Trump ‘to kick transgender troops out of US military’ And in Dr. Steve Turley showed an article from the British newspaper The Telegram saying the same thing. But it's still B.S.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Other",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "Target post quotes another user and dismisses the report as 'B.S.'; it does not directly attack transgender people. The only abusive language is a mild dismissal aimed at the claim/article, not the protected group. Counterspeech is ambiguous because it rejects the report rather than clearly opposing the hateful language in the original post."
+  },
+  {
+    "post_id": "reply-16",
+    "text": "Quote: Originally Posted by Dietl But it's still B.S. It was probably a legitimate rumor in the beginning, then it may have gotten too hot for the Trump team to handle, so they changed the story.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Behavior / actions",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply dismisses the linked report as 'B.S.' and speculates about the story changing; it does not attack a protected group or push back against the original post's anti-trans sentiment."
+  },
+  {
+    "post_id": "reply-17",
+    "text": "Quote: Originally Posted by vikingcelt It was probably a legitimate rumor in the beginning, then it may have gotten too hot for the Trump team to handle, so they changed the story. Legitimate rumor... Yeah!  Yeah! That's the ticket!\n\n[OCR Text from images: TOMMY FLANAGAN,\n\nOF TRUTH]",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Behavior / actions",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply quotes another user and uses sarcastic agreement about the rumor/story, but does not attack transgender people in its own language. No identity-based slur or explicit pushback against the original hateful post."
+  },
+  {
+    "post_id": "reply-18",
+    "text": "1. There are no crossdressing pretenders who have served for decades openly like the OP's article states. DADT was not rescinded until obummer made it happen in 2010, and that was just for the 'normal' degenerates. 2. Trump cannot simply dismiss lower enlisted people at a whim. It is a breach of contract on the part of the government and those kicked under it would become filthy rich. The only way to purge the deviants is to change policies within the military and wait for them to violate those. Bringing back old higher standards in physical training, discipline, medical and mental requirements, and background checks will also help tremendously. The side effect of doing it this way is that the liberals have a less direct thing to scream about.",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "medium",
+      "hate_target_group": "Gender / sex",
+      "abuse_level": "moderate",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "The post uses derogatory terms for transgender people and describes them as deviants/degenerates, advocating their removal from the military. It does not challenge the harmful framing in the original post."
+  },
+  {
+    "post_id": "reply-19",
+    "text": "Yeah ! I sure hope we will do the same in Canada, once that freaking woke Trudeau is out.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Political belief or ideology",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "The reply endorses excluding transgender servicemembers but does not directly attack a protected group itself. It contains a mild hostile remark about Trudeau/'woke' politics."
+  },
+  {
+    "post_id": "reply-20",
+    "text": "Why do these freaks of nature want to serve in the military in the first place? What are they trying to prove? Are they doing this as some sort of desperate attempt to normalize themselves, that by protecting and fighting for the country is somehow automatically going to make people overlook their degenerate lifestyles?",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "medium",
+      "hate_target_group": "Gender / sex",
+      "abuse_level": "moderate",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Targets transgender people with degrading language and claims they have a 'degenerate lifestyle.' No violence or direct threat; the reply supports the original post rather than resisting it."
+  },
+  {
+    "post_id": "https://vnnforum.com/showthread.php?t=572635",
+    "text": "Why are the thumb up/down buttons gone?\n\nDoes anybody know why the thumb up/down buttons have been removed?",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": null,
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "The post asks about missing UI buttons and contains no attack on a protected identity or abusive language."
+  },
+  {
+    "post_id": "reply-1",
+    "text": "Varg said he eliminated the thumbs option because it had been abused by trolls and a lot of others complain when they get thumbs down. He posted this in my thread should the thumbs option be dropped.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Informational reply about forum moderation/features; no attack on a protected identity or abusive language toward a person/group."
+  },
+  {
+    "post_id": "reply-2",
+    "text": "Makes sense, that way if someone has an issue they have to do more than click and most trolls won't say anything anyway,..",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Behavior / actions",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply is a mild dismissive comment about trolls/complainers; no protected group is targeted and no counter-harm stance is present."
+  },
+  {
+    "post_id": "reply-3",
+    "text": "https://vnnforum.com/showthread.php?...36#post2440936",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "low",
+      "flag_for_review": true
+    },
+    "reasoning": "Target post text is unavailable; only surrounding context is a benign question about forum buttons, with no evidence of hate or abuse."
+  },
+  {
+    "post_id": "reply-4",
+    "text": "I hardly noticed them.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply is a neutral remark about noticing the buttons; no protected-identity attack or abusive language."
+  },
+  {
+    "post_id": "reply-5",
+    "text": "It turns out every thumbs down came from the same guy. Agatma Pantiesinawad. He will have to find another way to vent now.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Individual person",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "No protected identity attack is present. The post makes a dismissive joke about a specific individual supposedly posting the thumbs-downs."
+  },
+  {
+    "post_id": "reply-6",
+    "text": "Quote: Originally Posted by bedford It turns out every thumbs down came from the same guy. Agatma Pantiesinawad. He will have to find another way to vent now. I know that guy very well, follows me all around the forum just to thumb my posts. He's giving me a mental thumb right now.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "mild",
+      "abuse_target": "Individual person",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "The post references and lightly mocks a specific individual’s behavior; it does not attack a protected identity group. No counterspeech is present because the original post is a neutral question."
+  },
+  {
+    "post_id": "reply-7",
+    "text": "Quote: Originally Posted by bedford Varg said he eliminated the thumbs option because it had been abused by trolls and a lot of others complain when they get thumbs down. He posted this in my thread should the thumbs option be dropped. Quote: Originally Posted by George Witzgall https://vnnforum.com/showthread.php?...36#post2440936 OK, I see. Thanks for the info, guys. I had missed that thread.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "The reply only acknowledges information and thanks others; it does not attack any protected group or person."
+  },
+  {
+    "post_id": "reply-8",
+    "text": "Thanks, Varg! Varg did all of us a favor. The Jewish Dickhead who down-rated EVERY SINGLE ONE OF MY POSTS! has been, at least, muted. But, Varg, if I may be so bold as to suggest: your work is not complete. There are about 4 or 5 trolls at VNNF right now who need to be banned. Several of them are trolls from SF who decided to follow me over to VNNF and harass me, apparently since: 1. I am a sexist pig 2. I like Dr. Pierce waaaay too much 3. I make too many common-sense/logical posts, which isn't good for the Usual Suspects. Those are sins to Jewish, and NS-hating, trolls. (Many trolls hate NS). As to the question \"who?,\" I can send you a PM if needed, Varg. -------------------------",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "medium",
+      "hate_target_group": "Religion",
+      "abuse_level": "moderate",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": false
+    },
+    "reasoning": "Contains derogatory references to Jews and a negative generalization linking them with hostility toward the speaker. Also includes direct insulting language, but no threat or violence."
+  },
+  {
+    "post_id": "https://vnnforum.com/showthread.php?t=573666",
+    "text": "Perfect Triangle podcast #192 w/ Alex Linder\n\nhttps://speakfreeradio.com/2024/05/1...-triangle-192/",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": null,
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "The post only names a podcast episode and link; it contains no direct attack on any protected identity or abusive language."
+  },
+  {
+    "post_id": "reply-1",
+    "text": "Bump. This was a good one. Especially enjoyed Alex focusing on Christinsanity and how it is what keeps Whites from fighting back, and disabled their self defense mechanism like malware. Somewhat cringey when Alex will explain how Christianity in itself is anti white since inception, Giuseppe will agree then talk about how it's just the zionist christians they're bad. Maybe he'll see the reality of things eventually. I think he's a good guy either way. Hard to detach the emotional attachment from some and have them thinking critically about it, since they grew up in it. \"In my day... things were slightly better,\" and they mistakenly attribute that to christianity.",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "low",
+      "hate_target_group": "Religion",
+      "abuse_level": "mild",
+      "abuse_target": "Political belief or ideology",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "Targets Christianity with pejorative wording and negative characterization of the religion/ideology; no attack on an individual or threat of harm. The reply does not function as counterspeech to the original link post."
+  },
+  {
+    "post_id": "reply-2",
+    "text": "https://rumble.com/v4vopmx-the-perfe...inder-ale.html For video version",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "The target post only provides a video link and does not contain attacks or identity-based claims. It does not push back against the original post."
+  },
+  {
+    "post_id": "reply-3",
+    "text": "It's also true most Christians believe it either because they were brainwashed since they were a kid, or the adults who start believing later in life are often recovering drug addicts, alcoholics, or just all around scumbags. I've met quite a few who meet that criteria.. it makes sense, Christianity tells them everyone is guilty of sin, just believe jesus and spread the mind poison and you get absolved from your sins. Also next time you get into an argument with a christtard on the Internet, remember they very well not even be White; of course they won't want whites being exclusive for their racial interests.. christianity places no value on race so it benefits nonwhites that whites continue to follow it as well.",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "medium",
+      "hate_target_group": "Religion",
+      "abuse_level": "moderate",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "Targets Christians/Christianity with a derogatory slur and broad negative generalizations about believers; no clear pushback against the original post."
+  },
+  {
+    "post_id": "reply-4",
+    "text": "Another point to bring up is jews going after leaders or prominent figures for partial compliance.  They HATE partial compliance, even 90% compliant is not good enough for them.  They are not rational with their demands in the slightest, and they believe themselves to be in a position where they're untouchable while making such silly demands. Just take a look at leaders like Vladimir Putin for example.  He's not even an antisemite, and he's got jewish friends, and Putin even preens like a peacock bolstering jew-lies like the holocaust, and \"evil nazis\".  They have a hate boner for Putin over partial compliance.  The jew's approach to the Chinese appears to the same, the problem appears to be with partial compliance. The jews are telling both Putin and Xi that you must be 100% complaint on any and all demands or else.  So instead, you have 2 partially compliant parties who'd mostly work with jews if they stayed off their nuts are now working together to become even less compliant than they'd otherwise be.  And jews are having a complete meltdown over it. This explains why you cannot work with jews, period.  To them, this is a master > slave relationship, and christianity is in place to solidify the later.  The only option is 110 and never again.",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "medium",
+      "hate_target_group": "Religion",
+      "abuse_level": "moderate",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Targets Jews as a group with derogatory generalizations, exclusionary language, and conspiratorial claims about them; no direct threat or violence is present."
+  },
+  {
+    "post_id": "reply-5",
+    "text": "All of the podcasts are linked on https://www.alexlinder.com/interviews.html The odysee/rumble video links have quite a bit of comments on them.",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "The reply only shares additional interview/podcast links and mentions comments on video links; it does not attack any protected group or person, and does not push back against the original post."
+  },
+  {
+    "post_id": "reply-6",
+    "text": "This perfectly exemplifies the CI people, the \"identity tards\" who claim jeboo is Aryan, and Whites are lost tribes of izzy. They instinctively know something is off about christianity, but instead of disowning jewish fairy tales, they become copium addicts who invent fairy tales of their own in order to rebrand it.",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "medium",
+      "hate_target_group": "Religion",
+      "abuse_level": "moderate",
+      "abuse_target": "Political belief or ideology",
+      "counterspeech": "0",
+      "confidence": "medium",
+      "flag_for_review": true
+    },
+    "reasoning": "The reply uses an antisemitic slur and derogatory language about Jewish beliefs/narratives, making it identity hate toward religion. It also attacks Christian Identity adherents/ideology with insulting language. Context is somewhat ambiguous, so review may help."
+  },
+  {
+    "post_id": "reply-7",
+    "text": "Great show. Keep chipping away at christinsanity and explaining to normies why jews must be exterminated..",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "high",
+      "hate_target_group": "Religion",
+      "abuse_level": "severe",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Reply endorses hatred toward Jews and explicitly calls for their extermination, which is severe identity-based hate."
+  },
+  {
+    "post_id": "reply-8",
+    "text": "Highly recommended!",
+    "labels": {
+      "identity_hate_speech": "0",
+      "hate_severity": null,
+      "hate_target_group": null,
+      "abuse_level": "none",
+      "abuse_target": null,
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "The reply only endorses the linked podcast and contains no attack on a protected group or individual."
+  },
+  {
+    "post_id": "reply-9",
+    "text": "I listened to an hour of it yesterday. It is good. I will catch the rest of it today. Linder says kicking jews out won't work. Where would they go? Nobody wants them and wherever they go they would regroup and go back to all their usual evil activities.",
+    "labels": {
+      "identity_hate_speech": "1",
+      "hate_severity": "medium",
+      "hate_target_group": "Religion",
+      "abuse_level": "moderate",
+      "abuse_target": "Protected identity group",
+      "counterspeech": "0",
+      "confidence": "high",
+      "flag_for_review": false
+    },
+    "reasoning": "Targets Jews as a group with a negative stereotype that they are unwanted and engage in 'evil activities.' No direct threat or violence is present."
+  }
+]

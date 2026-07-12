@@ -165,11 +165,17 @@
                 <h1>Choose Annotation Task</h1>
                 <p class="subtitle">Select whether you are completing the trial annotation or the full annotation.</p>
             </div>
-            <a class="button-link secondary" href="/instructions/back">View annotation instructions</a>
+            <div class="button-row" style="margin-top: 0;">
+                <a class="button-link secondary" href="/instructions/back">View annotation instructions</a>
+                <a class="button-link secondary" href="/platform-info/back">View platform-specific information</a>
+            </div>
         </div>
 
         <div class="warning" id="consent-warning">
             Consent is required before choosing an annotation task. Please return to the instructions page and save consent first.
+        </div>
+        <div class="warning" id="platform-warning">
+            Platform-specific information acknowledgement is required before choosing an annotation task. Please review the platform-specific information and save acknowledgement first.
         </div>
 
         <div class="choice-grid">
@@ -199,6 +205,7 @@
     <script>
         const STORAGE_KEYS = {
             consent: 'hate_annotation_content_consent',
+            platformInfo: 'hate_annotation_platform_info_acknowledged',
             startedSession: 'hate_annotation_started_session'
         };
 
@@ -207,6 +214,15 @@
                 return localStorage.getItem(STORAGE_KEYS.consent) === 'true';
             } catch (error) {
                 console.error('Unable to read content consent:', error);
+                return false;
+            }
+        }
+
+        function hasPlatformInfoAcknowledgement() {
+            try {
+                return localStorage.getItem(STORAGE_KEYS.platformInfo) === 'true';
+            } catch (error) {
+                console.error('Unable to read platform information acknowledgement:', error);
                 return false;
             }
         }
@@ -225,6 +241,13 @@
                 link.classList.remove('primary');
                 link.classList.add('secondary');
                 link.href = '/instructions';
+            });
+        } else if (!hasPlatformInfoAcknowledgement()) {
+            document.getElementById('platform-warning').style.display = 'block';
+            document.querySelectorAll('.task-link').forEach((link) => {
+                link.classList.remove('primary');
+                link.classList.add('secondary');
+                link.href = '/platform-info';
             });
         }
 

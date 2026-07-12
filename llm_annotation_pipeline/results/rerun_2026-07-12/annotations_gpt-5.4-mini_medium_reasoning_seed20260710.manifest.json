@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-07-12T08:06:18.673960+00:00",
+  "model": "gpt-5.4-mini",
+  "reasoning_effort": "medium",
+  "seed": 20260710,
+  "samples_per_fringe_platform": 2,
+  "item_count": 173,
+  "thread_count": 10,
+  "selected_threads": [
+    {
+      "group": "trial",
+      "platform": "twitter",
+      "thread_id": "1426226403381493765",
+      "item_count": 33
+    },
+    {
+      "group": "trial",
+      "platform": "twitter",
+      "thread_id": "1539263007762563072",
+      "item_count": 34
+    },
+    {
+      "group": "validation_sample",
+      "platform": "4chan",
+      "thread_id": "509750664",
+      "item_count": 28
+    },
+    {
+      "group": "validation_sample",
+      "platform": "4chan",
+      "thread_id": "509757402",
+      "item_count": 15
+    },
+    {
+      "group": "validation_sample",
+      "platform": "gab",
+      "thread_id": "114823268206085862",
+      "item_count": 12
+    },
+    {
+      "group": "validation_sample",
+      "platform": "gab",
+      "thread_id": "114827438940651821",
+      "item_count": 6
+    },
+    {
+      "group": "validation_sample",
+      "platform": "stormfront",
+      "thread_id": "1409662",
+      "item_count": 5
+    },
+    {
+      "group": "validation_sample",
+      "platform": "stormfront",
+      "thread_id": "1416380",
+      "item_count": 21
+    },
+    {
+      "group": "validation_sample",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=572635",
+      "item_count": 9
+    },
+    {
+      "group": "validation_sample",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=573666",
+      "item_count": 10
+    }
+  ]
+}

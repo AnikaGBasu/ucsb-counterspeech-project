@@ -78,6 +78,7 @@
         .platform-banner {
             display: flex;
             align-items: center;
+            justify-content: center;
             width: 100%;
             margin: 0 0 18px;
             padding: 12px 14px;
@@ -87,6 +88,7 @@
             border: 1px solid #bde4df;
             font-size: 16px;
             font-weight: 800;
+            text-align: center;
         }
 
         .platform-banner[hidden] {
@@ -115,6 +117,41 @@
             box-shadow: var(--shadow-soft);
             flex-shrink: 0;
             margin-top: 2px;
+        }
+
+        .topbar-stats {
+            display: flex;
+            align-items: stretch;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
+        .progress-stat {
+            min-width: 96px;
+            padding: 7px 10px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 7px;
+            box-shadow: var(--shadow-soft);
+            text-align: center;
+        }
+
+        .progress-stat-label {
+            display: block;
+            color: var(--muted);
+            font-size: 10px;
+            font-weight: 760;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .progress-stat-value {
+            display: block;
+            margin-top: 2px;
+            color: var(--accent-dark);
+            font-size: 20px;
+            font-weight: 800;
+            line-height: 1.1;
         }
 
         .annotator-box label,
@@ -148,6 +185,10 @@
 
             .annotator-box {
                 align-self: flex-start;
+            }
+
+            .topbar-stats {
+                flex-wrap: wrap;
             }
         }
 
@@ -246,10 +287,25 @@
 
         .context-meta,
         .target-meta {
-            font-size: 12px;
-            font-weight: 650;
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 5px 9px;
+            margin-bottom: 10px;
+        }
+
+        .post-author-handle {
+            color: var(--text);
+            font-size: 15px;
+            font-weight: 800;
+            line-height: 1.25;
+        }
+
+        .post-author-details {
             color: var(--muted);
-            margin-bottom: 8px;
+            font-size: 11px;
+            font-weight: 600;
+            line-height: 1.35;
         }
 
         .target-post {
@@ -607,23 +663,36 @@
             <div class="title-wrap">
                 <div class="title-row">
                     <h1>{{ task.title }}</h1>
-                    <div class="annotator-box">
-                        <label for="annotator-id">Your ID is</label>
-                        <div id="annotator-id" class="generated-id">Generating...</div>
+                    <div class="topbar-stats">
+                        {% if task.mode == "full" %}
+                        <div class="progress-stat" title="Assigned threads for which every post has been completed and saved">
+                            <span class="progress-stat-label">Threads annotated</span>
+                            <span class="progress-stat-value" id="threads-annotated">0</span>
+                        </div>
+                        <div class="progress-stat" title="Unique posts with complete saved annotations">
+                            <span class="progress-stat-label">Posts annotated</span>
+                            <span class="progress-stat-value" id="posts-annotated">0</span>
+                        </div>
+                        {% endif %}
+                        <div class="annotator-box">
+                            <label for="annotator-id">Your ID is</label>
+                            <div id="annotator-id" class="generated-id">Generating...</div>
+                        </div>
                     </div>
                 </div>
                 <p>{{ task.description }}</p>
                 <div style="margin-top: 12px;" id="top-instructions-link">
                     <a class="button-link primary" href="/instructions/back">View annotation instructions</a>
+                    <a class="button-link secondary" href="/platform-info/back">View platform-specific information</a>
                 </div>
             </div>
         </div>
 
         <div class="progress-card" id="consent-gate" style="display: none;">
-            <strong>Consent required before annotation.</strong>
-            <div class="legend">Please read the instructions and provide consent before viewing annotation examples.</div>
+            <strong id="gate-title">Acknowledgement required before annotation.</strong>
+            <div class="legend" id="gate-message">Please read the required instructions before viewing annotation examples.</div>
             <div style="margin-top: 12px;">
-                <a class="button-link primary" href="/instructions">Go to annotation instructions</a>
+                <a class="button-link primary" id="gate-link" href="/instructions">Go to annotation instructions</a>
             </div>
         </div>
 
@@ -659,20 +728,20 @@
         <div class="layout">
             <div>
                 <div class="card" style="margin-bottom: 20px;">
-                    <div class="section-title">{{ task.context_label }}</div>
-                    <div id="context-list" class="context-list"></div>
-                    <div style="margin-top: 12px;">
-                        <button type="button" class="secondary" id="toggle-context-btn">{{ task.context_more }}</button>
-                    </div>
-                </div>
-
-                <div class="card">
                     <div class="section-title" id="target-section-title">Target Reply</div>
                     <div class="target-post">
                         <div class="target-meta" id="target-meta"></div>
                         <div class="text-content" id="target-text"></div>
                         <div id="target-image-urls"></div>
                         <div class="pill-row" id="target-pills"></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="section-title">{{ task.context_label }}</div>
+                    <div id="context-list" class="context-list"></div>
+                    <div style="margin-top: 12px;">
+                        <button type="button" class="secondary" id="toggle-context-btn">{{ task.context_more }}</button>
                     </div>
                 </div>
             </div>
@@ -768,7 +837,7 @@
                     </div>
 
                     <div class="field" id="counter-relation-field">
-                        <label class="main" id="counter-relation-label">6. Does the target reply contain counterspeech to the original post?</label>
+                        <label class="main" id="counter-relation-label">6. Does the TARGET POST contain counterspeech to the DIRECT PARENT POST?</label>
                         <div class="radio-grid">
                             <div class="radio-card">
                                 <input type="radio" id="counter-no" name="counterspeech" value="0" />
@@ -783,7 +852,7 @@
                     </div>
 
                     <div class="field">
-                        <label class="main">7. Confidence</label>
+                        <label class="main">7. Annotator confidence</label>
                         <div class="radio-grid">
                             <div class="radio-card">
                                 <input type="radio" id="conf-low" name="confidence" value="low" />
@@ -839,13 +908,15 @@
             annotations: {},
             showFullContext: false,
             assignment: null,
-            savedAnnotations: {}
+            savedAnnotations: {},
+            annotatorProgress: { threads_annotated: 0, posts_annotated: 0 }
         };
 
         const STORAGE_KEYS = {
             annotatorId: 'hate_annotation_annotator_id',
             draft: 'hate_annotation_draft_{{ task.mode }}',
             consent: 'hate_annotation_content_consent',
+            platformInfo: 'hate_annotation_platform_info_acknowledged',
             startedSession: 'hate_annotation_started_session',
             mode: '{{ task.mode }}',
             itemEndpoint: '/items/{{ task.mode }}',
@@ -857,6 +928,8 @@
 
         const DOM = {
             annotatorId: document.getElementById('annotator-id'),
+            threadsAnnotated: document.getElementById('threads-annotated'),
+            postsAnnotated: document.getElementById('posts-annotated'),
             itemCounter: document.getElementById('item-counter'),
             completionText: document.getElementById('completion-text'),
             progressFill: document.getElementById('progress-fill'),
@@ -898,6 +971,15 @@
             }
         }
 
+        function hasPlatformInfoAcknowledgement() {
+            try {
+                return localStorage.getItem(STORAGE_KEYS.platformInfo) === 'true';
+            } catch (error) {
+                console.error('Unable to read platform information acknowledgement:', error);
+                return false;
+            }
+        }
+
         function hasStartedAnnotationSession() {
             try {
                 return sessionStorage.getItem(STORAGE_KEYS.startedSession) === 'true';
@@ -907,7 +989,12 @@
             }
         }
 
-        function showConsentGate() {
+        function showAcknowledgementGate(title, message, href, linkText) {
+            document.getElementById('gate-title').textContent = title;
+            document.getElementById('gate-message').textContent = message;
+            const link = document.getElementById('gate-link');
+            link.href = href;
+            link.textContent = linkText;
             document.getElementById('consent-gate').style.display = 'block';
             document.getElementById('annotation-progress').style.display = 'none';
             document.getElementById('top-instructions-link').style.display = 'none';
@@ -938,8 +1025,39 @@
             return isOriginalPost(item) ? 'original post' : 'target reply';
         }
 
+        function usernameFromUrl(url) {
+            try {
+                const parsed = new URL(url || '', window.location.origin);
+                if (!['x.com', 'www.x.com', 'twitter.com', 'www.twitter.com'].includes(parsed.hostname.toLowerCase())) return '';
+                const username = parsed.pathname.split('/').filter(Boolean)[0] || '';
+                return ['i', 'intent', 'share', 'home'].includes(username.toLowerCase()) ? '' : username;
+            } catch (error) {
+                return '';
+            }
+        }
+
+        function displayUsername(value, url = '') {
+            const username = String(value || usernameFromUrl(url)).trim().replace(/^@+/, '');
+            return username ? `@${username}` : 'Unknown user';
+        }
+
+        function appendPostMeta(container, username, details) {
+            container.innerHTML = '';
+            const handle = document.createElement('span');
+            handle.className = 'post-author-handle';
+            handle.textContent = username;
+            container.appendChild(handle);
+
+            if (details) {
+                const metadata = document.createElement('span');
+                metadata.className = 'post-author-details';
+                metadata.textContent = details;
+                container.appendChild(metadata);
+            }
+        }
+
         function makeReplyOptionLabel(item, position, total) {
-            const username = item.username ? ` @${item.username}` : '';
+            const username = ` ${displayUsername(item.username, item.url)}`;
             const postId = item.post_id ? ` ${item.post_id}` : '';
             const label = isOriginalPost(item) ? 'Original post' : `Reply ${position + 1} of ${total}`;
             return `${label}${username}${postId}`;
@@ -1027,6 +1145,17 @@
             getAnnotatorId();
         }
 
+        function renderAnnotatorProgress(progress) {
+            if (!progress) return;
+            state.annotatorProgress = progress;
+            if (DOM.threadsAnnotated) {
+                DOM.threadsAnnotated.textContent = progress.threads_annotated || 0;
+            }
+            if (DOM.postsAnnotated) {
+                DOM.postsAnnotated.textContent = progress.posts_annotated || 0;
+            }
+        }
+
         function normalizeTargetGroup(value) {
             return ['Race / ethnicity', 'Nationality / immigration status'].includes(value)
                 ? 'Race / ethnicity / nationality'
@@ -1106,13 +1235,25 @@
                 visible.forEach((ctx, idx) => {
                     const div = document.createElement('div');
                     div.className = 'context-post';
-                    div.innerHTML = `
-                        <div class="context-meta">Context ${idx + 1}${ctx.post_id ? ` • ${ctx.post_id}` : ''}${ctx.speaker ? ` • ${ctx.speaker}` : ''}</div>
-                        <div class="text-content"></div>
-                        <div class="image-url-container"></div>
-                    `;
-                    div.querySelector('.text-content').textContent = ctx.text || '';
-                    renderImageUrls(div.querySelector('.image-url-container'), ctx.image_urls || []);
+
+                    const meta = document.createElement('div');
+                    meta.className = 'context-meta';
+                    appendPostMeta(
+                        meta,
+                        displayUsername(ctx.speaker, ctx.url),
+                        [`Context ${idx + 1}`, ctx.post_id || ''].filter(Boolean).join(' • ')
+                    );
+                    div.appendChild(meta);
+
+                    const text = document.createElement('div');
+                    text.className = 'text-content';
+                    text.textContent = ctx.text || '';
+                    div.appendChild(text);
+
+                    const images = document.createElement('div');
+                    images.className = 'image-url-container';
+                    div.appendChild(images);
+                    renderImageUrls(images, ctx.image_urls || []);
                     DOM.contextList.appendChild(div);
                 });
             }
@@ -1126,12 +1267,15 @@
             DOM.platformBanner.hidden = !platform;
             DOM.platformName.textContent = platform ? platform.toUpperCase() : '';
             DOM.targetSectionTitle.textContent = originalPost ? 'Original Post' : 'Target Reply';
-            DOM.targetMeta.textContent = [
-                item.item_id,
-                item.thread_id ? `${STORAGE_KEYS.threadOption} ${item.thread_id}` : '',
-                item.post_id ? `${originalPost ? 'Original post' : 'Reply'} ${item.post_id}` : '',
-                originalPost ? 'Original post' : 'Reply'
-            ].filter(Boolean).join(' • ');
+            appendPostMeta(
+                DOM.targetMeta,
+                displayUsername(item.username, item.url),
+                [
+                    originalPost ? 'Original post' : 'Reply',
+                    item.post_id || '',
+                    item.thread_id ? `${STORAGE_KEYS.threadOption} ${item.thread_id}` : ''
+                ].filter(Boolean).join(' • ')
+            );
 
             DOM.targetText.textContent = item.target_text || '';
             renderImageUrls(DOM.targetImageUrls, item.image_urls || []);
@@ -1183,7 +1327,7 @@
             DOM.abuseLevelLabel.textContent = `4. Does the ${noun} contain offensive, uncivil, or abusive language?`;
             DOM.counterRelationLabel.textContent = isOriginalPost(item)
                 ? '6. Counterspeech is not applicable for original posts.'
-                : '6. Does the target reply contain counterspeech to the original post?';
+                : '6. Does the TARGET POST contain counterspeech to the DIRECT PARENT POST?';
             DOM.counterRelationHelp.textContent = isOriginalPost(item)
                 ? 'Not applicable because this item is the original post and has no prior post to respond to.'
                 : '';
@@ -1380,6 +1524,8 @@
                 throw new Error(data.error || 'Save failed');
             }
 
+            renderAnnotatorProgress(data.annotator_progress);
+
             DOM.statusLine.textContent = `Saved current progress for ${item.item_id} at ${new Date().toLocaleTimeString()}.`;
         }
 
@@ -1417,6 +1563,8 @@
             if (!response.ok) {
                 throw new Error(data.error || 'Submission failed');
             }
+
+            renderAnnotatorProgress(data.annotator_progress);
 
             if (showFinal) {
                 DOM.finalBox.style.display = 'block';
@@ -1508,6 +1656,7 @@
                 state.items = data.items || [];
                 state.assignment = data.assignment || null;
                 state.savedAnnotations = data.saved_annotations || {};
+                renderAnnotatorProgress(data.annotator_progress);
                 state.currentIndex = 0;
                 state.annotations = { ...state.savedAnnotations };
                 if (state.items.length === 0) {
@@ -1526,9 +1675,28 @@
         }
 
         async function init() {
-            if (!hasContentConsent() || !hasStartedAnnotationSession()) {
-                showConsentGate();
+            if (!hasContentConsent()) {
+                showAcknowledgementGate(
+                    'Sensitive content consent required before annotation.',
+                    'Please read the annotation instructions and save consent before viewing annotation examples.',
+                    '/instructions',
+                    'Go to annotation instructions'
+                );
                 window.location.replace('/instructions');
+                return;
+            }
+            if (!hasPlatformInfoAcknowledgement()) {
+                showAcknowledgementGate(
+                    'Platform-specific acknowledgement required before annotation.',
+                    'Please read the platform-specific information and save acknowledgement before choosing an annotation task.',
+                    '/platform-info',
+                    'Go to platform-specific information'
+                );
+                window.location.replace('/platform-info');
+                return;
+            }
+            if (!hasStartedAnnotationSession()) {
+                window.location.replace('/choose');
                 return;
             }
             loadAnnotatorIdLocal();

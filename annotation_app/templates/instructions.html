@@ -130,6 +130,41 @@
             margin: 10px 0;
         }
 
+
+        .severity-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .severity-panel {
+            background: #f7fbfa;
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--accent);
+            border-radius: 8px;
+            padding: 12px 14px;
+            font-size: 13px;
+        }
+
+        .severity-panel h4 {
+            margin: 0 0 6px;
+            font-size: 14px;
+            line-height: 1.25;
+        }
+
+        .severity-panel p {
+            margin: 6px 0;
+        }
+
+        .severity-panel ul {
+            margin: 8px 0 0 18px;
+        }
+
+        .severity-panel li {
+            margin-bottom: 5px;
+        }
+
         .instruction-lead {
             font-weight: 760;
             color: var(--text);
@@ -224,6 +259,10 @@
                 flex-direction: column;
             }
 
+            .severity-grid {
+                grid-template-columns: 1fr;
+            }
+
             .button-link,
             button {
                 width: 100%;
@@ -237,10 +276,10 @@
         <div class="header">
             <div>
                 <h1>Annotation Instructions</h1>
-                <p class="subtitle">Read these instructions and provide consent before choosing an annotation task.</p>
+                <p class="subtitle">Read these instructions and provide consent before continuing to platform-specific information.</p>
             </div>
             {% if show_back_to_annotation %}
-            <a class="button-link secondary" href="/choose">Choose annotation task</a>
+            <a class="button-link secondary" href="/platform-info/back">View platform-specific information</a>
             {% endif %}
         </div>
 
@@ -330,21 +369,65 @@
                         </tbody>
                     </table>
                 </div>
+                <div class="callout">
+                    <p><strong>Additional identity-hate rules</strong></p>
+                    <p>Protected identities in this project include race, ethnicity, nationality, religion, caste, gender/sex, sexual orientation, disability, age, and other protected identities.</p>
+                    <p>A protected-identity word used pejoratively as a generic insult counts as identity hate, even if the person being insulted does not actually have that identity. For example, using “gay” to mean bad targets sexual orientation, and using “autistic” to mean stupid or incapable targets disability. Neutral description, quotation, or reclaimed use does not count.</p>
+                    <p>An identity-based slur or pejorative identity term directed at one individual still counts as identity hate because the insult relies on a protected identity.</p>
+                    <p>Brief agreement, praise, or approval of another post—such as “exactly,” “well said,” “you are right,” or “based”—does not automatically inherit that post’s identity-hate label. Mark Q1 No unless the TARGET POST repeats, paraphrases, or independently expresses the identity attack.</p>
+                    <p>Quoted or reported identity attacks do not count as the TARGET POST author’s hate unless the author clearly endorses, adopts, repeats, or adds to them.</p>
+                </div>
             </div>
 
             <div class="section">
                 <h3>2. If yes, what is the hate speech severity?</h3>
                 <p><strong>Only answer if Q1 = Yes.</strong></p>
-                <ul>
-                    <li>Low.</li>
-                    <li>Medium.</li>
-                    <li>High.</li>
-                </ul>
+                <div class="severity-grid" aria-label="Hate speech severity examples">
+                    <div class="severity-panel">
+                        <h4>Low-severity hate speech</h4>
+                        <p>Mild hostility, profanity, stereotyping, or negative generalizations toward a protected group. No severe slurs, dehumanization, exclusion, threats, or calls for violence.</p>
+                        <ul>
+                            <li>“People from [nationality] are so annoying.”</li>
+                            <li>“I’m so tired of [protected group].”</li>
+                            <li>“Fuck [protected group].”</li>
+                            <li>“[Gender group] are too emotional.”</li>
+                        </ul>
+                    </div>
+                    <div class="severity-panel">
+                        <h4>Medium-severity hate speech</h4>
+                        <p>Explicit hatred, strong degradation, an unambiguously derogatory identity slur, or a claim that a protected group is inferior, inherently dangerous, criminal, or does not belong. No direct threat or call for violence.</p>
+                        <ul>
+                            <li>“I fucking hate [protected group]. They’re disgusting.”</li>
+                            <li>“[Protected group] should not be allowed here.”</li>
+                            <li>“These [slur] don’t belong.”</li>
+                            <li>“[Protected group] are all criminals.”</li>
+                        </ul>
+                    </div>
+                    <div class="severity-panel">
+                        <h4>Severe hate speech</h4>
+                        <p>Threats, encouragement or celebration of violence, dehumanization, or eliminationist language toward a protected group.</p>
+                        <ul>
+                            <li>“[Protected group] should be wiped out.”</li>
+                            <li>“Someone should beat up [protected group].”</li>
+                            <li>“Kill all [protected group].”</li>
+                            <li>“[Protected group] are vermin.”</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="callout">
+                    <p><strong>Note:</strong> Profanity alone does <strong>not</strong> determine severity. For example:</p>
+                    <ul>
+                        <li>“Fuck [protected group].” → <strong>Low</strong></li>
+                        <li>“I fucking hate [protected group]. They’re disgusting.” → <strong>Medium</strong></li>
+                        <li>“Kill those fucking [protected group].” → <strong>Severe</strong></li>
+                    </ul>
+                </div>
             </div>
 
             <div class="section">
                 <h3>3. Primary hate target group</h3>
                 <p><strong>Only answer if Q1 = Yes.</strong></p>
+                <p>Choose the identity category most directly or strongly attacked. If multiple attacked groups belong to the same category, choose that category. If different identity categories are attacked equally and no primary target can be identified, choose Unclear. Do not use Other protected identity merely because multiple groups are attacked.</p>
                 <ul>
                     <li>Race / ethnicity / nationality.</li>
                     <li>Religion.</li>
@@ -360,17 +443,54 @@
             <div class="section">
                 <h3>4. Does the target reply contain offensive, uncivil, or abusive language?</h3>
                 <p>Answer this for every reply, even if Q1 = No.</p>
-                <ul>
-                    <li>None.</li>
-                    <li>Mild.</li>
-                    <li>Moderate.</li>
-                    <li>Severe.</li>
-                </ul>
+                <div class="severity-grid" aria-label="Offensive content severity examples">
+                    <div class="severity-panel">
+                        <h4>Low-severity offensive content</h4>
+                        <p>Mild insults, profanity, sarcasm, dismissive language, annoyance, or general hostility toward a person, group, belief, organization, or behavior.</p>
+                        <p><strong>Examples:</strong></p>
+                        <ul>
+                            <li>“This is such a stupid take.”</li>
+                            <li>“That was dumb as hell, you moron.”</li>
+                            <li>“Shut up, nobody cares.”</li>
+                            <li>“Fuck you.”</li>
+                            <li>“Lazy cowards.”</li>
+                            <li>“Fuck the government.”</li>
+                        </ul>
+                    </div>
+                    <div class="severity-panel">
+                        <h4>Medium-severity offensive content</h4>
+                        <p>Direct and intense personal attacks, degrading language, humiliation, aggressive profanity, or repeated harassment. The language is stronger than a brief insult but does not include a serious threat or encouragement of harm.</p>
+                        <p><strong>Examples:</strong></p>
+                        <ul>
+                            <li>“You’re too stupid to understand basic facts.”</li>
+                            <li>“Nobody likes you because you’re unbearable.”</li>
+                            <li>“You’re ugly, pathetic, and completely worthless.”</li>
+                            <li>“Get out of here, you useless piece of trash.”</li>
+                            <li>Repeatedly targeting the same person with hostile insults.</li>
+                        </ul>
+                    </div>
+                    <div class="severity-panel">
+                        <h4>Severe offensive content</h4>
+                        <p>Threats, encouragement of self-harm, wishes for serious injury or death, incitement of violence, or extreme and sustained harassment.</p>
+                        <p><strong>Examples:</strong></p>
+                        <ul>
+                            <li>“I hope you get seriously hurt.”</li>
+                            <li>“You should go die.”</li>
+                            <li>“Someone should beat you up.”</li>
+                            <li>“I’m going to find you and make you regret this.”</li>
+                            <li>“Kill yourself.”</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="callout">
+                    <p><strong>Important:</strong> Profanity alone is usually low severity. Label it medium or severe only when it is combined with intense degradation, repeated harassment, intimidation, or threats.</p>
+                </div>
             </div>
 
             <div class="section">
                 <h3>5. What is the main target of the offensive or abusive language?</h3>
                 <p><strong>Only answer if Q4 is not None.</strong></p>
+                <p>Choose what the abusive language primarily attacks. If it attacks intelligence, appearance, or family, prefer that specific category over Individual person. Age-based abuse uses Protected identity group because age is protected. When a protected-identity slur is directed at one person, choose Protected identity group because the abusive basis is identity. For clear approval of abusive content, use the target of the content being approved.</p>
                 <ul>
                     <li>Individual person.</li>
                     <li>Protected identity group.</li>
@@ -385,19 +505,38 @@
             </div>
 
             <div class="section">
-                <div class="callout">
-                    <p>Mark Yes when the reply tries to reduce the harm of hateful, abusive, misleading, or harmful content in the original post by challenging, correcting, condemning, warning, supporting the target, mocking the harmful message, or otherwise pushing back against it.</p>
-                    <p>Counterspeech can be polite or impolite, including offensive language, as long as it opposes the harmful original post.</p>
-                </div>
-                <h3>6. Does the target reply contain counterspeech to the original post?</h3>
+                <h3>6. Does the TARGET POST contain counterspeech to the DIRECT PARENT POST?</h3>
+                <p><strong>Only answer this for replies. For an original post with no parent, leave this question blank.</strong></p>
                 <ul>
                     <li>No.</li>
                     <li>Yes.</li>
                 </ul>
+                <div class="callout">
+                    <p>Mark Yes when the TARGET POST directly pushes back against harmful, abusive, hateful, or materially misleading content in the DIRECT PARENT POST. This includes:</p>
+                    <ul>
+                        <li>condemning, rejecting, mocking, or challenging the harmful content;</li>
+                        <li>correcting a false or misleading claim;</li>
+                        <li>clearly stating that the claim is false, fabricated, “fake news,” or “B.S.”;</li>
+                        <li>warning others about the harm;</li>
+                        <li>directly defending or supporting the person or group targeted by the harm.</li>
+                    </ul>
+                    <p>Mark No when the TARGET POST:</p>
+                    <ul>
+                        <li>agrees with, approves, reinforces, or intensifies the harmful content;</li>
+                        <li>attacks someone who challenged the harmful content;</li>
+                        <li>offers sympathy, condolences, prayers, or emotional support to the author without opposing the harmful statement;</li>
+                        <li>shares a related personal experience without opposing the harmful statement;</li>
+                        <li>restates something the direct parent already said rather than correcting it;</li>
+                        <li>expresses a different political or ideological position without directly opposing the harmful element;</li>
+                        <li>ignores the harmful content or responds to a separate part of the parent post.</li>
+                    </ul>
+                    <p>Counterspeech may itself contain offensive language or identity hate. Answer Q1–Q5 independently.</p>
+                    <p>Before marking Yes, identify the specific harmful or misleading claim in the DIRECT PARENT POST and the specific words in the TARGET POST that oppose it. If there is no clear claim–response connection, mark No.</p>
+                </div>
             </div>
 
             <div class="section">
-                <h3>7. Confidence</h3>
+                <h3>7. Annotator confidence</h3>
                 <ul>
                     <li>Low.</li>
                     <li>Medium.</li>
@@ -425,11 +564,11 @@
                 <input type="checkbox" id="disturbing-content-consent" />
                 <span>I understand that the annotation examples may include hate speech or disturbing content, and I explicitly consent to viewing this material for the annotation task.</span>
             </label>
-            <p class="small-note">You must check this box before choosing an annotation task.</p>
+            <p class="small-note">You must check this box before continuing to platform-specific information.</p>
         </div>
 
         <div class="button-row card">
-            <button type="button" class="primary" id="start-btn" disabled>Save consent and choose annotation task</button>
+            <button type="button" class="primary" id="start-btn" disabled>Save consent and continue to platform-specific information</button>
             <span class="status" id="consent-status"></span>
         </div>
     </div>
@@ -478,7 +617,7 @@
             if (!checkbox.checked) return;
             localStorage.setItem(STORAGE_KEY, 'true');
             markAnnotationStarted();
-            window.location.href = '/choose';
+            window.location.href = '/platform-info';
         });
     </script>
 </body>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Platform-Specific Information</title>
+    <link rel="prefetch" href="/choose" />
+    <style>
+        :root {
+            --bg: #f4f6f8;
+            --surface: #ffffff;
+            --surface-soft: #f9fafb;
+            --text: #18202a;
+            --muted: #667085;
+            --border: #d7dde5;
+            --accent: #1f6f68;
+            --accent-dark: #185b55;
+            --accent-soft: #dff3f0;
+            --danger: #b42318;
+            --danger-soft: #fff1f0;
+            --success: #16703f;
+            --shadow-soft: 0 4px 14px rgba(24, 32, 42, 0.06);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+            line-height: 1.58;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .page {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 30px 24px 52px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 18px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 32px;
+            line-height: 1.15;
+            font-weight: 760;
+        }
+
+        .subtitle {
+            margin: 8px 0 0;
+            color: var(--muted);
+            max-width: 68ch;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            box-shadow: var(--shadow-soft);
+            padding: 22px;
+            margin-bottom: 18px;
+        }
+
+        h2 {
+            margin: 0 0 12px;
+            font-size: 21px;
+            line-height: 1.25;
+        }
+
+        h3 {
+            margin: 18px 0 8px;
+            font-size: 17px;
+            line-height: 1.3;
+        }
+
+        p { margin: 8px 0; }
+
+        ul {
+            margin: 8px 0 8px 22px;
+            padding: 0;
+        }
+
+        li { margin-bottom: 7px; }
+
+        .content-warning {
+            color: var(--danger);
+            background: var(--danger-soft);
+            border: 1px solid #f3b8b0;
+            border-left: 4px solid var(--danger);
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
+
+        .callout {
+            background: #f7fbfa;
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--accent);
+            border-radius: 8px;
+            padding: 12px 14px;
+            margin: 10px 0;
+        }
+
+        .term-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .term-card {
+            background: var(--surface-soft);
+            border: 1px solid #edf1f5;
+            border-radius: 8px;
+            padding: 14px;
+        }
+
+        .term-card h3 { margin-top: 0; }
+
+        .consent-box {
+            background: #fff8e8;
+            border: 1px solid #efc66b;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 18px;
+        }
+
+        .consent-box label {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            font-weight: 700;
+        }
+
+        .consent-box input {
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+
+        .button-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+
+        button,
+        .button-link {
+            border: 1px solid transparent;
+            border-radius: 8px;
+            padding: 10px 15px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+        }
+
+        button:hover:not(:disabled),
+        .button-link:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-soft);
+        }
+
+        button:disabled {
+            opacity: 0.55;
+            cursor: not-allowed;
+        }
+
+        .primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .secondary {
+            background: #eef2f6;
+            color: #27313f;
+            border-color: #d9e0e8;
+        }
+
+        .status {
+            color: var(--success);
+            font-size: 13px;
+            font-weight: 650;
+        }
+
+        .small-note {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        @media (max-width: 760px) {
+            .header,
+            .term-grid {
+                grid-template-columns: 1fr;
+                flex-direction: column;
+            }
+
+            .button-link,
+            button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <div>
+                <h1>Platform-Specific Information</h1>
+                <p class="subtitle">Read this before choosing an annotation task. These notes explain platform context, slang, coded terms, and common edge cases.</p>
+            </div>
+            <div class="button-row">
+                <a class="button-link secondary" href="/instructions/back">View annotation instructions</a>
+                {% if show_back_to_annotation %}
+                <a class="button-link secondary" href="/choose">Choose annotation task</a>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="content-warning" role="alert">
+            This page includes examples of slurs, coded hate terms, and offensive language so annotators can recognize them accurately.
+        </div>
+
+        <div class="card">
+            <h2>Platform Context</h2>
+            <div class="callout">
+                <p><strong>4chan /pol/:</strong> Anonymous politics imageboard where users often rely on irony, slurs, memes, trolling, misspellings, and exaggerated language. Use the full original post, including readable OCR, but do not over-interpret unclear memes or unreadable image text.</p>
+            </div>
+            <div class="callout">
+                <p><strong>Stormfront / Vanguard:</strong> White nationalist forums where hate is often framed through news, crime reports, racial grievance, demographic fear, antisemitic conspiracy, and pro-white ideology. Focus on the author's own framing/commentary; do not automatically treat quoted news or quoted replies as the author's stance.</p>
+            </div>
+            <div class="callout">
+                <p><strong>Twitter / X and Gab:</strong> Treat the visible post and reply context as the basis for annotation. Some posts use ordinary political language, sarcasm, hashtags, or dog whistles. Use context, but flag cases where the target or meaning is unclear.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Slang and Coded Terms</h2>
+            <p>This list is not comprehensive. If you see an unfamiliar word, search it or flag it, because it may be a slur, coded term, or platform-specific dog whistle.</p>
+            <div class="term-grid">
+                <div class="term-card">
+                    <h3>General / 4chan Style</h3>
+                    <ul>
+                        <li><strong>anon / anons:</strong> anonymous 4chan users.</li>
+                        <li><strong>OP:</strong> original poster or original post.</li>
+                        <li><strong>kek:</strong> lol or mocking laughter.</li>
+                        <li><strong>cope / seethe:</strong> mocking someone as angry or rationalizing defeat.</li>
+                        <li><strong>based / cringe:</strong> approval or dismissal.</li>
+                        <li><strong>bait:</strong> intentionally provocative post.</li>
+                        <li><strong>shill, fed, glowie, psyop:</strong> accusations of propaganda, government involvement, or manipulation.</li>
+                    </ul>
+                </div>
+                <div class="term-card">
+                    <h3>Antisemitic / White Nationalist</h3>
+                    <ul>
+                        <li><strong>goy / goyim, kike, yid, jewess, Shlomo:</strong> terms often used in antisemitic framing; some are slurs.</li>
+                        <li><strong>the Jews, ((( ))), ZOG:</strong> often signals antisemitic conspiracy claims.</li>
+                        <li><strong>globalist, bankers, elites, media owners:</strong> may be coded antisemitic depending on context.</li>
+                        <li><strong>Holohoax / Holocough:</strong> Holocaust denial or minimization.</li>
+                        <li><strong>14/88 / 1488, white genocide:</strong> white supremacist codes or demographic-conspiracy framing.</li>
+                        <li><strong>mud / muds, race traitor:</strong> white supremacist insults.</li>
+                    </ul>
+                </div>
+                <div class="term-card">
+                    <h3>Anti-Black Terms</h3>
+                    <ul>
+                        <li><strong>nigger / nigga, negro, niglet:</strong> anti-Black slurs or derogatory terms; context matters, but these are often hate on these platforms.</li>
+                        <li><strong>dindu / dindu nuffin:</strong> racist caricature implying Black criminality.</li>
+                        <li><strong>jogger:</strong> coded anti-Black slur.</li>
+                        <li><strong>ape, monkey, gorilla:</strong> dehumanizing anti-Black terms when race-targeted.</li>
+                        <li><strong>Bix Nood / we wuz:</strong> mocking African or Black history claims.</li>
+                    </ul>
+                </div>
+                <div class="term-card">
+                    <h3>South Asian / East Asian</h3>
+                    <ul>
+                        <li><strong>pajeet / jeet, paki:</strong> slurs for Indian, Pakistani, or South Asian people.</li>
+                        <li><strong>curry / currycel, street shitter, bobs and vagene:</strong> anti-South Asian insults or tropes.</li>
+                        <li><strong>chink, chang, yellow menace:</strong> anti-Chinese or anti-East Asian slurs/framing.</li>
+                        <li><strong>CCP shill:</strong> can be political, but may become anti-Chinese when generalized.</li>
+                        <li><strong>bugman:</strong> sometimes anti-Asian or anti-modernity insult; context-dependent.</li>
+                    </ul>
+                </div>
+                <div class="term-card">
+                    <h3>Latino / Immigrant / Muslim / Arab</h3>
+                    <ul>
+                        <li><strong>beaner, wetback:</strong> slurs for Mexican or Latino people/immigrants.</li>
+                        <li><strong>mestizo, third-worlder:</strong> often derogatory in white nationalist spaces.</li>
+                        <li><strong>illegals / invaders:</strong> can be policy language, but often dehumanizing or xenophobic.</li>
+                        <li><strong>muzzie, mohammedan, raghead, sand nigger:</strong> anti-Muslim, Arab, Middle Eastern, or related slurs.</li>
+                        <li><strong>Islamization:</strong> can be political, but often anti-Muslim conspiracy framing.</li>
+                    </ul>
+                </div>
+                <div class="term-card">
+                    <h3>LGBTQ / Gender / Political</h3>
+                    <ul>
+                        <li><strong>faggot / fag, tranny, troon:</strong> anti-gay or anti-trans slurs.</li>
+                        <li><strong>groomer, degenerate, alphabet people:</strong> often used to target LGBTQ people.</li>
+                        <li><strong>femoid / foid, roastie, thot, whore, slut:</strong> misogynistic or gendered sexual insults.</li>
+                        <li><strong>feminazi, tradwife:</strong> anti-feminist or gender-ideology terms; tradwife is not hateful by itself.</li>
+                        <li><strong>MAGA, MIGA, libtard, leftoid, globohomo, antifa:</strong> political/factional terms; evaluate whether identity-based hate is present.</li>
+                        <li><strong>antitappers:</strong> unclear or board-specific; search or flag before labeling.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="consent-box">
+            <label for="platform-info-consent">
+                <input type="checkbox" id="platform-info-consent" />
+                <span>I have read the platform-specific information and understand that I should use it as context while annotating.</span>
+            </label>
+            <p class="small-note">You must check this box before choosing an annotation task. This acknowledgement is saved in this browser.</p>
+        </div>
+
+        <div class="button-row card">
+            <button type="button" class="primary" id="continue-btn" disabled>Save acknowledgement and choose annotation task</button>
+            <span class="status" id="platform-status"></span>
+        </div>
+    </div>
+
+    <script>
+        const STORAGE_KEY = 'hate_annotation_platform_info_acknowledged';
+        const STARTED_ANNOTATION_KEY = 'hate_annotation_started_session';
+        const checkbox = document.getElementById('platform-info-consent');
+        const continueBtn = document.getElementById('continue-btn');
+        const status = document.getElementById('platform-status');
+
+        function updateControls() {
+            continueBtn.disabled = !checkbox.checked;
+            const recorded = localStorage.getItem(STORAGE_KEY) === 'true';
+            status.textContent = recorded ? 'Platform-specific acknowledgement has already been recorded in this browser.' : '';
+        }
+
+        checkbox.checked = localStorage.getItem(STORAGE_KEY) === 'true';
+        updateControls();
+
+        checkbox.addEventListener('change', updateControls);
+        continueBtn.addEventListener('click', () => {
+            if (!checkbox.checked) return;
+            localStorage.setItem(STORAGE_KEY, 'true');
+            try {
+                sessionStorage.removeItem(STARTED_ANNOTATION_KEY);
+            } catch (error) {
+                console.error('Unable to reset annotation session marker:', error);
+            }
+            window.location.href = '/choose';
+        });
+    </script>
+</body>
+</html>

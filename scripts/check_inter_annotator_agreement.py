@@ -444,7 +444,7 @@ def parse_args() -> argparse.Namespace:
         "csv_files",
         nargs="+",
         type=Path,
-        help="One or more annotation CSV files, e.g. annotation_storage/annotations_20260709.csv",
+        help="One or more annotation CSV files, e.g. annotation_app/annotation_storage/annotations_20260709.csv",
     )
     parser.add_argument(
         "--fields",
