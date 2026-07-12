@@ -15,7 +15,7 @@ app = Flask(__name__)
 APP_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(APP_DIR)
 DATA_DIR = os.path.join(APP_DIR, "data")
-OUTPUT_DIR = os.path.join(PROJECT_ROOT, "annotation_storage")
+OUTPUT_DIR = os.path.join(APP_DIR, "annotation_storage")
 ITEMS_FILE = os.path.join(DATA_DIR, "items.json")
 VALIDATION_DIR = os.path.join(PROJECT_ROOT, "data", "validation_set_jsons")
 ASSIGNMENT_STATE_FILE = os.path.join(OUTPUT_DIR, "thread_assignments.json")
@@ -106,6 +106,24 @@ def normalized_image_urls(image_urls):
     return urls
 
 
+def username_from_post(post):
+    if not isinstance(post, dict):
+        return ""
+
+    for key in ("username", "author_username", "author_id", "author", "user", "name"):
+        value = post.get(key)
+        if isinstance(value, dict):
+            value = value.get("username") or value.get("name") or value.get("id")
+        if value:
+            return str(value).lstrip("@")
+
+    url = post.get("url") or post.get("post_url") or ""
+    match = re.search(r"https?://(?:www\.)?(?:x\.com|twitter\.com)/([^/?#]+)", str(url), re.IGNORECASE)
+    if match and match.group(1).lower() not in {"i", "intent", "share", "home"}:
+        return match.group(1).lstrip("@")
+    return ""
+
+
 def make_context_post(post_id, speaker, text, image_urls=None):
     return {
         "post_id": post_id or "",
@@ -154,7 +172,7 @@ def convert_simple_reply_thread(thread, platform, source):
     original_text = combine_text_and_ocr(thread.get("text", ""), thread.get("ocr_text", ""))
     original_context = make_context_post(
         thread_id,
-        thread.get("author_id", ""),
+        username_from_post(thread),
         original_text,
         thread.get("image_urls", []),
     )
@@ -179,7 +197,7 @@ def convert_simple_reply_thread(thread, platform, source):
             image_urls=thread.get("image_urls", []),
             url=thread.get("post_url", ""),
             date=thread.get("timestamp_iso") or thread.get("timestamp_raw", ""),
-            username=thread.get("author_id", ""),
+            username=username_from_post(thread),
         )
     ]
 
@@ -197,7 +215,7 @@ def convert_simple_reply_thread(thread, platform, source):
             context.append(
                 make_context_post(
                     parent_id,
-                    "",
+                    username_from_post(parent),
                     combine_text_and_ocr(parent.get("reply_text", ""), parent.get("ocr_text", "")),
                     parent.get("image_urls", []),
                 )
@@ -216,6 +234,7 @@ def convert_simple_reply_thread(thread, platform, source):
                 image_urls=reply.get("image_urls", []),
                 url=thread.get("post_url", ""),
                 date=reply.get("reply_timestamp_iso") or reply.get("reply_timestamp_raw", ""),
+                username=username_from_post(reply),
             )
         )
 
@@ -242,7 +261,7 @@ def convert_twitter_thread(thread, source):
     original = thread.get("post") or {}
     thread_id = str(original.get("tweet_id") or original.get("id") or original.get("url") or "")
     original_text = tweet_text(original)
-    original_context = make_context_post(thread_id, original.get("username", ""), original_text, twitter_media_urls(original))
+    original_context = make_context_post(thread_id, username_from_post(original), original_text, twitter_media_urls(original))
     items = [
         base_item(
             platform="twitter",
@@ -256,7 +275,7 @@ def convert_twitter_thread(thread, source):
             image_urls=twitter_media_urls(original),
             url=original.get("url", ""),
             date=original.get("date", ""),
-            username=original.get("username", ""),
+            username=username_from_post(original),
         )
     ]
 
@@ -279,10 +298,10 @@ def convert_twitter_thread(thread, source):
                     image_urls=twitter_media_urls(reply),
                     url=reply.get("url", ""),
                     date=reply.get("date", ""),
-                    username=reply.get("username", ""),
+                    username=username_from_post(reply),
                 )
             )
-            child_context = context_path + [make_context_post(reply_id, reply.get("username", ""), text, twitter_media_urls(reply))]
+            child_context = context_path + [make_context_post(reply_id, username_from_post(reply), text, twitter_media_urls(reply))]
             walk_replies(reply.get("nested_replies") or [], child_context, reply_id)
 
     walk_replies(thread.get("replies") or [], [original_context], thread_id)
@@ -295,7 +314,7 @@ def convert_forum_thread(key, thread, platform, source):
     original_text = combine_text_and_ocr(main_post.get("text", ""), main_post.get("ocr_text", ""))
     if thread.get("title") and thread.get("title") not in original_text:
         original_text = f"{thread.get('title')}\n\n{original_text}".strip()
-    original_context = make_context_post(thread_id, "", original_text, main_post.get("image_urls", []))
+    original_context = make_context_post(thread_id, username_from_post(main_post), original_text, main_post.get("image_urls", []))
     items = [
         base_item(
             platform=platform,
@@ -309,6 +328,7 @@ def convert_forum_thread(key, thread, platform, source):
             image_urls=main_post.get("image_urls", []),
             url=thread.get("url", ""),
             date=thread.get("post_date", ""),
+            username=username_from_post(main_post),
         )
     ]
 
@@ -328,6 +348,7 @@ def convert_forum_thread(key, thread, platform, source):
                 image_urls=reply.get("image_urls", []),
                 url=thread.get("url", ""),
                 date=thread.get("post_date", ""),
+                username=username_from_post(reply),
             )
         )
 
@@ -506,6 +527,26 @@ def annotation_progress_by_thread(thread_map):
     return by_thread
 
 
+def annotator_progress_summary(annotator_id):
+    """Return saved adaptive-assignment progress for one annotator."""
+    threads = load_full_threads()
+    thread_map = {items[0]["thread_key"]: items for items in threads if items}
+    progress = annotation_progress_by_thread(thread_map)
+
+    posts_annotated = sum(
+        len(info["annotator_items"].get(annotator_id, set()))
+        for info in progress.values()
+    )
+    threads_annotated = sum(
+        annotator_id in info["complete_annotators"]
+        for info in progress.values()
+    )
+    return {
+        "threads_annotated": threads_annotated,
+        "posts_annotated": posts_annotated,
+    }
+
+
 def saved_annotations_for_items(annotator_id, items):
     item_ids = {item["item_id"] for item in items}
     latest = {}
@@ -682,6 +723,16 @@ def instructions_back():
     return render_template("instructions.html", show_back_to_annotation=True)
 
 
+@app.route("/platform-info")
+def platform_info():
+    return render_template("platform_info.html", show_back_to_annotation=False)
+
+
+@app.route("/platform-info/back")
+def platform_info_back():
+    return render_template("platform_info.html", show_back_to_annotation=True)
+
+
 @app.route("/choose")
 def choose_task():
     return render_template("choose.html")
@@ -759,9 +810,15 @@ def items_for_mode(mode):
                 "required_annotators": REQUIRED_ANNOTATORS_PER_THREAD,
             },
             "saved_annotations": saved_annotations_for_items(annotator_id, items),
+            "annotator_progress": annotator_progress_summary(annotator_id),
         }
     else:
-        payload = {"items": load_items(mode), "assignment": None, "saved_annotations": {}}
+        payload = {
+            "items": load_items(mode),
+            "assignment": None,
+            "saved_annotations": {},
+            "annotator_progress": None,
+        }
 
     response = jsonify(payload)
     response.cache_control.no_store = True
@@ -795,7 +852,8 @@ def save_item():
 
         return jsonify({
             "status": "success",
-            "confirmation_code": confirmation_code
+            "confirmation_code": confirmation_code,
+            "annotator_progress": annotator_progress_summary(annotator_id),
         })
 
     except Exception as e:
@@ -829,7 +887,8 @@ def submit_all():
         return jsonify({
             "status": "success",
             "confirmation_code": confirmation_code,
-            "items_saved": len(annotations)
+            "items_saved": len(annotations),
+            "annotator_progress": annotator_progress_summary(annotator_id),
         })
 
     except Exception as e:

@@ -1,0 +1,4826 @@
+{
+  "summary": {
+    "generated_at": "2026-07-12T13:39:21.806248-07:00",
+    "model": "gpt-5.4-mini",
+    "reasoning_effort": "medium",
+    "llm_file": "llm_annotation_pipeline/results/rerun_2026-07-12/annotations_gpt-5.4-mini_medium_reasoning_seed20260710.jsonl",
+    "valid_human_annotations": 594,
+    "shared_human_llm_rating_pairs": 406,
+    "shared_items": 67,
+    "human_annotators_in_overlap": 9,
+    "complete_human_annotators": 6,
+    "minimum_shared_items_for_individual_comparison": 20,
+    "blank_handling": "Blank conditional values are explicit not-applicable categories for nominal metrics and are excluded from ordinal metrics."
+  },
+  "1_sample_and_class_distributions": {
+    "shared_items": 67,
+    "shared_human_rating_rows": 406,
+    "human_annotators": 9,
+    "complete_human_annotators": [
+      "01937c8cb6",
+      "36b4a7c4a6",
+      "439e73be12",
+      "4f24a1468f",
+      "bfff806a32",
+      "cc790fc8d2"
+    ],
+    "items_by_platform": {
+      "X": 67
+    },
+    "items_by_reply_status": {
+      "original_post": 2,
+      "reply": 65
+    },
+    "fields": {
+      "identity_hate_speech": {
+        "human_rating_counts": {
+          "0": 391,
+          "1": 15
+        },
+        "human_majority_counts": {
+          "0": 66,
+          "1": 1
+        },
+        "human_majority_ties": 0,
+        "llm_counts": {
+          "0": 63,
+          "1": 4
+        }
+      },
+      "hate_severity": {
+        "human_rating_counts": {
+          "": 391,
+          "high": 2,
+          "low": 4,
+          "medium": 9
+        },
+        "human_majority_counts": {
+          "": 66,
+          "medium": 1
+        },
+        "human_majority_ties": 0,
+        "llm_counts": {
+          "": 63,
+          "low": 4
+        }
+      },
+      "hate_target_group": {
+        "human_rating_counts": {
+          "": 391,
+          "Other protected identity": 1,
+          "Race / ethnicity / nationality": 14
+        },
+        "human_majority_counts": {
+          "": 66,
+          "Race / ethnicity / nationality": 1
+        },
+        "human_majority_ties": 0,
+        "llm_counts": {
+          "": 63,
+          "Race / ethnicity / nationality": 4
+        }
+      },
+      "abuse_level": {
+        "human_rating_counts": {
+          "mild": 43,
+          "moderate": 25,
+          "none": 330,
+          "severe": 8
+        },
+        "human_majority_counts": {
+          "mild": 8,
+          "moderate": 2,
+          "none": 55
+        },
+        "human_majority_ties": 2,
+        "llm_counts": {
+          "mild": 33,
+          "moderate": 1,
+          "none": 33
+        }
+      },
+      "abuse_target": {
+        "human_rating_counts": {
+          "": 330,
+          "Behavior / actions": 6,
+          "Individual person": 14,
+          "Intelligence / competence": 1,
+          "Other": 2,
+          "Political belief or ideology": 31,
+          "Protected identity group": 21,
+          "Unclear": 1
+        },
+        "human_majority_counts": {
+          "": 54,
+          "Behavior / actions": 1,
+          "Individual person": 2,
+          "Political belief or ideology": 5,
+          "Protected identity group": 3
+        },
+        "human_majority_ties": 2,
+        "llm_counts": {
+          "": 33,
+          "Behavior / actions": 13,
+          "Individual person": 4,
+          "Intelligence / competence": 2,
+          "Political belief or ideology": 10,
+          "Protected identity group": 5
+        }
+      },
+      "counterspeech": {
+        "human_rating_counts": {
+          "": 13,
+          "0": 351,
+          "1": 42
+        },
+        "human_majority_counts": {
+          "": 2,
+          "0": 58,
+          "1": 4
+        },
+        "human_majority_ties": 3,
+        "llm_counts": {
+          "": 2,
+          "0": 64,
+          "1": 1
+        }
+      },
+      "flag_for_review": {
+        "human_rating_counts": {
+          "false": 385,
+          "true": 21
+        },
+        "human_majority_counts": {
+          "false": 64,
+          "true": 3
+        },
+        "human_majority_ties": 0,
+        "llm_counts": {
+          "false": 62,
+          "true": 5
+        }
+      }
+    }
+  },
+  "2_human_only_reliability": {
+    "identity_hate_speech": {
+      "items": 67,
+      "raters": 6,
+      "annotators": [
+        "01937c8cb6",
+        "36b4a7c4a6",
+        "439e73be12",
+        "4f24a1468f",
+        "bfff806a32",
+        "cc790fc8d2"
+      ],
+      "labels": [
+        "0",
+        "1"
+      ],
+      "fleiss_kappa": 0.4967599410898378,
+      "mean_pairwise_human_human_cohen_kappa": 0.5561639094802355,
+      "human_pairs": 15,
+      "pairwise_details": {
+        "01937c8cb6__36b4a7c4a6": {
+          "comparisons": 67,
+          "agreements": 64,
+          "percent_agreement": 0.9552238805970149,
+          "cohen_kappa": 0.38532110091743066
+        },
+        "01937c8cb6__439e73be12": {
+          "comparisons": 67,
+          "agreements": 63,
+          "percent_agreement": 0.9402985074626866,
+          "cohen_kappa": 0.46825396825396826
+        },
+        "01937c8cb6__4f24a1468f": {
+          "comparisons": 67,
+          "agreements": 66,
+          "percent_agreement": 0.9850746268656716,
+          "cohen_kappa": 0.8494382022471905
+        },
+        "01937c8cb6__bfff806a32": {
+          "comparisons": 67,
+          "agreements": 64,
+          "percent_agreement": 0.9552238805970149,
+          "cohen_kappa": 0.38532110091743066
+        },
+        "01937c8cb6__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 64,
+          "percent_agreement": 0.9552238805970149,
+          "cohen_kappa": 0.38532110091743066
+        },
+        "36b4a7c4a6__439e73be12": {
+          "comparisons": 67,
+          "agreements": 64,
+          "percent_agreement": 0.9552238805970149,
+          "cohen_kappa": 0.38532110091743066
+        },
+        "36b4a7c4a6__4f24a1468f": {
+          "comparisons": 67,
+          "agreements": 65,
+          "percent_agreement": 0.9701492537313433,
+          "cohen_kappa": 0.48854961832061244
+        },
+        "36b4a7c4a6__bfff806a32": {
+          "comparisons": 67,
+          "agreements": 67,
+          "percent_agreement": 1.0,
+          "cohen_kappa": 1.0
+        },
+        "36b4a7c4a6__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 67,
+          "percent_agreement": 1.0,
+          "cohen_kappa": 1.0
+        },
+        "439e73be12__4f24a1468f": {
+          "comparisons": 67,
+          "agreements": 62,
+          "percent_agreement": 0.9253731343283582,
+          "cohen_kappa": 0.2471910112359543
+        },
+        "439e73be12__bfff806a32": {
+          "comparisons": 67,
+          "agreements": 64,
+          "percent_agreement": 0.9552238805970149,
+          "cohen_kappa": 0.38532110091743066
+        },
+        "439e73be12__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 64,
+          "percent_agreement": 0.9552238805970149,
+          "cohen_kappa": 0.38532110091743066
+        },
+        "4f24a1468f__bfff806a32": {
+          "comparisons": 67,
+          "agreements": 65,
+          "percent_agreement": 0.9701492537313433,
+          "cohen_kappa": 0.48854961832061244
+        },
+        "4f24a1468f__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 65,
+          "percent_agreement": 0.9701492537313433,
+          "cohen_kappa": 0.48854961832061244
+        },
+        "bfff806a32__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 67,
+          "percent_agreement": 1.0,
+          "cohen_kappa": 1.0
+        }
+      },
+      "gwet_ac1": 0.9637309274247048,
+      "gwet_ac2_linear": null,
+      "gwet_ac2_quadratic": null,
+      "ordinal_items_with_all_human_ratings_applicable": 0
+    },
+    "hate_severity": {
+      "items": 67,
+      "raters": 6,
+      "annotators": [
+        "01937c8cb6",
+        "36b4a7c4a6",
+        "439e73be12",
+        "4f24a1468f",
+        "bfff806a32",
+        "cc790fc8d2"
+      ],
+      "labels": [
+        "",
+        "high",
+        "low",
+        "medium"
+      ],
+      "fleiss_kappa": 0.3553935860058292,
+      "mean_pairwise_human_human_cohen_kappa": 0.4406874634639749,
+      "human_pairs": 15,
+      "pairwise_details": {
+        "01937c8cb6__36b4a7c4a6": {
+          "comparisons": 67,
+          "agreements": 63,
+          "percent_agreement": 0.9402985074626866,
+          "cohen_kappa": 0.18787878787878892
+        },
+        "01937c8cb6__439e73be12": {
+          "comparisons": 67,
+          "agreements": 62,
+          "percent_agreement": 0.9253731343283582,
+          "cohen_kappa": 0.35077519379845
+        },
+        "01937c8cb6__4f24a1468f": {
+          "comparisons": 67,
+          "agreements": 64,
+          "percent_agreement": 0.9552238805970149,
+          "cohen_kappa": 0.555309734513274
+        },
+        "01937c8cb6__bfff806a32": {
+          "comparisons": 67,
+          "agreements": 63,
+          "percent_agreement": 0.9402985074626866,
+          "cohen_kappa": 0.18787878787878892
+        },
+        "01937c8cb6__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 63,
+          "percent_agreement": 0.9402985074626866,
+          "cohen_kappa": 0.18787878787878892
+        },
+        "36b4a7c4a6__439e73be12": {
+          "comparisons": 67,
+          "agreements": 63,
+          "percent_agreement": 0.9402985074626866,
+          "cohen_kappa": 0.18292682926829368
+        },
+        "36b4a7c4a6__4f24a1468f": {
+          "comparisons": 67,
+          "agreements": 65,
+          "percent_agreement": 0.9701492537313433,
+          "cohen_kappa": 0.4924242424242442
+        },
+        "36b4a7c4a6__bfff806a32": {
+          "comparisons": 67,
+          "agreements": 67,
+          "percent_agreement": 1.0,
+          "cohen_kappa": 1.0
+        },
+        "36b4a7c4a6__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 67,
+          "percent_agreement": 1.0,
+          "cohen_kappa": 1.0
+        },
+        "439e73be12__4f24a1468f": {
+          "comparisons": 67,
+          "agreements": 61,
+          "percent_agreement": 0.9104477611940298,
+          "cohen_kappa": 0.11453744493392014
+        },
+        "439e73be12__bfff806a32": {
+          "comparisons": 67,
+          "agreements": 63,
+          "percent_agreement": 0.9402985074626866,
+          "cohen_kappa": 0.18292682926829368
+        },
+        "439e73be12__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 63,
+          "percent_agreement": 0.9402985074626866,
+          "cohen_kappa": 0.18292682926829368
+        },
+        "4f24a1468f__bfff806a32": {
+          "comparisons": 67,
+          "agreements": 65,
+          "percent_agreement": 0.9701492537313433,
+          "cohen_kappa": 0.4924242424242442
+        },
+        "4f24a1468f__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 65,
+          "percent_agreement": 0.9701492537313433,
+          "cohen_kappa": 0.4924242424242442
+        },
+        "bfff806a32__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 67,
+          "percent_agreement": 1.0,
+          "cohen_kappa": 1.0
+        }
+      },
+      "gwet_ac1": 0.955204754387594,
+      "gwet_ac2_linear": 0.5764705882352941,
+      "gwet_ac2_quadratic": 0.76,
+      "ordinal_items_with_all_human_ratings_applicable": 1
+    },
+    "hate_target_group": {
+      "items": 67,
+      "raters": 6,
+      "annotators": [
+        "01937c8cb6",
+        "36b4a7c4a6",
+        "439e73be12",
+        "4f24a1468f",
+        "bfff806a32",
+        "cc790fc8d2"
+      ],
+      "labels": [
+        "",
+        "Other protected identity",
+        "Race / ethnicity / nationality"
+      ],
+      "fleiss_kappa": 0.48319559228649817,
+      "mean_pairwise_human_human_cohen_kappa": 0.5471413355765531,
+      "human_pairs": 15,
+      "pairwise_details": {
+        "01937c8cb6__36b4a7c4a6": {
+          "comparisons": 67,
+          "agreements": 64,
+          "percent_agreement": 0.9552238805970149,
+          "cohen_kappa": 0.38532110091743066
+        },
+        "01937c8cb6__439e73be12": {
+          "comparisons": 67,
+          "agreements": 63,
+          "percent_agreement": 0.9402985074626866,
+          "cohen_kappa": 0.46825396825396826
+        },
+        "01937c8cb6__4f24a1468f": {
+          "comparisons": 67,
+          "agreements": 65,
+          "percent_agreement": 0.9701492537313433,
+          "cohen_kappa": 0.7015590200445434
+        },
+        "01937c8cb6__bfff806a32": {
+          "comparisons": 67,
+          "agreements": 64,
+          "percent_agreement": 0.9552238805970149,
+          "cohen_kappa": 0.38532110091743066
+        },
+        "01937c8cb6__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 64,
+          "percent_agreement": 0.9552238805970149,
+          "cohen_kappa": 0.38532110091743066
+        },
+        "36b4a7c4a6__439e73be12": {
+          "comparisons": 67,
+          "agreements": 64,
+          "percent_agreement": 0.9552238805970149,
+          "cohen_kappa": 0.38532110091743066
+        },
+        "36b4a7c4a6__4f24a1468f": {
+          "comparisons": 67,
+          "agreements": 65,
+          "percent_agreement": 0.9701492537313433,
+          "cohen_kappa": 0.4904942965779481
+        },
+        "36b4a7c4a6__bfff806a32": {
+          "comparisons": 67,
+          "agreements": 67,
+          "percent_agreement": 1.0,
+          "cohen_kappa": 1.0
+        },
+        "36b4a7c4a6__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 67,
+          "percent_agreement": 1.0,
+          "cohen_kappa": 1.0
+        },
+        "439e73be12__4f24a1468f": {
+          "comparisons": 67,
+          "agreements": 62,
+          "percent_agreement": 0.9253731343283582,
+          "cohen_kappa": 0.25389755011135795
+        },
+        "439e73be12__bfff806a32": {
+          "comparisons": 67,
+          "agreements": 64,
+          "percent_agreement": 0.9552238805970149,
+          "cohen_kappa": 0.38532110091743066
+        },
+        "439e73be12__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 64,
+          "percent_agreement": 0.9552238805970149,
+          "cohen_kappa": 0.38532110091743066
+        },
+        "4f24a1468f__bfff806a32": {
+          "comparisons": 67,
+          "agreements": 65,
+          "percent_agreement": 0.9701492537313433,
+          "cohen_kappa": 0.4904942965779481
+        },
+        "4f24a1468f__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 65,
+          "percent_agreement": 0.9701492537313433,
+          "cohen_kappa": 0.4904942965779481
+        },
+        "bfff806a32__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 67,
+          "percent_agreement": 1.0,
+          "cohen_kappa": 1.0
+        }
+      },
+      "gwet_ac1": 0.9639598101934564,
+      "gwet_ac2_linear": null,
+      "gwet_ac2_quadratic": null,
+      "ordinal_items_with_all_human_ratings_applicable": 0
+    },
+    "abuse_level": {
+      "items": 67,
+      "raters": 6,
+      "annotators": [
+        "01937c8cb6",
+        "36b4a7c4a6",
+        "439e73be12",
+        "4f24a1468f",
+        "bfff806a32",
+        "cc790fc8d2"
+      ],
+      "labels": [
+        "mild",
+        "moderate",
+        "none",
+        "severe"
+      ],
+      "fleiss_kappa": 0.4203361937228158,
+      "mean_pairwise_human_human_cohen_kappa": 0.4283547768978631,
+      "human_pairs": 15,
+      "pairwise_details": {
+        "01937c8cb6__36b4a7c4a6": {
+          "comparisons": 67,
+          "agreements": 56,
+          "percent_agreement": 0.835820895522388,
+          "cohen_kappa": 0.4934707903780067
+        },
+        "01937c8cb6__439e73be12": {
+          "comparisons": 67,
+          "agreements": 53,
+          "percent_agreement": 0.7910447761194029,
+          "cohen_kappa": 0.5068349106203994
+        },
+        "01937c8cb6__4f24a1468f": {
+          "comparisons": 67,
+          "agreements": 56,
+          "percent_agreement": 0.835820895522388,
+          "cohen_kappa": 0.5613095238095236
+        },
+        "01937c8cb6__bfff806a32": {
+          "comparisons": 67,
+          "agreements": 57,
+          "percent_agreement": 0.8507462686567164,
+          "cohen_kappa": 0.4924242424242425
+        },
+        "01937c8cb6__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 54,
+          "percent_agreement": 0.8059701492537313,
+          "cohen_kappa": 0.3401515151515152
+        },
+        "36b4a7c4a6__439e73be12": {
+          "comparisons": 67,
+          "agreements": 48,
+          "percent_agreement": 0.7164179104477612,
+          "cohen_kappa": 0.2654356607039815
+        },
+        "36b4a7c4a6__4f24a1468f": {
+          "comparisons": 67,
+          "agreements": 60,
+          "percent_agreement": 0.8955223880597015,
+          "cohen_kappa": 0.663799283154122
+        },
+        "36b4a7c4a6__bfff806a32": {
+          "comparisons": 67,
+          "agreements": 59,
+          "percent_agreement": 0.8805970149253731,
+          "cohen_kappa": 0.48903717826501425
+        },
+        "36b4a7c4a6__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 62,
+          "percent_agreement": 0.9253731343283582,
+          "cohen_kappa": 0.6646646646646647
+        },
+        "439e73be12__4f24a1468f": {
+          "comparisons": 67,
+          "agreements": 50,
+          "percent_agreement": 0.746268656716418,
+          "cohen_kappa": 0.4149974319465845
+        },
+        "439e73be12__bfff806a32": {
+          "comparisons": 67,
+          "agreements": 49,
+          "percent_agreement": 0.7313432835820896,
+          "cohen_kappa": 0.22443729903536985
+        },
+        "439e73be12__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 48,
+          "percent_agreement": 0.7164179104477612,
+          "cohen_kappa": 0.20188087774294644
+        },
+        "4f24a1468f__bfff806a32": {
+          "comparisons": 67,
+          "agreements": 55,
+          "percent_agreement": 0.8208955223880597,
+          "cohen_kappa": 0.3968492123030759
+        },
+        "4f24a1468f__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 57,
+          "percent_agreement": 0.8507462686567164,
+          "cohen_kappa": 0.47574334898278564
+        },
+        "bfff806a32__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 57,
+          "percent_agreement": 0.8507462686567164,
+          "cohen_kappa": 0.234285714285714
+        }
+      },
+      "gwet_ac1": 0.7953717407842864,
+      "gwet_ac2_linear": 0.8878795999059373,
+      "gwet_ac2_quadratic": 0.9350172714984708,
+      "ordinal_items_with_all_human_ratings_applicable": 67
+    },
+    "abuse_target": {
+      "items": 67,
+      "raters": 6,
+      "annotators": [
+        "01937c8cb6",
+        "36b4a7c4a6",
+        "439e73be12",
+        "4f24a1468f",
+        "bfff806a32",
+        "cc790fc8d2"
+      ],
+      "labels": [
+        "",
+        "Behavior / actions",
+        "Individual person",
+        "Intelligence / competence",
+        "Other",
+        "Political belief or ideology",
+        "Protected identity group",
+        "Unclear"
+      ],
+      "fleiss_kappa": 0.5134222496337979,
+      "mean_pairwise_human_human_cohen_kappa": 0.509028142440422,
+      "human_pairs": 15,
+      "pairwise_details": {
+        "01937c8cb6__36b4a7c4a6": {
+          "comparisons": 67,
+          "agreements": 59,
+          "percent_agreement": 0.8805970149253731,
+          "cohen_kappa": 0.6380823767724509
+        },
+        "01937c8cb6__439e73be12": {
+          "comparisons": 67,
+          "agreements": 58,
+          "percent_agreement": 0.8656716417910447,
+          "cohen_kappa": 0.6854460093896712
+        },
+        "01937c8cb6__4f24a1468f": {
+          "comparisons": 67,
+          "agreements": 59,
+          "percent_agreement": 0.8805970149253731,
+          "cohen_kappa": 0.6874635568513119
+        },
+        "01937c8cb6__bfff806a32": {
+          "comparisons": 67,
+          "agreements": 56,
+          "percent_agreement": 0.835820895522388,
+          "cohen_kappa": 0.45122859270290394
+        },
+        "01937c8cb6__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 56,
+          "percent_agreement": 0.835820895522388,
+          "cohen_kappa": 0.4508196721311476
+        },
+        "36b4a7c4a6__439e73be12": {
+          "comparisons": 67,
+          "agreements": 52,
+          "percent_agreement": 0.7761194029850746,
+          "cohen_kappa": 0.411592505854801
+        },
+        "36b4a7c4a6__4f24a1468f": {
+          "comparisons": 67,
+          "agreements": 59,
+          "percent_agreement": 0.8805970149253731,
+          "cohen_kappa": 0.6358695652173912
+        },
+        "36b4a7c4a6__bfff806a32": {
+          "comparisons": 67,
+          "agreements": 60,
+          "percent_agreement": 0.8955223880597015,
+          "cohen_kappa": 0.5575471698113209
+        },
+        "36b4a7c4a6__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 61,
+          "percent_agreement": 0.9104477611940298,
+          "cohen_kappa": 0.6167778836987606
+        },
+        "439e73be12__4f24a1468f": {
+          "comparisons": 67,
+          "agreements": 56,
+          "percent_agreement": 0.835820895522388,
+          "cohen_kappa": 0.615545122587376
+        },
+        "439e73be12__bfff806a32": {
+          "comparisons": 67,
+          "agreements": 52,
+          "percent_agreement": 0.7761194029850746,
+          "cohen_kappa": 0.35823754789272017
+        },
+        "439e73be12__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 50,
+          "percent_agreement": 0.746268656716418,
+          "cohen_kappa": 0.2791139240506332
+        },
+        "4f24a1468f__bfff806a32": {
+          "comparisons": 67,
+          "agreements": 55,
+          "percent_agreement": 0.8208955223880597,
+          "cohen_kappa": 0.40664206642066425
+        },
+        "4f24a1468f__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 56,
+          "percent_agreement": 0.835820895522388,
+          "cohen_kappa": 0.4487658937920717
+        },
+        "bfff806a32__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 59,
+          "percent_agreement": 0.8805970149253731,
+          "cohen_kappa": 0.3922902494331065
+        }
+      },
+      "gwet_ac1": 0.8362716613053853,
+      "gwet_ac2_linear": null,
+      "gwet_ac2_quadratic": null,
+      "ordinal_items_with_all_human_ratings_applicable": 0
+    },
+    "counterspeech": {
+      "items": 67,
+      "raters": 6,
+      "annotators": [
+        "01937c8cb6",
+        "36b4a7c4a6",
+        "439e73be12",
+        "4f24a1468f",
+        "bfff806a32",
+        "cc790fc8d2"
+      ],
+      "labels": [
+        "",
+        "0",
+        "1"
+      ],
+      "fleiss_kappa": 0.5808310074253504,
+      "mean_pairwise_human_human_cohen_kappa": 0.5748695153240362,
+      "human_pairs": 15,
+      "pairwise_details": {
+        "01937c8cb6__36b4a7c4a6": {
+          "comparisons": 67,
+          "agreements": 60,
+          "percent_agreement": 0.8955223880597015,
+          "cohen_kappa": 0.5911072362685267
+        },
+        "01937c8cb6__439e73be12": {
+          "comparisons": 67,
+          "agreements": 60,
+          "percent_agreement": 0.8955223880597015,
+          "cohen_kappa": 0.6444275966641395
+        },
+        "01937c8cb6__4f24a1468f": {
+          "comparisons": 67,
+          "agreements": 58,
+          "percent_agreement": 0.8656716417910447,
+          "cohen_kappa": 0.43166823751178124
+        },
+        "01937c8cb6__bfff806a32": {
+          "comparisons": 67,
+          "agreements": 62,
+          "percent_agreement": 0.9253731343283582,
+          "cohen_kappa": 0.7460197119029568
+        },
+        "01937c8cb6__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 60,
+          "percent_agreement": 0.8955223880597015,
+          "cohen_kappa": 0.6444275966641395
+        },
+        "36b4a7c4a6__439e73be12": {
+          "comparisons": 67,
+          "agreements": 63,
+          "percent_agreement": 0.9402985074626866,
+          "cohen_kappa": 0.7254098360655741
+        },
+        "36b4a7c4a6__4f24a1468f": {
+          "comparisons": 67,
+          "agreements": 63,
+          "percent_agreement": 0.9402985074626866,
+          "cohen_kappa": 0.5772870662460571
+        },
+        "36b4a7c4a6__bfff806a32": {
+          "comparisons": 67,
+          "agreements": 63,
+          "percent_agreement": 0.9402985074626866,
+          "cohen_kappa": 0.7254098360655741
+        },
+        "36b4a7c4a6__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 61,
+          "percent_agreement": 0.9104477611940298,
+          "cohen_kappa": 0.5881147540983606
+        },
+        "439e73be12__4f24a1468f": {
+          "comparisons": 67,
+          "agreements": 59,
+          "percent_agreement": 0.8805970149253731,
+          "cohen_kappa": 0.3895216400911157
+        },
+        "439e73be12__bfff806a32": {
+          "comparisons": 67,
+          "agreements": 63,
+          "percent_agreement": 0.9402985074626866,
+          "cohen_kappa": 0.771331058020478
+        },
+        "439e73be12__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 57,
+          "percent_agreement": 0.8507462686567164,
+          "cohen_kappa": 0.4283276450511946
+        },
+        "4f24a1468f__bfff806a32": {
+          "comparisons": 67,
+          "agreements": 59,
+          "percent_agreement": 0.8805970149253731,
+          "cohen_kappa": 0.3895216400911157
+        },
+        "4f24a1468f__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 61,
+          "percent_agreement": 0.9104477611940298,
+          "cohen_kappa": 0.5421412300683366
+        },
+        "bfff806a32__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 57,
+          "percent_agreement": 0.8507462686567164,
+          "cohen_kappa": 0.4283276450511946
+        }
+      },
+      "gwet_ac1": 0.8883763979946006,
+      "gwet_ac2_linear": null,
+      "gwet_ac2_quadratic": null,
+      "ordinal_items_with_all_human_ratings_applicable": 0
+    },
+    "flag_for_review": {
+      "items": 67,
+      "raters": 6,
+      "annotators": [
+        "01937c8cb6",
+        "36b4a7c4a6",
+        "439e73be12",
+        "4f24a1468f",
+        "bfff806a32",
+        "cc790fc8d2"
+      ],
+      "labels": [
+        "false",
+        "true"
+      ],
+      "fleiss_kappa": 0.34753926701570687,
+      "mean_pairwise_human_human_cohen_kappa": 0.31323596898952955,
+      "human_pairs": 15,
+      "pairwise_details": {
+        "01937c8cb6__36b4a7c4a6": {
+          "comparisons": 67,
+          "agreements": 63,
+          "percent_agreement": 0.9402985074626866,
+          "cohen_kappa": 0.5677419354838712
+        },
+        "01937c8cb6__439e73be12": {
+          "comparisons": 67,
+          "agreements": 63,
+          "percent_agreement": 0.9402985074626866,
+          "cohen_kappa": 0.6348773841961856
+        },
+        "01937c8cb6__4f24a1468f": {
+          "comparisons": 67,
+          "agreements": 62,
+          "percent_agreement": 0.9253731343283582,
+          "cohen_kappa": 0.0
+        },
+        "01937c8cb6__bfff806a32": {
+          "comparisons": 67,
+          "agreements": 65,
+          "percent_agreement": 0.9701492537313433,
+          "cohen_kappa": 0.7351778656126485
+        },
+        "01937c8cb6__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 62,
+          "percent_agreement": 0.9253731343283582,
+          "cohen_kappa": 0.0
+        },
+        "36b4a7c4a6__439e73be12": {
+          "comparisons": 67,
+          "agreements": 61,
+          "percent_agreement": 0.9104477611940298,
+          "cohen_kappa": 0.4523160762942776
+        },
+        "36b4a7c4a6__4f24a1468f": {
+          "comparisons": 67,
+          "agreements": 62,
+          "percent_agreement": 0.9253731343283582,
+          "cohen_kappa": 0.0
+        },
+        "36b4a7c4a6__bfff806a32": {
+          "comparisons": 67,
+          "agreements": 65,
+          "percent_agreement": 0.9701492537313433,
+          "cohen_kappa": 0.7351778656126485
+        },
+        "36b4a7c4a6__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 62,
+          "percent_agreement": 0.9253731343283582,
+          "cohen_kappa": 0.0
+        },
+        "439e73be12__4f24a1468f": {
+          "comparisons": 67,
+          "agreements": 60,
+          "percent_agreement": 0.8955223880597015,
+          "cohen_kappa": 0.0
+        },
+        "439e73be12__bfff806a32": {
+          "comparisons": 67,
+          "agreements": 63,
+          "percent_agreement": 0.9402985074626866,
+          "cohen_kappa": 0.5732484076433123
+        },
+        "439e73be12__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 60,
+          "percent_agreement": 0.8955223880597015,
+          "cohen_kappa": 0.0
+        },
+        "4f24a1468f__bfff806a32": {
+          "comparisons": 67,
+          "agreements": 64,
+          "percent_agreement": 0.9552238805970149,
+          "cohen_kappa": 0.0
+        },
+        "4f24a1468f__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 67,
+          "percent_agreement": 1.0,
+          "cohen_kappa": 1.0
+        },
+        "bfff806a32__cc790fc8d2": {
+          "comparisons": 67,
+          "agreements": 64,
+          "percent_agreement": 0.9552238805970149,
+          "cohen_kappa": 0.0
+        }
+      },
+      "gwet_ac1": 0.9318662693748121,
+      "gwet_ac2_linear": null,
+      "gwet_ac2_quadratic": null,
+      "ordinal_items_with_all_human_ratings_applicable": 0
+    }
+  },
+  "3_llm_versus_human_majority_gold": {
+    "identity_hate_speech": {
+      "comparisons": 67,
+      "labels": [
+        "0",
+        "1"
+      ],
+      "percent_agreement": 0.9552238805970149,
+      "cohen_kappa": 0.38532110091743066,
+      "gwet_ac1": 0.9517580703228129,
+      "confusion_matrix": [
+        [
+          63,
+          3
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+      "macro_precision": 0.625,
+      "macro_recall": 0.9772727272727273,
+      "macro_f1": 0.6883720930232557,
+      "per_class": {
+        "0": {
+          "precision": 1.0,
+          "recall": 0.9545454545454546,
+          "f1": 0.9767441860465116,
+          "support": 66
+        },
+        "1": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "support": 1
+        }
+      },
+      "human_majority_ties_excluded": 0
+    },
+    "hate_severity": {
+      "comparisons": 67,
+      "labels": [
+        "",
+        "low",
+        "medium"
+      ],
+      "percent_agreement": 0.9402985074626866,
+      "cohen_kappa": 0.19033232628398838,
+      "gwet_ac1": 0.9380597446120068,
+      "confusion_matrix": [
+        [
+          63,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+      "macro_precision": 0.3333333333333333,
+      "macro_recall": 0.3181818181818182,
+      "macro_f1": 0.3255813953488372,
+      "per_class": {
+        "": {
+          "precision": 1.0,
+          "recall": 0.9545454545454546,
+          "f1": 0.9767441860465116,
+          "support": 66
+        },
+        "low": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        },
+        "medium": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1
+        }
+      },
+      "human_majority_ties_excluded": 0
+    },
+    "hate_target_group": {
+      "comparisons": 67,
+      "labels": [
+        "",
+        "Race / ethnicity / nationality"
+      ],
+      "percent_agreement": 0.9552238805970149,
+      "cohen_kappa": 0.38532110091743066,
+      "gwet_ac1": 0.9517580703228129,
+      "confusion_matrix": [
+        [
+          63,
+          3
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+      "macro_precision": 0.625,
+      "macro_recall": 0.9772727272727273,
+      "macro_f1": 0.6883720930232557,
+      "per_class": {
+        "": {
+          "precision": 1.0,
+          "recall": 0.9545454545454546,
+          "f1": 0.9767441860465116,
+          "support": 66
+        },
+        "Race / ethnicity / nationality": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "support": 1
+        }
+      },
+      "human_majority_ties_excluded": 0
+    },
+    "abuse_level": {
+      "comparisons": 65,
+      "labels": [
+        "mild",
+        "moderate",
+        "none"
+      ],
+      "percent_agreement": 0.6153846153846154,
+      "cohen_kappa": 0.24768518518518526,
+      "gwet_ac1": 0.5033239092228929,
+      "confusion_matrix": [
+        [
+          7,
+          1,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          22,
+          0,
+          33
+        ]
+      ],
+      "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+      "macro_precision": 0.40860215053763443,
+      "macro_recall": 0.4916666666666667,
+      "macro_f1": 0.3696581196581197,
+      "per_class": {
+        "mild": {
+          "precision": 0.22580645161290322,
+          "recall": 0.875,
+          "f1": 0.358974358974359,
+          "support": 8
+        },
+        "moderate": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        "none": {
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.75,
+          "support": 55
+        }
+      },
+      "human_majority_ties_excluded": 2
+    },
+    "abuse_target": {
+      "comparisons": 65,
+      "labels": [
+        "",
+        "Behavior / actions",
+        "Individual person",
+        "Intelligence / competence",
+        "Political belief or ideology",
+        "Protected identity group"
+      ],
+      "percent_agreement": 0.6153846153846154,
+      "cohen_kappa": 0.31231485399915365,
+      "gwet_ac1": 0.5703217959226844,
+      "confusion_matrix": [
+        [
+          33,
+          9,
+          2,
+          2,
+          7,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          2,
+          2
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          2
+        ]
+      ],
+      "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+      "macro_precision": 0.3675925925925925,
+      "macro_recall": 0.6129629629629629,
+      "macro_f1": 0.39414129931371306,
+      "per_class": {
+        "": {
+          "precision": 1.0,
+          "recall": 0.6111111111111112,
+          "f1": 0.7586206896551724,
+          "support": 54
+        },
+        "Behavior / actions": {
+          "precision": 0.08333333333333333,
+          "recall": 1.0,
+          "f1": 0.15384615384615385,
+          "support": 1
+        },
+        "Individual person": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666,
+          "support": 2
+        },
+        "Intelligence / competence": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        },
+        "Political belief or ideology": {
+          "precision": 0.2222222222222222,
+          "recall": 0.4,
+          "f1": 0.2857142857142857,
+          "support": 5
+        },
+        "Protected identity group": {
+          "precision": 0.4,
+          "recall": 0.6666666666666666,
+          "f1": 0.5,
+          "support": 3
+        }
+      },
+      "human_majority_ties_excluded": 2
+    },
+    "counterspeech": {
+      "comparisons": 64,
+      "labels": [
+        "",
+        "0",
+        "1"
+      ],
+      "percent_agreement": 0.953125,
+      "cohen_kappa": 0.6509090909090909,
+      "gwet_ac1": 0.949780945530635,
+      "confusion_matrix": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          58,
+          0
+        ],
+        [
+          0,
+          3,
+          1
+        ]
+      ],
+      "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+      "macro_precision": 0.983606557377049,
+      "macro_recall": 0.75,
+      "macro_f1": 0.7915966386554621,
+      "per_class": {
+        "": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 2
+        },
+        "0": {
+          "precision": 0.9508196721311475,
+          "recall": 1.0,
+          "f1": 0.9747899159663865,
+          "support": 58
+        },
+        "1": {
+          "precision": 1.0,
+          "recall": 0.25,
+          "f1": 0.4,
+          "support": 4
+        }
+      },
+      "human_majority_ties_excluded": 3
+    },
+    "flag_for_review": {
+      "comparisons": 67,
+      "labels": [
+        "false",
+        "true"
+      ],
+      "percent_agreement": 0.8805970149253731,
+      "cohen_kappa": -0.059288537549406946,
+      "gwet_ac1": 0.8654956085319951,
+      "confusion_matrix": [
+        [
+          59,
+          5
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+      "macro_precision": 0.47580645161290325,
+      "macro_recall": 0.4609375,
+      "macro_f1": 0.46825396825396826,
+      "per_class": {
+        "false": {
+          "precision": 0.9516129032258065,
+          "recall": 0.921875,
+          "f1": 0.9365079365079365,
+          "support": 64
+        },
+        "true": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 3
+        }
+      },
+      "human_majority_ties_excluded": 0
+    }
+  },
+  "4_conditional_metrics": {
+    "hate_severity_on_human_hate_positive_items": {
+      "comparisons": 1,
+      "labels": [
+        "low",
+        "medium"
+      ],
+      "percent_agreement": 0.0,
+      "cohen_kappa": 0.0,
+      "gwet_ac1": -1.0,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+      "macro_precision": 0.0,
+      "macro_recall": 0.0,
+      "macro_f1": 0.0,
+      "per_class": {
+        "low": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        },
+        "medium": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1
+        }
+      },
+      "condition": "human-majority identity_hate_speech == 1",
+      "eligible_items": 1,
+      "human_majority_ties_excluded": 0
+    },
+    "hate_target_on_human_hate_positive_items": {
+      "comparisons": 1,
+      "labels": [
+        "Race / ethnicity / nationality"
+      ],
+      "percent_agreement": 1.0,
+      "cohen_kappa": 1.0,
+      "gwet_ac1": null,
+      "confusion_matrix": [
+        [
+          1
+        ]
+      ],
+      "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "per_class": {
+        "Race / ethnicity / nationality": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1
+        }
+      },
+      "condition": "human-majority identity_hate_speech == 1",
+      "eligible_items": 1,
+      "human_majority_ties_excluded": 0
+    },
+    "abuse_target_on_human_abuse_positive_items": {
+      "comparisons": 9,
+      "labels": [
+        "Behavior / actions",
+        "Individual person",
+        "Political belief or ideology",
+        "Protected identity group"
+      ],
+      "percent_agreement": 0.6666666666666666,
+      "cohen_kappa": 0.564516129032258,
+      "gwet_ac1": 0.5573770491803278,
+      "confusion_matrix": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ]
+      ],
+      "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+      "macro_precision": 0.7083333333333333,
+      "macro_recall": 0.75,
+      "macro_f1": 0.6666666666666666,
+      "per_class": {
+        "Behavior / actions": {
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "support": 1
+        },
+        "Individual person": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 2
+        },
+        "Political belief or ideology": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "support": 4
+        },
+        "Protected identity group": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "support": 2
+        }
+      },
+      "condition": "human-majority abuse_level is not none",
+      "eligible_items": 10,
+      "human_majority_ties_excluded": 1
+    },
+    "counterspeech_on_replies_only": {
+      "comparisons": 62,
+      "labels": [
+        "0",
+        "1"
+      ],
+      "percent_agreement": 0.9516129032258065,
+      "cohen_kappa": 0.3841059602649008,
+      "gwet_ac1": 0.9475539264063161,
+      "confusion_matrix": [
+        [
+          58,
+          0
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+      "macro_precision": 0.9754098360655737,
+      "macro_recall": 0.625,
+      "macro_f1": 0.6873949579831933,
+      "per_class": {
+        "0": {
+          "precision": 0.9508196721311475,
+          "recall": 1.0,
+          "f1": 0.9747899159663865,
+          "support": 58
+        },
+        "1": {
+          "precision": 1.0,
+          "recall": 0.25,
+          "f1": 0.4,
+          "support": 4
+        }
+      },
+      "condition": "item is a reply",
+      "eligible_items": 65,
+      "human_majority_ties_excluded": 3
+    }
+  },
+  "5_ordinal_metrics": {
+    "hate_severity": {
+      "eligible_items": 1,
+      "comparisons": 1,
+      "items_excluded_for_tied_or_non_ordinal_values": 0,
+      "labels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "linear_weighted_cohen_kappa": 0.0,
+      "quadratic_weighted_cohen_kappa": 0.0,
+      "gwet_ac2_linear": 0.14285714285714285,
+      "gwet_ac2_quadratic": 0.5
+    },
+    "abuse_level": {
+      "eligible_items": 65,
+      "comparisons": 65,
+      "items_excluded_for_tied_or_non_ordinal_values": 0,
+      "labels": [
+        "none",
+        "mild",
+        "moderate",
+        "severe"
+      ],
+      "linear_weighted_cohen_kappa": 0.2875931608943446,
+      "quadratic_weighted_cohen_kappa": 0.35592548553309555,
+      "gwet_ac2_linear": 0.8024676350817471,
+      "gwet_ac2_quadratic": 0.9244256348246661
+    }
+  },
+  "6_llm_versus_individual_humans_minimum_20_items": {
+    "01937c8cb6": {
+      "shared_items": 67,
+      "fields": {
+        "identity_hate_speech": {
+          "comparisons": 67,
+          "labels": [
+            "0",
+            "1"
+          ],
+          "percent_agreement": 1.0,
+          "cohen_kappa": 1.0,
+          "gwet_ac1": 1.0,
+          "confusion_matrix": [
+            [
+              63,
+              0
+            ],
+            [
+              0,
+              4
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 1.0,
+          "macro_recall": 1.0,
+          "macro_f1": 1.0,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 63
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 4
+            }
+          }
+        },
+        "hate_severity": {
+          "comparisons": 67,
+          "labels": [
+            "",
+            "high",
+            "low",
+            "medium"
+          ],
+          "percent_agreement": 0.9701492537313433,
+          "cohen_kappa": 0.7382812500000001,
+          "gwet_ac1": 0.9689731023038628,
+          "confusion_matrix": [
+            [
+              63,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              0
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.375,
+          "macro_recall": 0.5,
+          "macro_f1": 0.41666666666666663,
+          "per_class": {
+            "": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 63
+            },
+            "high": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 1
+            },
+            "low": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666,
+              "support": 2
+            },
+            "medium": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 1
+            }
+          }
+        },
+        "hate_target_group": {
+          "comparisons": 67,
+          "labels": [
+            "",
+            "Race / ethnicity / nationality"
+          ],
+          "percent_agreement": 1.0,
+          "cohen_kappa": 1.0,
+          "gwet_ac1": 1.0,
+          "confusion_matrix": [
+            [
+              63,
+              0
+            ],
+            [
+              0,
+              4
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 1.0,
+          "macro_recall": 1.0,
+          "macro_f1": 1.0,
+          "per_class": {
+            "": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 63
+            },
+            "Race / ethnicity / nationality": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 4
+            }
+          }
+        },
+        "abuse_level": {
+          "comparisons": 67,
+          "labels": [
+            "mild",
+            "moderate",
+            "none",
+            "severe"
+          ],
+          "percent_agreement": 0.582089552238806,
+          "cohen_kappa": 0.2599605522682446,
+          "gwet_ac1": 0.49752243203428426,
+          "confusion_matrix": [
+            [
+              6,
+              1,
+              0,
+              0
+            ],
+            [
+              7,
+              0,
+              0,
+              0
+            ],
+            [
+              19,
+              0,
+              33,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.29545454545454547,
+          "macro_recall": 0.37293956043956045,
+          "macro_f1": 0.2691176470588235,
+          "per_class": {
+            "mild": {
+              "precision": 0.18181818181818182,
+              "recall": 0.8571428571428571,
+              "f1": 0.3,
+              "support": 7
+            },
+            "moderate": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 7
+            },
+            "none": {
+              "precision": 1.0,
+              "recall": 0.6346153846153846,
+              "f1": 0.7764705882352941,
+              "support": 52
+            },
+            "severe": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 1
+            }
+          }
+        },
+        "abuse_target": {
+          "comparisons": 67,
+          "labels": [
+            "",
+            "Behavior / actions",
+            "Individual person",
+            "Intelligence / competence",
+            "Political belief or ideology",
+            "Protected identity group"
+          ],
+          "percent_agreement": 0.6268656716417911,
+          "cohen_kappa": 0.36911487758945394,
+          "gwet_ac1": 0.5794838320947983,
+          "confusion_matrix": [
+            [
+              33,
+              8,
+              1,
+              2,
+              7,
+              1
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              3,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              2,
+              2
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              1,
+              2
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.4173076923076923,
+          "macro_recall": 0.577991452991453,
+          "macro_f1": 0.43245409274821034,
+          "per_class": {
+            "": {
+              "precision": 1.0,
+              "recall": 0.6346153846153846,
+              "f1": 0.7764705882352941,
+              "support": 52
+            },
+            "Behavior / actions": {
+              "precision": 0.15384615384615385,
+              "recall": 1.0,
+              "f1": 0.26666666666666666,
+              "support": 2
+            },
+            "Individual person": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "f1": 0.8571428571428571,
+              "support": 3
+            },
+            "Intelligence / competence": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            },
+            "Political belief or ideology": {
+              "precision": 0.2,
+              "recall": 0.3333333333333333,
+              "f1": 0.25,
+              "support": 6
+            },
+            "Protected identity group": {
+              "precision": 0.4,
+              "recall": 0.5,
+              "f1": 0.4444444444444444,
+              "support": 4
+            }
+          }
+        },
+        "counterspeech": {
+          "comparisons": 67,
+          "labels": [
+            "",
+            "0",
+            "1"
+          ],
+          "percent_agreement": 0.8507462686567164,
+          "cohen_kappa": 0.34184675834970557,
+          "gwet_ac1": 0.83270911360799,
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              54,
+              0
+            ],
+            [
+              0,
+              10,
+              1
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.9479166666666666,
+          "macro_recall": 0.6969696969696969,
+          "macro_f1": 0.6939736346516008,
+          "per_class": {
+            "": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "0": {
+              "precision": 0.84375,
+              "recall": 1.0,
+              "f1": 0.9152542372881356,
+              "support": 54
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 0.09090909090909091,
+              "f1": 0.16666666666666666,
+              "support": 11
+            }
+          }
+        },
+        "flag_for_review": {
+          "comparisons": 67,
+          "labels": [
+            "false",
+            "true"
+          ],
+          "percent_agreement": 0.8507462686567164,
+          "cohen_kappa": -0.08064516129032294,
+          "gwet_ac1": 0.8268286378909279,
+          "confusion_matrix": [
+            [
+              57,
+              5
+            ],
+            [
+              5,
+              0
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.4596774193548387,
+          "macro_recall": 0.4596774193548387,
+          "macro_f1": 0.4596774193548387,
+          "per_class": {
+            "false": {
+              "precision": 0.9193548387096774,
+              "recall": 0.9193548387096774,
+              "f1": 0.9193548387096774,
+              "support": 62
+            },
+            "true": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 5
+            }
+          }
+        }
+      }
+    },
+    "36b4a7c4a6": {
+      "shared_items": 67,
+      "fields": {
+        "identity_hate_speech": {
+          "comparisons": 67,
+          "labels": [
+            "0",
+            "1"
+          ],
+          "percent_agreement": 0.9552238805970149,
+          "cohen_kappa": 0.38532110091743066,
+          "gwet_ac1": 0.9517580703228129,
+          "confusion_matrix": [
+            [
+              63,
+              3
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.625,
+          "macro_recall": 0.9772727272727273,
+          "macro_f1": 0.6883720930232557,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.9545454545454546,
+              "f1": 0.9767441860465116,
+              "support": 66
+            },
+            "1": {
+              "precision": 0.25,
+              "recall": 1.0,
+              "f1": 0.4,
+              "support": 1
+            }
+          }
+        },
+        "hate_severity": {
+          "comparisons": 67,
+          "labels": [
+            "",
+            "low",
+            "medium"
+          ],
+          "percent_agreement": 0.9402985074626866,
+          "cohen_kappa": 0.19033232628398838,
+          "gwet_ac1": 0.9380597446120068,
+          "confusion_matrix": [
+            [
+              63,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.3333333333333333,
+          "macro_recall": 0.3181818181818182,
+          "macro_f1": 0.3255813953488372,
+          "per_class": {
+            "": {
+              "precision": 1.0,
+              "recall": 0.9545454545454546,
+              "f1": 0.9767441860465116,
+              "support": 66
+            },
+            "low": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            },
+            "medium": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 1
+            }
+          }
+        },
+        "hate_target_group": {
+          "comparisons": 67,
+          "labels": [
+            "",
+            "Race / ethnicity / nationality"
+          ],
+          "percent_agreement": 0.9552238805970149,
+          "cohen_kappa": 0.38532110091743066,
+          "gwet_ac1": 0.9517580703228129,
+          "confusion_matrix": [
+            [
+              63,
+              3
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.625,
+          "macro_recall": 0.9772727272727273,
+          "macro_f1": 0.6883720930232557,
+          "per_class": {
+            "": {
+              "precision": 1.0,
+              "recall": 0.9545454545454546,
+              "f1": 0.9767441860465116,
+              "support": 66
+            },
+            "Race / ethnicity / nationality": {
+              "precision": 0.25,
+              "recall": 1.0,
+              "f1": 0.4,
+              "support": 1
+            }
+          }
+        },
+        "abuse_level": {
+          "comparisons": 67,
+          "labels": [
+            "mild",
+            "moderate",
+            "none"
+          ],
+          "percent_agreement": 0.6268656716417911,
+          "cohen_kappa": 0.2647058823529413,
+          "gwet_ac1": 0.5198165269117753,
+          "confusion_matrix": [
+            [
+              9,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              24,
+              0,
+              33
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.42424242424242425,
+          "macro_recall": 0.49298245614035086,
+          "macro_f1": 0.38397932816537467,
+          "per_class": {
+            "mild": {
+              "precision": 0.2727272727272727,
+              "recall": 0.9,
+              "f1": 0.4186046511627907,
+              "support": 10
+            },
+            "moderate": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            },
+            "none": {
+              "precision": 1.0,
+              "recall": 0.5789473684210527,
+              "f1": 0.7333333333333333,
+              "support": 57
+            }
+          }
+        },
+        "abuse_target": {
+          "comparisons": 67,
+          "labels": [
+            "",
+            "Behavior / actions",
+            "Individual person",
+            "Intelligence / competence",
+            "Political belief or ideology",
+            "Protected identity group"
+          ],
+          "percent_agreement": 0.582089552238806,
+          "cohen_kappa": 0.2552600238189757,
+          "gwet_ac1": 0.5336233685518956,
+          "confusion_matrix": [
+            [
+              33,
+              11,
+              2,
+              2,
+              7,
+              2
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              2,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.3294871794871795,
+          "macro_recall": 0.5798245614035088,
+          "macro_f1": 0.35555555555555557,
+          "per_class": {
+            "": {
+              "precision": 1.0,
+              "recall": 0.5789473684210527,
+              "f1": 0.7333333333333333,
+              "support": 57
+            },
+            "Behavior / actions": {
+              "precision": 0.07692307692307693,
+              "recall": 0.5,
+              "f1": 0.13333333333333333,
+              "support": 2
+            },
+            "Individual person": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666,
+              "support": 2
+            },
+            "Intelligence / competence": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            },
+            "Political belief or ideology": {
+              "precision": 0.2,
+              "recall": 0.4,
+              "f1": 0.26666666666666666,
+              "support": 5
+            },
+            "Protected identity group": {
+              "precision": 0.2,
+              "recall": 1.0,
+              "f1": 0.3333333333333333,
+              "support": 1
+            }
+          }
+        },
+        "counterspeech": {
+          "comparisons": 67,
+          "labels": [
+            "",
+            "0",
+            "1"
+          ],
+          "percent_agreement": 0.9552238805970149,
+          "cohen_kappa": 0.6516464471403811,
+          "gwet_ac1": 0.9521741716733092,
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              61,
+              0
+            ],
+            [
+              0,
+              3,
+              1
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.984375,
+          "macro_recall": 0.75,
+          "macro_f1": 0.7919999999999999,
+          "per_class": {
+            "": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "0": {
+              "precision": 0.953125,
+              "recall": 1.0,
+              "f1": 0.976,
+              "support": 61
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 0.25,
+              "f1": 0.4,
+              "support": 4
+            }
+          }
+        },
+        "flag_for_review": {
+          "comparisons": 67,
+          "labels": [
+            "false",
+            "true"
+          ],
+          "percent_agreement": 0.8805970149253731,
+          "cohen_kappa": 0.13548387096774148,
+          "gwet_ac1": 0.8614629103127421,
+          "confusion_matrix": [
+            [
+              58,
+              4
+            ],
+            [
+              4,
+              1
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.567741935483871,
+          "macro_recall": 0.567741935483871,
+          "macro_f1": 0.567741935483871,
+          "per_class": {
+            "false": {
+              "precision": 0.9354838709677419,
+              "recall": 0.9354838709677419,
+              "f1": 0.9354838709677419,
+              "support": 62
+            },
+            "true": {
+              "precision": 0.2,
+              "recall": 0.2,
+              "f1": 0.2,
+              "support": 5
+            }
+          }
+        }
+      }
+    },
+    "439e73be12": {
+      "shared_items": 67,
+      "fields": {
+        "identity_hate_speech": {
+          "comparisons": 67,
+          "labels": [
+            "0",
+            "1"
+          ],
+          "percent_agreement": 0.9402985074626866,
+          "cohen_kappa": 0.46825396825396826,
+          "gwet_ac1": 0.9327478042659976,
+          "confusion_matrix": [
+            [
+              61,
+              2
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.7341269841269842,
+          "macro_recall": 0.7341269841269842,
+          "macro_f1": 0.7341269841269842,
+          "per_class": {
+            "0": {
+              "precision": 0.9682539682539683,
+              "recall": 0.9682539682539683,
+              "f1": 0.9682539682539683,
+              "support": 63
+            },
+            "1": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "f1": 0.5,
+              "support": 4
+            }
+          }
+        },
+        "hate_severity": {
+          "comparisons": 67,
+          "labels": [
+            "",
+            "high",
+            "low",
+            "medium"
+          ],
+          "percent_agreement": 0.9104477611940298,
+          "cohen_kappa": 0.22692307692307634,
+          "gwet_ac1": 0.9068977496429536,
+          "confusion_matrix": [
+            [
+              61,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1,
+              0
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.24206349206349206,
+          "macro_recall": 0.24206349206349206,
+          "macro_f1": 0.24206349206349206,
+          "per_class": {
+            "": {
+              "precision": 0.9682539682539683,
+              "recall": 0.9682539682539683,
+              "f1": 0.9682539682539683,
+              "support": 63
+            },
+            "high": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 1
+            },
+            "low": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            },
+            "medium": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 3
+            }
+          }
+        },
+        "hate_target_group": {
+          "comparisons": 67,
+          "labels": [
+            "",
+            "Race / ethnicity / nationality"
+          ],
+          "percent_agreement": 0.9402985074626866,
+          "cohen_kappa": 0.46825396825396826,
+          "gwet_ac1": 0.9327478042659976,
+          "confusion_matrix": [
+            [
+              61,
+              2
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.7341269841269842,
+          "macro_recall": 0.7341269841269842,
+          "macro_f1": 0.7341269841269842,
+          "per_class": {
+            "": {
+              "precision": 0.9682539682539683,
+              "recall": 0.9682539682539683,
+              "f1": 0.9682539682539683,
+              "support": 63
+            },
+            "Race / ethnicity / nationality": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "f1": 0.5,
+              "support": 4
+            }
+          }
+        },
+        "abuse_level": {
+          "comparisons": 67,
+          "labels": [
+            "mild",
+            "moderate",
+            "none",
+            "severe"
+          ],
+          "percent_agreement": 0.5223880597014925,
+          "cohen_kappa": 0.24213503004595258,
+          "gwet_ac1": 0.41351326707394903,
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              10,
+              0,
+              0,
+              0
+            ],
+            [
+              15,
+              0,
+              33,
+              0
+            ],
+            [
+              6,
+              1,
+              0,
+              0
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.26515151515151514,
+          "macro_recall": 0.421875,
+          "macro_f1": 0.23227513227513227,
+          "per_class": {
+            "mild": {
+              "precision": 0.06060606060606061,
+              "recall": 1.0,
+              "f1": 0.11428571428571428,
+              "support": 2
+            },
+            "moderate": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 10
+            },
+            "none": {
+              "precision": 1.0,
+              "recall": 0.6875,
+              "f1": 0.8148148148148148,
+              "support": 48
+            },
+            "severe": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 7
+            }
+          }
+        },
+        "abuse_target": {
+          "comparisons": 67,
+          "labels": [
+            "",
+            "Behavior / actions",
+            "Individual person",
+            "Intelligence / competence",
+            "Other",
+            "Political belief or ideology",
+            "Protected identity group"
+          ],
+          "percent_agreement": 0.6417910447761194,
+          "cohen_kappa": 0.4244810307802434,
+          "gwet_ac1": 0.6020704873069229,
+          "confusion_matrix": [
+            [
+              33,
+              7,
+              0,
+              1,
+              0,
+              6,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              3,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              1,
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              0,
+              0,
+              1,
+              4
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.4071428571428571,
+          "macro_recall": 0.3584183673469387,
+          "macro_f1": 0.3723544973544973,
+          "per_class": {
+            "": {
+              "precision": 1.0,
+              "recall": 0.6875,
+              "f1": 0.8148148148148148,
+              "support": 48
+            },
+            "Behavior / actions": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            },
+            "Individual person": {
+              "precision": 0.75,
+              "recall": 0.75,
+              "f1": 0.75,
+              "support": 4
+            },
+            "Intelligence / competence": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            },
+            "Other": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 2
+            },
+            "Political belief or ideology": {
+              "precision": 0.3,
+              "recall": 0.5,
+              "f1": 0.375,
+              "support": 6
+            },
+            "Protected identity group": {
+              "precision": 0.8,
+              "recall": 0.5714285714285714,
+              "f1": 0.6666666666666666,
+              "support": 7
+            }
+          }
+        },
+        "counterspeech": {
+          "comparisons": 67,
+          "labels": [
+            "",
+            "0",
+            "1"
+          ],
+          "percent_agreement": 0.8955223880597015,
+          "cohen_kappa": 0.434258142340169,
+          "gwet_ac1": 0.8852388817520035,
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              57,
+              0
+            ],
+            [
+              0,
+              7,
+              1
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.9635416666666666,
+          "macro_recall": 0.7083333333333334,
+          "macro_f1": 0.7214569941842669,
+          "per_class": {
+            "": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "0": {
+              "precision": 0.890625,
+              "recall": 1.0,
+              "f1": 0.9421487603305785,
+              "support": 57
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 0.125,
+              "f1": 0.2222222222222222,
+              "support": 8
+            }
+          }
+        },
+        "flag_for_review": {
+          "comparisons": 67,
+          "labels": [
+            "false",
+            "true"
+          ],
+          "percent_agreement": 0.8208955223880597,
+          "cohen_kappa": -0.09536784741144415,
+          "gwet_ac1": 0.7859994676603674,
+          "confusion_matrix": [
+            [
+              55,
+              5
+            ],
+            [
+              7,
+              0
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.4435483870967742,
+          "macro_recall": 0.4583333333333333,
+          "macro_f1": 0.45081967213114754,
+          "per_class": {
+            "false": {
+              "precision": 0.8870967741935484,
+              "recall": 0.9166666666666666,
+              "f1": 0.9016393442622951,
+              "support": 60
+            },
+            "true": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 7
+            }
+          }
+        }
+      }
+    },
+    "4f24a1468f": {
+      "shared_items": 67,
+      "fields": {
+        "identity_hate_speech": {
+          "comparisons": 67,
+          "labels": [
+            "0",
+            "1"
+          ],
+          "percent_agreement": 0.9850746268656716,
+          "cohen_kappa": 0.8494382022471905,
+          "gwet_ac1": 0.9834342934849796,
+          "confusion_matrix": [
+            [
+              63,
+              1
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.875,
+          "macro_recall": 0.9921875,
+          "macro_f1": 0.9246344206974129,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.984375,
+              "f1": 0.9921259842519685,
+              "support": 64
+            },
+            "1": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "f1": 0.8571428571428571,
+              "support": 3
+            }
+          }
+        },
+        "hate_severity": {
+          "comparisons": 67,
+          "labels": [
+            "",
+            "low",
+            "medium"
+          ],
+          "percent_agreement": 0.9701492537313433,
+          "cohen_kappa": 0.7015590200445434,
+          "gwet_ac1": 0.9685833186800306,
+          "confusion_matrix": [
+            [
+              63,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.5,
+          "macro_recall": 0.6614583333333334,
+          "macro_f1": 0.552930883639545,
+          "per_class": {
+            "": {
+              "precision": 1.0,
+              "recall": 0.984375,
+              "f1": 0.9921259842519685,
+              "support": 64
+            },
+            "low": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666,
+              "support": 2
+            },
+            "medium": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 1
+            }
+          }
+        },
+        "hate_target_group": {
+          "comparisons": 67,
+          "labels": [
+            "",
+            "Other protected identity",
+            "Race / ethnicity / nationality"
+          ],
+          "percent_agreement": 0.9701492537313433,
+          "cohen_kappa": 0.7015590200445434,
+          "gwet_ac1": 0.9685833186800306,
+          "confusion_matrix": [
+            [
+              63,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.5,
+          "macro_recall": 0.6614583333333334,
+          "macro_f1": 0.552930883639545,
+          "per_class": {
+            "": {
+              "precision": 1.0,
+              "recall": 0.984375,
+              "f1": 0.9921259842519685,
+              "support": 64
+            },
+            "Other protected identity": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 1
+            },
+            "Race / ethnicity / nationality": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666,
+              "support": 2
+            }
+          }
+        },
+        "abuse_level": {
+          "comparisons": 67,
+          "labels": [
+            "mild",
+            "moderate",
+            "none"
+          ],
+          "percent_agreement": 0.6716417910447762,
+          "cohen_kappa": 0.37062339880444073,
+          "gwet_ac1": 0.5681535193730316,
+          "confusion_matrix": [
+            [
+              12,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              19,
+              0,
+              33
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.4545454545454546,
+          "macro_recall": 0.5192307692307693,
+          "macro_f1": 0.4327365728900256,
+          "per_class": {
+            "mild": {
+              "precision": 0.36363636363636365,
+              "recall": 0.9230769230769231,
+              "f1": 0.5217391304347826,
+              "support": 13
+            },
+            "moderate": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 2
+            },
+            "none": {
+              "precision": 1.0,
+              "recall": 0.6346153846153846,
+              "f1": 0.7764705882352941,
+              "support": 52
+            }
+          }
+        },
+        "abuse_target": {
+          "comparisons": 67,
+          "labels": [
+            "",
+            "Behavior / actions",
+            "Individual person",
+            "Intelligence / competence",
+            "Political belief or ideology",
+            "Protected identity group",
+            "Unclear"
+          ],
+          "percent_agreement": 0.5970149253731343,
+          "cohen_kappa": 0.31787330316742074,
+          "gwet_ac1": 0.5554008110432965,
+          "confusion_matrix": [
+            [
+              33,
+              9,
+              1,
+              1,
+              7,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              1,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.2967032967032967,
+          "macro_recall": 0.49542124542124544,
+          "macro_f1": 0.3124997367368,
+          "per_class": {
+            "": {
+              "precision": 1.0,
+              "recall": 0.6346153846153846,
+              "f1": 0.7764705882352941,
+              "support": 52
+            },
+            "Behavior / actions": {
+              "precision": 0.07692307692307693,
+              "recall": 1.0,
+              "f1": 0.14285714285714285,
+              "support": 1
+            },
+            "Individual person": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666,
+              "support": 2
+            },
+            "Intelligence / competence": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            },
+            "Political belief or ideology": {
+              "precision": 0.3,
+              "recall": 0.3333333333333333,
+              "f1": 0.3157894736842105,
+              "support": 9
+            },
+            "Protected identity group": {
+              "precision": 0.2,
+              "recall": 0.5,
+              "f1": 0.2857142857142857,
+              "support": 2
+            },
+            "Unclear": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 1
+            }
+          }
+        },
+        "counterspeech": {
+          "comparisons": 67,
+          "labels": [
+            "",
+            "0",
+            "1"
+          ],
+          "percent_agreement": 0.9552238805970149,
+          "cohen_kappa": 0.5543237250554318,
+          "gwet_ac1": 0.952858399296394,
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              62,
+              1
+            ],
+            [
+              0,
+              2,
+              0
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.65625,
+          "macro_recall": 0.6613756613756614,
+          "macro_f1": 0.6587926509186351,
+          "per_class": {
+            "": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "0": {
+              "precision": 0.96875,
+              "recall": 0.9841269841269841,
+              "f1": 0.9763779527559056,
+              "support": 63
+            },
+            "1": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 2
+            }
+          }
+        },
+        "flag_for_review": {
+          "comparisons": 67,
+          "labels": [
+            "false",
+            "true"
+          ],
+          "percent_agreement": 0.9253731343283582,
+          "cohen_kappa": 0.0,
+          "gwet_ac1": 0.9195967838713549,
+          "confusion_matrix": [
+            [
+              62,
+              5
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.5,
+          "macro_recall": 0.4626865671641791,
+          "macro_f1": 0.4806201550387597,
+          "per_class": {
+            "false": {
+              "precision": 1.0,
+              "recall": 0.9253731343283582,
+              "f1": 0.9612403100775194,
+              "support": 67
+            },
+            "true": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            }
+          }
+        }
+      }
+    },
+    "bfff806a32": {
+      "shared_items": 67,
+      "fields": {
+        "identity_hate_speech": {
+          "comparisons": 67,
+          "labels": [
+            "0",
+            "1"
+          ],
+          "percent_agreement": 0.9552238805970149,
+          "cohen_kappa": 0.38532110091743066,
+          "gwet_ac1": 0.9517580703228129,
+          "confusion_matrix": [
+            [
+              63,
+              3
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.625,
+          "macro_recall": 0.9772727272727273,
+          "macro_f1": 0.6883720930232557,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.9545454545454546,
+              "f1": 0.9767441860465116,
+              "support": 66
+            },
+            "1": {
+              "precision": 0.25,
+              "recall": 1.0,
+              "f1": 0.4,
+              "support": 1
+            }
+          }
+        },
+        "hate_severity": {
+          "comparisons": 67,
+          "labels": [
+            "",
+            "low",
+            "medium"
+          ],
+          "percent_agreement": 0.9402985074626866,
+          "cohen_kappa": 0.19033232628398838,
+          "gwet_ac1": 0.9380597446120068,
+          "confusion_matrix": [
+            [
+              63,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.3333333333333333,
+          "macro_recall": 0.3181818181818182,
+          "macro_f1": 0.3255813953488372,
+          "per_class": {
+            "": {
+              "precision": 1.0,
+              "recall": 0.9545454545454546,
+              "f1": 0.9767441860465116,
+              "support": 66
+            },
+            "low": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            },
+            "medium": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 1
+            }
+          }
+        },
+        "hate_target_group": {
+          "comparisons": 67,
+          "labels": [
+            "",
+            "Race / ethnicity / nationality"
+          ],
+          "percent_agreement": 0.9552238805970149,
+          "cohen_kappa": 0.38532110091743066,
+          "gwet_ac1": 0.9517580703228129,
+          "confusion_matrix": [
+            [
+              63,
+              3
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.625,
+          "macro_recall": 0.9772727272727273,
+          "macro_f1": 0.6883720930232557,
+          "per_class": {
+            "": {
+              "precision": 1.0,
+              "recall": 0.9545454545454546,
+              "f1": 0.9767441860465116,
+              "support": 66
+            },
+            "Race / ethnicity / nationality": {
+              "precision": 0.25,
+              "recall": 1.0,
+              "f1": 0.4,
+              "support": 1
+            }
+          }
+        },
+        "abuse_level": {
+          "comparisons": 67,
+          "labels": [
+            "mild",
+            "moderate",
+            "none"
+          ],
+          "percent_agreement": 0.5223880597014925,
+          "cohen_kappa": 0.12059064807219029,
+          "gwet_ac1": 0.3844828823656068,
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              5,
+              0,
+              0
+            ],
+            [
+              26,
+              1,
+              33
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.35353535353535354,
+          "macro_recall": 0.5166666666666667,
+          "macro_f1": 0.2746543778801844,
+          "per_class": {
+            "mild": {
+              "precision": 0.06060606060606061,
+              "recall": 1.0,
+              "f1": 0.11428571428571428,
+              "support": 2
+            },
+            "moderate": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 5
+            },
+            "none": {
+              "precision": 1.0,
+              "recall": 0.55,
+              "f1": 0.7096774193548387,
+              "support": 60
+            }
+          }
+        },
+        "abuse_target": {
+          "comparisons": 67,
+          "labels": [
+            "",
+            "Behavior / actions",
+            "Individual person",
+            "Intelligence / competence",
+            "Political belief or ideology",
+            "Protected identity group"
+          ],
+          "percent_agreement": 0.5373134328358209,
+          "cohen_kappa": 0.16114701130856215,
+          "gwet_ac1": 0.4864123043446008,
+          "confusion_matrix": [
+            [
+              33,
+              12,
+              2,
+              2,
+              7,
+              4
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3,
+              1
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.2833333333333333,
+          "macro_recall": 0.2916666666666667,
+          "macro_f1": 0.26272401433691756,
+          "per_class": {
+            "": {
+              "precision": 1.0,
+              "recall": 0.55,
+              "f1": 0.7096774193548387,
+              "support": 60
+            },
+            "Behavior / actions": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            },
+            "Individual person": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666,
+              "support": 2
+            },
+            "Intelligence / competence": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            },
+            "Political belief or ideology": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            },
+            "Protected identity group": {
+              "precision": 0.2,
+              "recall": 0.2,
+              "f1": 0.2,
+              "support": 5
+            }
+          }
+        },
+        "counterspeech": {
+          "comparisons": 67,
+          "labels": [
+            "",
+            "0",
+            "1"
+          ],
+          "percent_agreement": 0.8955223880597015,
+          "cohen_kappa": 0.434258142340169,
+          "gwet_ac1": 0.8852388817520035,
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              57,
+              0
+            ],
+            [
+              0,
+              7,
+              1
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.9635416666666666,
+          "macro_recall": 0.7083333333333334,
+          "macro_f1": 0.7214569941842669,
+          "per_class": {
+            "": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "0": {
+              "precision": 0.890625,
+              "recall": 1.0,
+              "f1": 0.9421487603305785,
+              "support": 57
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 0.125,
+              "f1": 0.2222222222222222,
+              "support": 8
+            }
+          }
+        },
+        "flag_for_review": {
+          "comparisons": 67,
+          "labels": [
+            "false",
+            "true"
+          ],
+          "percent_agreement": 0.8805970149253731,
+          "cohen_kappa": -0.059288537549406946,
+          "gwet_ac1": 0.8654956085319951,
+          "confusion_matrix": [
+            [
+              59,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.47580645161290325,
+          "macro_recall": 0.4609375,
+          "macro_f1": 0.46825396825396826,
+          "per_class": {
+            "false": {
+              "precision": 0.9516129032258065,
+              "recall": 0.921875,
+              "f1": 0.9365079365079365,
+              "support": 64
+            },
+            "true": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 3
+            }
+          }
+        }
+      }
+    },
+    "cc790fc8d2": {
+      "shared_items": 67,
+      "fields": {
+        "identity_hate_speech": {
+          "comparisons": 67,
+          "labels": [
+            "0",
+            "1"
+          ],
+          "percent_agreement": 0.9552238805970149,
+          "cohen_kappa": 0.38532110091743066,
+          "gwet_ac1": 0.9517580703228129,
+          "confusion_matrix": [
+            [
+              63,
+              3
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.625,
+          "macro_recall": 0.9772727272727273,
+          "macro_f1": 0.6883720930232557,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.9545454545454546,
+              "f1": 0.9767441860465116,
+              "support": 66
+            },
+            "1": {
+              "precision": 0.25,
+              "recall": 1.0,
+              "f1": 0.4,
+              "support": 1
+            }
+          }
+        },
+        "hate_severity": {
+          "comparisons": 67,
+          "labels": [
+            "",
+            "low",
+            "medium"
+          ],
+          "percent_agreement": 0.9402985074626866,
+          "cohen_kappa": 0.19033232628398838,
+          "gwet_ac1": 0.9380597446120068,
+          "confusion_matrix": [
+            [
+              63,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.3333333333333333,
+          "macro_recall": 0.3181818181818182,
+          "macro_f1": 0.3255813953488372,
+          "per_class": {
+            "": {
+              "precision": 1.0,
+              "recall": 0.9545454545454546,
+              "f1": 0.9767441860465116,
+              "support": 66
+            },
+            "low": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            },
+            "medium": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 1
+            }
+          }
+        },
+        "hate_target_group": {
+          "comparisons": 67,
+          "labels": [
+            "",
+            "Race / ethnicity / nationality"
+          ],
+          "percent_agreement": 0.9552238805970149,
+          "cohen_kappa": 0.38532110091743066,
+          "gwet_ac1": 0.9517580703228129,
+          "confusion_matrix": [
+            [
+              63,
+              3
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.625,
+          "macro_recall": 0.9772727272727273,
+          "macro_f1": 0.6883720930232557,
+          "per_class": {
+            "": {
+              "precision": 1.0,
+              "recall": 0.9545454545454546,
+              "f1": 0.9767441860465116,
+              "support": 66
+            },
+            "Race / ethnicity / nationality": {
+              "precision": 0.25,
+              "recall": 1.0,
+              "f1": 0.4,
+              "support": 1
+            }
+          }
+        },
+        "abuse_level": {
+          "comparisons": 67,
+          "labels": [
+            "mild",
+            "moderate",
+            "none"
+          ],
+          "percent_agreement": 0.5970149253731343,
+          "cohen_kappa": 0.2058823529411764,
+          "gwet_ac1": 0.4869176770899808,
+          "confusion_matrix": [
+            [
+              7,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              26,
+              1,
+              33
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.40404040404040403,
+          "macro_recall": 0.5166666666666667,
+          "macro_f1": 0.3532258064516129,
+          "per_class": {
+            "mild": {
+              "precision": 0.21212121212121213,
+              "recall": 1.0,
+              "f1": 0.35,
+              "support": 7
+            },
+            "moderate": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            },
+            "none": {
+              "precision": 1.0,
+              "recall": 0.55,
+              "f1": 0.7096774193548387,
+              "support": 60
+            }
+          }
+        },
+        "abuse_target": {
+          "comparisons": 67,
+          "labels": [
+            "",
+            "Behavior / actions",
+            "Individual person",
+            "Intelligence / competence",
+            "Political belief or ideology",
+            "Protected identity group"
+          ],
+          "percent_agreement": 0.5522388059701493,
+          "cohen_kappa": 0.18126272912423638,
+          "gwet_ac1": 0.5031393681712563,
+          "confusion_matrix": [
+            [
+              33,
+              10,
+              3,
+              2,
+              9,
+              3
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.27115384615384613,
+          "macro_recall": 0.6472222222222223,
+          "macro_f1": 0.2899523415652448,
+          "per_class": {
+            "": {
+              "precision": 1.0,
+              "recall": 0.55,
+              "f1": 0.7096774193548387,
+              "support": 60
+            },
+            "Behavior / actions": {
+              "precision": 0.07692307692307693,
+              "recall": 1.0,
+              "f1": 0.14285714285714285,
+              "support": 1
+            },
+            "Individual person": {
+              "precision": 0.25,
+              "recall": 1.0,
+              "f1": 0.4,
+              "support": 1
+            },
+            "Intelligence / competence": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 1
+            },
+            "Political belief or ideology": {
+              "precision": 0.1,
+              "recall": 0.3333333333333333,
+              "f1": 0.15384615384615385,
+              "support": 3
+            },
+            "Protected identity group": {
+              "precision": 0.2,
+              "recall": 1.0,
+              "f1": 0.3333333333333333,
+              "support": 1
+            }
+          }
+        },
+        "counterspeech": {
+          "comparisons": 67,
+          "labels": [
+            "",
+            "0",
+            "1"
+          ],
+          "percent_agreement": 0.8955223880597015,
+          "cohen_kappa": 0.434258142340169,
+          "gwet_ac1": 0.8852388817520035,
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              57,
+              0
+            ],
+            [
+              0,
+              7,
+              1
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.9635416666666666,
+          "macro_recall": 0.7083333333333334,
+          "macro_f1": 0.7214569941842669,
+          "per_class": {
+            "": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "0": {
+              "precision": 0.890625,
+              "recall": 1.0,
+              "f1": 0.9421487603305785,
+              "support": 57
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 0.125,
+              "f1": 0.2222222222222222,
+              "support": 8
+            }
+          }
+        },
+        "flag_for_review": {
+          "comparisons": 67,
+          "labels": [
+            "false",
+            "true"
+          ],
+          "percent_agreement": 0.9253731343283582,
+          "cohen_kappa": 0.0,
+          "gwet_ac1": 0.9195967838713549,
+          "confusion_matrix": [
+            [
+              62,
+              5
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "confusion_matrix_axes": "rows=human_gold, columns=llm_prediction",
+          "macro_precision": 0.5,
+          "macro_recall": 0.4626865671641791,
+          "macro_f1": 0.4806201550387597,
+          "per_class": {
+            "false": {
+              "precision": 1.0,
+              "recall": 0.9253731343283582,
+              "f1": 0.9612403100775194,
+              "support": 67
+            },
+            "true": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            }
+          }
+        }
+      }
+    }
+  },
+  "7_bootstrap_confidence_intervals": {
+    "method": {
+      "iterations": 1000,
+      "confidence_level": 0.95,
+      "interval": "percentile",
+      "resampling_unit": "shared item",
+      "seed": 20260712,
+      "note": "Undefined kappa replicates are omitted and counted through defined_replicates."
+    },
+    "human_only_reliability": {
+      "identity_hate_speech": {
+        "gwet_ac1": {
+          "ci_95_percentile": [
+            0.9260579820875249,
+            0.9919602009949752
+          ],
+          "defined_replicates": 1000
+        },
+        "mean_pairwise_human_human_cohen_kappa": {
+          "ci_95_percentile": [
+            0.2594756554307115,
+            0.8773903030169907
+          ],
+          "defined_replicates": 1000
+        },
+        "fleiss_kappa": {
+          "ci_95_percentile": [
+            0.06841309823678139,
+            0.8519882179676016
+          ],
+          "defined_replicates": 1000
+        }
+      },
+      "hate_severity": {
+        "gwet_ac1": {
+          "ci_95_percentile": [
+            0.9164773528845948,
+            0.9860004062900329
+          ],
+          "defined_replicates": 1000
+        },
+        "gwet_ac2_linear": {
+          "ci_95_percentile": [
+            0.5764705882352941,
+            0.5764705882352941
+          ],
+          "defined_replicates": 646
+        },
+        "gwet_ac2_quadratic": {
+          "ci_95_percentile": [
+            0.76,
+            0.76
+          ],
+          "defined_replicates": 646
+        },
+        "mean_pairwise_human_human_cohen_kappa": {
+          "ci_95_percentile": [
+            0.2308012722285338,
+            0.6626338573707
+          ],
+          "defined_replicates": 1000
+        },
+        "fleiss_kappa": {
+          "ci_95_percentile": [
+            0.029864253393659057,
+            0.6019801980198
+          ],
+          "defined_replicates": 1000
+        }
+      },
+      "hate_target_group": {
+        "gwet_ac1": {
+          "ci_95_percentile": [
+            0.9308715957869503,
+            0.9920001990000249
+          ],
+          "defined_replicates": 1000
+        },
+        "mean_pairwise_human_human_cohen_kappa": {
+          "ci_95_percentile": [
+            0.23858440170940184,
+            0.8812972628561703
+          ],
+          "defined_replicates": 1000
+        },
+        "fleiss_kappa": {
+          "ci_95_percentile": [
+            0.04225705329153014,
+            0.8596683705273651
+          ],
+          "defined_replicates": 1000
+        }
+      },
+      "abuse_level": {
+        "gwet_ac1": {
+          "ci_95_percentile": [
+            0.7017250973845295,
+            0.8775115475990708
+          ],
+          "defined_replicates": 1000
+        },
+        "gwet_ac2_linear": {
+          "ci_95_percentile": [
+            0.8224990441421327,
+            0.9375665313121836
+          ],
+          "defined_replicates": 1000
+        },
+        "gwet_ac2_quadratic": {
+          "ci_95_percentile": [
+            0.8905903242192775,
+            0.965686405372937
+          ],
+          "defined_replicates": 1000
+        },
+        "mean_pairwise_human_human_cohen_kappa": {
+          "ci_95_percentile": [
+            0.3309810370664293,
+            0.49829197740695286
+          ],
+          "defined_replicates": 1000
+        },
+        "fleiss_kappa": {
+          "ci_95_percentile": [
+            0.3189421356134409,
+            0.49510684030850827
+          ],
+          "defined_replicates": 1000
+        }
+      },
+      "abuse_target": {
+        "gwet_ac1": {
+          "ci_95_percentile": [
+            0.7624824311848823,
+            0.9058470971812826
+          ],
+          "defined_replicates": 1000
+        },
+        "mean_pairwise_human_human_cohen_kappa": {
+          "ci_95_percentile": [
+            0.36311125731169214,
+            0.6421364568619155
+          ],
+          "defined_replicates": 1000
+        },
+        "fleiss_kappa": {
+          "ci_95_percentile": [
+            0.38019163763066205,
+            0.6461724806201553
+          ],
+          "defined_replicates": 1000
+        }
+      },
+      "counterspeech": {
+        "gwet_ac1": {
+          "ci_95_percentile": [
+            0.8224598308975215,
+            0.937968421123872
+          ],
+          "defined_replicates": 1000
+        },
+        "mean_pairwise_human_human_cohen_kappa": {
+          "ci_95_percentile": [
+            0.3230359945136103,
+            0.7325030597455416
+          ],
+          "defined_replicates": 1000
+        },
+        "fleiss_kappa": {
+          "ci_95_percentile": [
+            0.3392119210384823,
+            0.7331151526485578
+          ],
+          "defined_replicates": 1000
+        }
+      },
+      "flag_for_review": {
+        "gwet_ac1": {
+          "ci_95_percentile": [
+            0.8828242016709714,
+            0.9710083708950417
+          ],
+          "defined_replicates": 1000
+        },
+        "mean_pairwise_human_human_cohen_kappa": {
+          "ci_95_percentile": [
+            0.1952414421449954,
+            0.40763582966226136
+          ],
+          "defined_replicates": 1000
+        },
+        "fleiss_kappa": {
+          "ci_95_percentile": [
+            0.03071065989847894,
+            0.4807200769547907
+          ],
+          "defined_replicates": 1000
+        }
+      }
+    },
+    "llm_versus_human_majority_gold": {
+      "identity_hate_speech": {
+        "percent_agreement": {
+          "ci_95_percentile": [
+            0.8955223880597015,
+            1.0
+          ],
+          "defined_replicates": 1000
+        },
+        "cohen_kappa": {
+          "ci_95_percentile": [
+            0.0,
+            1.0
+          ],
+          "defined_replicates": 1000
+        },
+        "gwet_ac1": {
+          "ci_95_percentile": [
+            0.8805552018336942,
+            1.0
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_precision": {
+          "ci_95_percentile": [
+            0.5,
+            0.9
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_recall": {
+          "ci_95_percentile": [
+            0.4552238805970149,
+            0.9924242424242424
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_f1": {
+          "ci_95_percentile": [
+            0.4765625,
+            0.9404444444444444
+          ],
+          "defined_replicates": 1000
+        }
+      },
+      "hate_severity": {
+        "percent_agreement": {
+          "ci_95_percentile": [
+            0.8805970149253731,
+            0.9850746268656716
+          ],
+          "defined_replicates": 1000
+        },
+        "cohen_kappa": {
+          "ci_95_percentile": [
+            0.0,
+            0.4924242424242423
+          ],
+          "defined_replicates": 1000
+        },
+        "gwet_ac1": {
+          "ci_95_percentile": [
+            0.8716167664670659,
+            0.9849632497334904
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_precision": {
+          "ci_95_percentile": [
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_recall": {
+          "ci_95_percentile": [
+            0.2985074626865672,
+            0.3333333333333333
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_f1": {
+          "ci_95_percentile": [
+            0.31496062992125984,
+            0.3333333333333333
+          ],
+          "defined_replicates": 1000
+        }
+      },
+      "hate_target_group": {
+        "percent_agreement": {
+          "ci_95_percentile": [
+            0.8955223880597015,
+            1.0
+          ],
+          "defined_replicates": 1000
+        },
+        "cohen_kappa": {
+          "ci_95_percentile": [
+            0.0,
+            1.0
+          ],
+          "defined_replicates": 1000
+        },
+        "gwet_ac1": {
+          "ci_95_percentile": [
+            0.8840400543948572,
+            1.0
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_precision": {
+          "ci_95_percentile": [
+            0.5,
+            0.875
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_recall": {
+          "ci_95_percentile": [
+            0.4552238805970149,
+            0.9924242424242424
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_f1": {
+          "ci_95_percentile": [
+            0.4765625,
+            0.9246344206974129
+          ],
+          "defined_replicates": 1000
+        }
+      },
+      "abuse_level": {
+        "percent_agreement": {
+          "ci_95_percentile": [
+            0.49230769230769234,
+            0.7230769230769231
+          ],
+          "defined_replicates": 1000
+        },
+        "cohen_kappa": {
+          "ci_95_percentile": [
+            0.11489361702127647,
+            0.40567853705486046
+          ],
+          "defined_replicates": 1000
+        },
+        "gwet_ac1": {
+          "ci_95_percentile": [
+            0.33545039113933856,
+            0.6561099272540231
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_precision": {
+          "ci_95_percentile": [
+            0.3619047619047619,
+            0.4597701149425288
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_recall": {
+          "ci_95_percentile": [
+            0.39181286549707606,
+            0.5628415300546448
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_f1": {
+          "ci_95_percentile": [
+            0.2898936170212766,
+            0.44706102233436135
+          ],
+          "defined_replicates": 1000
+        }
+      },
+      "abuse_target": {
+        "percent_agreement": {
+          "ci_95_percentile": [
+            0.5076923076923077,
+            0.7384615384615385
+          ],
+          "defined_replicates": 1000
+        },
+        "cohen_kappa": {
+          "ci_95_percentile": [
+            0.15810629745422067,
+            0.47513812154696144
+          ],
+          "defined_replicates": 1000
+        },
+        "gwet_ac1": {
+          "ci_95_percentile": [
+            0.45033165085489274,
+            0.7109372956287441
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_precision": {
+          "ci_95_percentile": [
+            0.23333333333333336,
+            0.5050505050505051
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_recall": {
+          "ci_95_percentile": [
+            0.27037037037037037,
+            0.7141414141414142
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_f1": {
+          "ci_95_percentile": [
+            0.21449430836164254,
+            0.5118357487922706
+          ],
+          "defined_replicates": 1000
+        }
+      },
+      "counterspeech": {
+        "percent_agreement": {
+          "ci_95_percentile": [
+            0.890625,
+            1.0
+          ],
+          "defined_replicates": 1000
+        },
+        "cohen_kappa": {
+          "ci_95_percentile": [
+            0.0,
+            1.0
+          ],
+          "defined_replicates": 1000
+        },
+        "gwet_ac1": {
+          "ci_95_percentile": [
+            0.8828681613177332,
+            1.0
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_precision": {
+          "ci_95_percentile": [
+            0.3177083333333333,
+            0.9946236559139785
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_recall": {
+          "ci_95_percentile": [
+            0.3333333333333333,
+            0.9444444444444445
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_f1": {
+          "ci_95_percentile": [
+            0.3253333333333333,
+            0.966747117189595
+          ],
+          "defined_replicates": 1000
+        }
+      },
+      "flag_for_review": {
+        "percent_agreement": {
+          "ci_95_percentile": [
+            0.7910447761194029,
+            0.9552238805970149
+          ],
+          "defined_replicates": 1000
+        },
+        "cohen_kappa": {
+          "ci_95_percentile": [
+            -0.10613207547169778,
+            0.0
+          ],
+          "defined_replicates": 1000
+        },
+        "gwet_ac1": {
+          "ci_95_percentile": [
+            0.7429432721293504,
+            0.953174140943506
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_precision": {
+          "ci_95_percentile": [
+            0.4491525423728814,
+            0.5
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_recall": {
+          "ci_95_percentile": [
+            0.42424242424242425,
+            0.4921875
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_f1": {
+          "ci_95_percentile": [
+            0.44166666666666665,
+            0.48854961832061067
+          ],
+          "defined_replicates": 1000
+        }
+      }
+    },
+    "conditional_metrics": {
+      "hate_severity_on_human_hate_positive_items": {
+        "percent_agreement": {
+          "ci_95_percentile": [
+            0.0,
+            0.0
+          ],
+          "defined_replicates": 1000
+        },
+        "cohen_kappa": {
+          "ci_95_percentile": [
+            0.0,
+            0.0
+          ],
+          "defined_replicates": 1000
+        },
+        "gwet_ac1": {
+          "ci_95_percentile": [
+            -1.0,
+            -1.0
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_precision": {
+          "ci_95_percentile": [
+            0.0,
+            0.0
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_recall": {
+          "ci_95_percentile": [
+            0.0,
+            0.0
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_f1": {
+          "ci_95_percentile": [
+            0.0,
+            0.0
+          ],
+          "defined_replicates": 1000
+        }
+      },
+      "hate_target_on_human_hate_positive_items": {
+        "percent_agreement": {
+          "ci_95_percentile": [
+            1.0,
+            1.0
+          ],
+          "defined_replicates": 1000
+        },
+        "cohen_kappa": {
+          "ci_95_percentile": [
+            1.0,
+            1.0
+          ],
+          "defined_replicates": 1000
+        },
+        "gwet_ac1": {
+          "ci_95_percentile": null,
+          "defined_replicates": 0
+        },
+        "macro_precision": {
+          "ci_95_percentile": [
+            1.0,
+            1.0
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_recall": {
+          "ci_95_percentile": [
+            1.0,
+            1.0
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_f1": {
+          "ci_95_percentile": [
+            1.0,
+            1.0
+          ],
+          "defined_replicates": 1000
+        }
+      },
+      "abuse_target_on_human_abuse_positive_items": {
+        "percent_agreement": {
+          "ci_95_percentile": [
+            0.3333333333333333,
+            0.8888888888888888
+          ],
+          "defined_replicates": 1000
+        },
+        "cohen_kappa": {
+          "ci_95_percentile": [
+            0.15625,
+            0.85
+          ],
+          "defined_replicates": 1000
+        },
+        "gwet_ac1": {
+          "ci_95_percentile": [
+            0.14285714285714285,
+            0.8666666666666666
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_precision": {
+          "ci_95_percentile": [
+            0.3125,
+            0.9166666666666666
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_recall": {
+          "ci_95_percentile": [
+            0.3,
+            0.9375
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_f1": {
+          "ci_95_percentile": [
+            0.26785714285714285,
+            0.9142857142857143
+          ],
+          "defined_replicates": 1000
+        }
+      },
+      "counterspeech_on_replies_only": {
+        "percent_agreement": {
+          "ci_95_percentile": [
+            0.8870967741935484,
+            1.0
+          ],
+          "defined_replicates": 1000
+        },
+        "cohen_kappa": {
+          "ci_95_percentile": [
+            0.0,
+            1.0
+          ],
+          "defined_replicates": 1000
+        },
+        "gwet_ac1": {
+          "ci_95_percentile": [
+            0.8736351725141942,
+            1.0
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_precision": {
+          "ci_95_percentile": [
+            0.45161290322580644,
+            1.0
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_recall": {
+          "ci_95_percentile": [
+            0.5,
+            1.0
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_f1": {
+          "ci_95_percentile": [
+            0.4745762711864407,
+            1.0
+          ],
+          "defined_replicates": 1000
+        }
+      }
+    },
+    "ordinal_metrics": {
+      "hate_severity": {
+        "percent_agreement": {
+          "ci_95_percentile": [
+            0.0,
+            0.0
+          ],
+          "defined_replicates": 1000
+        },
+        "cohen_kappa": {
+          "ci_95_percentile": [
+            0.0,
+            0.0
+          ],
+          "defined_replicates": 1000
+        },
+        "gwet_ac1": {
+          "ci_95_percentile": [
+            -0.3333333333333333,
+            -0.3333333333333333
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_precision": {
+          "ci_95_percentile": [
+            0.0,
+            0.0
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_recall": {
+          "ci_95_percentile": [
+            0.0,
+            0.0
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_f1": {
+          "ci_95_percentile": [
+            0.0,
+            0.0
+          ],
+          "defined_replicates": 1000
+        },
+        "linear_weighted_cohen_kappa": {
+          "ci_95_percentile": [
+            0.0,
+            0.0
+          ],
+          "defined_replicates": 1000
+        },
+        "quadratic_weighted_cohen_kappa": {
+          "ci_95_percentile": [
+            0.0,
+            0.0
+          ],
+          "defined_replicates": 1000
+        },
+        "gwet_ac2_linear": {
+          "ci_95_percentile": [
+            0.14285714285714285,
+            0.14285714285714285
+          ],
+          "defined_replicates": 1000
+        },
+        "gwet_ac2_quadratic": {
+          "ci_95_percentile": [
+            0.5,
+            0.5
+          ],
+          "defined_replicates": 1000
+        }
+      },
+      "abuse_level": {
+        "percent_agreement": {
+          "ci_95_percentile": [
+            0.49230769230769234,
+            0.7384615384615385
+          ],
+          "defined_replicates": 1000
+        },
+        "cohen_kappa": {
+          "ci_95_percentile": [
+            0.10195331110052411,
+            0.39999999999999986
+          ],
+          "defined_replicates": 1000
+        },
+        "gwet_ac1": {
+          "ci_95_percentile": [
+            0.39295316258667046,
+            0.6985404446869459
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_precision": {
+          "ci_95_percentile": [
+            0.2692307692307692,
+            0.34259259259259256
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_recall": {
+          "ci_95_percentile": [
+            0.28308823529411764,
+            0.42592592592592593
+          ],
+          "defined_replicates": 1000
+        },
+        "macro_f1": {
+          "ci_95_percentile": [
+            0.2130987292277615,
+            0.33611111111111114
+          ],
+          "defined_replicates": 1000
+        },
+        "linear_weighted_cohen_kappa": {
+          "ci_95_percentile": [
+            0.14213197969543145,
+            0.42956120092378747
+          ],
+          "defined_replicates": 1000
+        },
+        "quadratic_weighted_cohen_kappa": {
+          "ci_95_percentile": [
+            0.18991097922848654,
+            0.5029239766081872
+          ],
+          "defined_replicates": 1000
+        },
+        "gwet_ac2_linear": {
+          "ci_95_percentile": [
+            0.7267868937771456,
+            0.8738368442084828
+          ],
+          "defined_replicates": 1000
+        },
+        "gwet_ac2_quadratic": {
+          "ci_95_percentile": [
+            0.8932506887052329,
+            0.9529346622369873
+          ],
+          "defined_replicates": 1000
+        }
+      }
+    }
+  }
+}
