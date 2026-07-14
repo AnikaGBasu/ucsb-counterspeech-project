@@ -25,8 +25,14 @@ uv run python -m llm_annotation_pipeline.runner --limit 1
 
 # Complete evaluation
 uv run python -m llm_annotation_pipeline.runner
+
+# Every post in every fringe-platform validation thread (no trial items)
+uv run python -m llm_annotation_pipeline.runner --all-validation
 ```
 
 The quality-first default is full `gpt-5.4` with `medium` reasoning. Override either setting with `--model MODEL_ID` or `--reasoning-effort LEVEL`.
 
 Model and reasoning effort are included in output filenames. Re-running an identical configuration and seed resumes its existing results instead of mixing configurations or paying for completed items again. Outputs go to `results/` inside this pipeline folder.
+
+
+`--all-validation` includes every post in every validation thread from 4chan, Gab, Stormfront, and Vanguard and excludes trial items. Each completed item is flushed and synced to disk, so after Ctrl-C the identical command safely resumes by skipping saved item IDs.

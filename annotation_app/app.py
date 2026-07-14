@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify, render_template, redirect, url_for
 import csv
 import json
 import os
+import random
 import re
 import uuid
 import threading
@@ -177,6 +178,12 @@ def convert_simple_reply_thread(thread, platform, source):
         thread.get("image_urls", []),
     )
     replies = thread.get("replies") or []
+    if platform == "gab":
+        replies = [
+            reply
+            for reply in replies
+            if str(reply.get("reply_id") or "") != "gab-ad-comment"
+        ]
     reply_by_id = {
         str(reply.get("reply_id")): reply
         for reply in replies
@@ -422,19 +429,44 @@ def load_items(mode="trial"):
 
 def load_assignment_state():
     if not os.path.exists(ASSIGNMENT_STATE_FILE):
-        return {"assignments": {}}
+        return {"by_user": {}, "by_thread": {}}
     try:
         with open(ASSIGNMENT_STATE_FILE, "r", encoding="utf-8") as f:
             state = json.load(f)
     except (json.JSONDecodeError, OSError):
-        return {"assignments": {}}
+        return {"by_user": {}, "by_thread": {}}
     if not isinstance(state, dict):
-        return {"assignments": {}}
-    state.setdefault("assignments", {})
-    return state
+        return {"by_user": {}, "by_thread": {}}
+
+    # Migrate the original {"assignments": {annotator_id: record}} layout on
+    # read. The by-thread view is derived from by-user so the two indexes never
+    # become independent sources of truth.
+    by_user = state.get("by_user", state.get("assignments", {}))
+    if not isinstance(by_user, dict):
+        by_user = {}
+    return assignment_state_with_thread_view(by_user)
+
+
+def assignment_state_with_thread_view(by_user):
+    by_thread = defaultdict(dict)
+    for annotator_id, record in by_user.items():
+        if not isinstance(record, dict):
+            continue
+        thread_key_value = record.get("thread_key")
+        if not thread_key_value:
+            continue
+        by_thread[thread_key_value][annotator_id] = {
+            "assigned_at": record.get("assigned_at", ""),
+            "assignment_id": record.get("assignment_id", ""),
+        }
+    return {
+        "by_user": by_user,
+        "by_thread": dict(by_thread),
+    }
 
 
 def save_assignment_state(state):
+    state = assignment_state_with_thread_view(state.get("by_user", {}))
     tmp_path = f"{ASSIGNMENT_STATE_FILE}.tmp"
     with open(tmp_path, "w", encoding="utf-8") as f:
         json.dump(state, f, ensure_ascii=False, indent=2, sort_keys=True)
@@ -600,7 +632,7 @@ def choose_thread_for_annotator(annotator_id, force_new=False):
         thread_map = {items[0]["thread_key"]: items for items in threads}
         progress = annotation_progress_by_thread(thread_map)
         state = load_assignment_state()
-        assignments = state.setdefault("assignments", {})
+        assignments = state.setdefault("by_user", {})
         existing = assignments.get(annotator_id)
 
         if existing and not force_new:
@@ -633,8 +665,40 @@ def choose_thread_for_annotator(annotator_id, force_new=False):
             save_assignment_state(state)
             return None, [], "empty"
 
-        candidates.sort(key=lambda candidate: (candidate[0], candidate[1]))
-        _, key, items, status = candidates[0]
+        best_priority = min(candidate[0] for candidate in candidates)
+        priority_candidates = [candidate for candidate in candidates if candidate[0] == best_priority]
+
+        # Always restore partial work first. For new assignments, keep platform
+        # coverage even before randomly choosing a thread within that platform.
+        if best_priority == -1:
+            _, key, items, status = random.choice(priority_candidates)
+        else:
+            platform_load = defaultdict(int)
+            for thread_key_value, info in progress.items():
+                platform = thread_map[thread_key_value][0]["platform"]
+                platform_load[platform] += len(info["complete_annotators"])
+            now = datetime.now()
+            for assigned_annotator, record in assignments.items():
+                if assigned_annotator == annotator_id or not is_assignment_active(record, now):
+                    continue
+                assigned_key = record.get("thread_key")
+                if assigned_key in thread_map:
+                    platform_load[thread_map[assigned_key][0]["platform"]] += 1
+
+            eligible_platforms = {
+                candidate[2][0]["platform"]
+                for candidate in priority_candidates
+            }
+            minimum_load = min(platform_load[platform] for platform in eligible_platforms)
+            least_used_platforms = {
+                platform for platform in eligible_platforms
+                if platform_load[platform] == minimum_load
+            }
+            balanced_candidates = [
+                candidate for candidate in priority_candidates
+                if candidate[2][0]["platform"] in least_used_platforms
+            ]
+            _, key, items, status = random.choice(balanced_candidates)
         assignments[annotator_id] = {
             "thread_key": key,
             "assigned_at": datetime.now().isoformat(),
@@ -645,7 +709,7 @@ def choose_thread_for_annotator(annotator_id, force_new=False):
 
 
 def current_assignment_id(annotator_id, thread_key_value):
-    record = load_assignment_state().get("assignments", {}).get(annotator_id, {})
+    record = load_assignment_state().get("by_user", {}).get(annotator_id, {})
     if record.get("thread_key") == thread_key_value:
         return record.get("assignment_id", "")
     return ""

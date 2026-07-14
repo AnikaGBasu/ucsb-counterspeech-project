@@ -1,10 +1,11 @@
 {
-  "created_at": "2026-07-12T08:06:18.673960+00:00",
+  "created_at": "2026-07-13T17:58:11.320808+00:00",
   "model": "gpt-5.4-mini",
   "reasoning_effort": "medium",
   "seed": 20260710,
+  "all_validation": false,
   "samples_per_fringe_platform": 2,
-  "item_count": 173,
+  "item_count": 171,
   "thread_count": 10,
   "selected_threads": [
     {
@@ -35,13 +36,13 @@
       "group": "validation_sample",
       "platform": "gab",
       "thread_id": "114823268206085862",
-      "item_count": 12
+      "item_count": 11
     },
     {
       "group": "validation_sample",
       "platform": "gab",
       "thread_id": "114827438940651821",
-      "item_count": 6
+      "item_count": 5
     },
     {
       "group": "validation_sample",

@@ -70,7 +70,7 @@ Choose what the abusive language primarily attacks. If abuse targets a person's 
 
 ## Q6. Counterspeech
 
-For a reply, decide whether the TARGET POST directly pushes back against harmful, abusive, hateful, or materially misleading content in the post it is responding to. Use the direct parent when it is supplied or identifiable from the conversation context.
+For a reply, decide whether the TARGET POST directly pushes back against harmful, abusive, or hateful content in the post it is responding to. Correcting hateful misinformation is counterspeech. Use the direct parent when it is supplied or identifiable from the conversation context.
 Return "1" when the TARGET POST:
 * directly condemns, rejects, mocks, or challenges the harmful content;
 * corrects a false or misleading claim;
