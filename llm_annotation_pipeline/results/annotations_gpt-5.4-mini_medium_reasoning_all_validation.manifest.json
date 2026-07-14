@@ -1,0 +1,2412 @@
+{
+  "created_at": "2026-07-13T18:37:17.338760+00:00",
+  "model": "gpt-5.4-mini",
+  "reasoning_effort": "medium",
+  "seed": 20260710,
+  "all_validation": true,
+  "samples_per_fringe_platform": 2,
+  "item_count": 4932,
+  "thread_count": 400,
+  "selected_threads": [
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509740126",
+      "item_count": 40
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509740268",
+      "item_count": 37
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509741234",
+      "item_count": 14
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509744030",
+      "item_count": 12
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509744244",
+      "item_count": 37
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509744506",
+      "item_count": 40
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509744686",
+      "item_count": 11
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509744690",
+      "item_count": 25
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509744955",
+      "item_count": 6
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509745356",
+      "item_count": 15
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509745928",
+      "item_count": 10
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509745980",
+      "item_count": 16
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509746051",
+      "item_count": 18
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509746077",
+      "item_count": 14
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509747005",
+      "item_count": 39
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509747166",
+      "item_count": 13
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509747170",
+      "item_count": 11
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509747483",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509747627",
+      "item_count": 9
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509747738",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509747889",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509748427",
+      "item_count": 6
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509749039",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509749547",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509750129",
+      "item_count": 22
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509750147",
+      "item_count": 13
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509750466",
+      "item_count": 32
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509750547",
+      "item_count": 7
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509750664",
+      "item_count": 28
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509751511",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509752017",
+      "item_count": 6
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509752271",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509752777",
+      "item_count": 10
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509753117",
+      "item_count": 22
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509753516",
+      "item_count": 34
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509754008",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509754170",
+      "item_count": 22
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509754207",
+      "item_count": 20
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509755400",
+      "item_count": 31
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509756373",
+      "item_count": 9
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509756419",
+      "item_count": 17
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509756996",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509757402",
+      "item_count": 15
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509758200",
+      "item_count": 17
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509758519",
+      "item_count": 22
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509759195",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509760068",
+      "item_count": 10
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509760116",
+      "item_count": 20
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509760217",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509761176",
+      "item_count": 25
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509761397",
+      "item_count": 11
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509762092",
+      "item_count": 6
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509762436",
+      "item_count": 9
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509762709",
+      "item_count": 20
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509762959",
+      "item_count": 13
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509763663",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509764527",
+      "item_count": 16
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509764606",
+      "item_count": 12
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509765136",
+      "item_count": 12
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509765426",
+      "item_count": 8
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509765816",
+      "item_count": 8
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509765894",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509766089",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509766308",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509766523",
+      "item_count": 16
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509766835",
+      "item_count": 8
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509767083",
+      "item_count": 17
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509767486",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509767575",
+      "item_count": 28
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509767610",
+      "item_count": 24
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509767934",
+      "item_count": 7
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509768412",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509768585",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509768827",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509768969",
+      "item_count": 6
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509769260",
+      "item_count": 14
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509769461",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509769645",
+      "item_count": 9
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509769723",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509769839",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509770121",
+      "item_count": 11
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509770378",
+      "item_count": 7
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509770731",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509770761",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509770942",
+      "item_count": 15
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509771076",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509771140",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509771327",
+      "item_count": 16
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509771373",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509772079",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509772128",
+      "item_count": 18
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509772612",
+      "item_count": 10
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509772712",
+      "item_count": 8
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509772932",
+      "item_count": 16
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509773180",
+      "item_count": 28
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509773454",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509773482",
+      "item_count": 10
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509773666",
+      "item_count": 9
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509774034",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "4chan",
+      "thread_id": "509774545",
+      "item_count": 15
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114819969169777610",
+      "item_count": 11
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114820300352450957",
+      "item_count": 11
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114820566434046977",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114820920283246312",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114820923514938966",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114820964994924901",
+      "item_count": 12
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114821194310375117",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114821228696123357",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114821457928334533",
+      "item_count": 8
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114821506537768882",
+      "item_count": 8
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114821516927492735",
+      "item_count": 10
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114821587018861822",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114821826148326095",
+      "item_count": 9
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114822662174776052",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114822832561658931",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114822919508148167",
+      "item_count": 9
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114823092652399671",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114823207202777341",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114823268206085862",
+      "item_count": 11
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114823279849719033",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114825945508636916",
+      "item_count": 10
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114825992869180804",
+      "item_count": 6
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114826166312222958",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114826534189607335",
+      "item_count": 10
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114826589671995708",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114826823151819988",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114826861065329353",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114826936783247093",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114826990518246610",
+      "item_count": 8
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114826995514310841",
+      "item_count": 20
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114827027760175624",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114827075352125516",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114827329376077780",
+      "item_count": 15
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114827377861695544",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114827438940651821",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114828186791488193",
+      "item_count": 7
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114828352350390528",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114828408517896733",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114828455261793883",
+      "item_count": 7
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114828468946132137",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114828598054034614",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114828694497330486",
+      "item_count": 6
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114828839243817444",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114828883709259984",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114828893523854845",
+      "item_count": 11
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114828927160702353",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114828991884045593",
+      "item_count": 9
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114834177618408863",
+      "item_count": 6
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114834514027589257",
+      "item_count": 8
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114837125439645924",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114837276518302951",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114837368605090672",
+      "item_count": 17
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114837553746415988",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114837646888882709",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114837734951690134",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114837745581353507",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114837747139652509",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114837752123756582",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114837756937563006",
+      "item_count": 11
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114838063340463401",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114838367544307056",
+      "item_count": 15
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114838449454027990",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114838535694448380",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114838921954060274",
+      "item_count": 11
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114839025270536842",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114839181241505062",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114839398526216771",
+      "item_count": 6
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114839662722695616",
+      "item_count": 6
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114839823018900259",
+      "item_count": 7
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114840135529535958",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114841277819017839",
+      "item_count": 11
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114842602280394191",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114842982448175613",
+      "item_count": 12
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114843025273822894",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114843309927523978",
+      "item_count": 11
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114843349328945638",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114843350141290161",
+      "item_count": 10
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114843384965696859",
+      "item_count": 17
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114843497810792894",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114843530661154322",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114843598527997473",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114843669137903346",
+      "item_count": 6
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114843687488390734",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114843706647488530",
+      "item_count": 11
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114843750364722945",
+      "item_count": 9
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114843911102459966",
+      "item_count": 10
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114843933721198976",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114844000173605369",
+      "item_count": 7
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114844260224852076",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114844454285686330",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114845112345492353",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114845217260560934",
+      "item_count": 20
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114845223382283507",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114845276425920682",
+      "item_count": 6
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114845304807369362",
+      "item_count": 10
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114845448625764742",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114845587314312902",
+      "item_count": 9
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114845926878239239",
+      "item_count": 6
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114845928787241963",
+      "item_count": 6
+    },
+    {
+      "group": "validation_all",
+      "platform": "gab",
+      "thread_id": "114845928970051093",
+      "item_count": 8
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1383583",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1395215",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1403891",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1404636",
+      "item_count": 19
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1406630",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1406968",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1407136",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1408677",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1408855",
+      "item_count": 9
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1408895",
+      "item_count": 9
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1408938",
+      "item_count": 8
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1408987",
+      "item_count": 7
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1408999",
+      "item_count": 11
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1409006",
+      "item_count": 9
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1409036",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1409044",
+      "item_count": 8
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1409074",
+      "item_count": 7
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1409151",
+      "item_count": 7
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1409171",
+      "item_count": 8
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1409211",
+      "item_count": 9
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1409252",
+      "item_count": 10
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1409278",
+      "item_count": 15
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1409339",
+      "item_count": 7
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1409345",
+      "item_count": 10
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1409376",
+      "item_count": 15
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1409390",
+      "item_count": 7
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1409452",
+      "item_count": 7
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1409455",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1409463",
+      "item_count": 14
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1409578",
+      "item_count": 9
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1409587",
+      "item_count": 7
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1409589",
+      "item_count": 7
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1409662",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1409858",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1409898",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1409940",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1409972",
+      "item_count": 18
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1410011",
+      "item_count": 9
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1410176",
+      "item_count": 10
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1410216",
+      "item_count": 7
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1410243",
+      "item_count": 12
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1410281",
+      "item_count": 12
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1410298",
+      "item_count": 9
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1410352",
+      "item_count": 9
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1410403",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1410413",
+      "item_count": 8
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1410468",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1410543",
+      "item_count": 9
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1410551",
+      "item_count": 8
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1410607",
+      "item_count": 13
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1410650",
+      "item_count": 9
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1410816",
+      "item_count": 11
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1410854",
+      "item_count": 18
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1410873",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1410876",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1410914",
+      "item_count": 11
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1410940",
+      "item_count": 14
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1410954",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1411006",
+      "item_count": 11
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1411179",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1411198",
+      "item_count": 13
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1411199",
+      "item_count": 7
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1411208",
+      "item_count": 9
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1411240",
+      "item_count": 7
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1411250",
+      "item_count": 7
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1411271",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1411287",
+      "item_count": 9
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1411404",
+      "item_count": 6
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1411405",
+      "item_count": 7
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1411469",
+      "item_count": 11
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1411588",
+      "item_count": 7
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1411598",
+      "item_count": 8
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1411619",
+      "item_count": 9
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1411624",
+      "item_count": 9
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1411637",
+      "item_count": 20
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1411686",
+      "item_count": 8
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1411757",
+      "item_count": 9
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1411869",
+      "item_count": 10
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1411916",
+      "item_count": 10
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1411948",
+      "item_count": 11
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1411956",
+      "item_count": 9
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1412191",
+      "item_count": 7
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1414298",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1414506",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1415069",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1416380",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1418431",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1419409",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1420143",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1421252",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1421482",
+      "item_count": 10
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1421505",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1422578",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1422997",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1423287",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1423409",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1423578",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1423984",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "1424587",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "stormfront",
+      "thread_id": "360077",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=113647",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=133755",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=147884",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=151603",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=186987",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=471375",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=544765",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=546542",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=548764",
+      "item_count": 13
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=553537",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=554021",
+      "item_count": 10
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=554779",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=554893",
+      "item_count": 17
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=555767",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=555852",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=556913",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=557282",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=557556",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=557893",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=557925",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=558926",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=559283",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=559973",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=559995",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=560204",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=560206",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=560450",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=560760",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=560928",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=560963",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=560987",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=561142",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=561801",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=562003",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=562094",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=562703",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=562902",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=564536",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=565780",
+      "item_count": 12
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=566538",
+      "item_count": 19
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=567440",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=567626",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=569061",
+      "item_count": 6
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=569368",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=569374",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=569549",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=569602",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=569636",
+      "item_count": 12
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=569907",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=570257",
+      "item_count": 8
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=570273",
+      "item_count": 10
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=570533",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=570622",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=570933",
+      "item_count": 6
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=571020",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=571217",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=571327",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=571473",
+      "item_count": 7
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=571561",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=571690",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=571823",
+      "item_count": 9
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=571849",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=572122",
+      "item_count": 17
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=572251",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=572397",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=572444",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=572507",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=572596",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=572608",
+      "item_count": 8
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=572635",
+      "item_count": 9
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=572743",
+      "item_count": 18
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=572806",
+      "item_count": 6
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=572807",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=572870",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=573160",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=573414",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=573447",
+      "item_count": 6
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=573666",
+      "item_count": 10
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=573771",
+      "item_count": 8
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=573779",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=573800",
+      "item_count": 7
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=573868",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=573940",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=573990",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=574003",
+      "item_count": 14
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=574117",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=574211",
+      "item_count": 17
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=574267",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=574447",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=574951",
+      "item_count": 7
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=575004",
+      "item_count": 5
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=575043",
+      "item_count": 7
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=575185",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=575190",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=575245",
+      "item_count": 8
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=575257",
+      "item_count": 13
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=575385",
+      "item_count": 21
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=575433",
+      "item_count": 4
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=575711",
+      "item_count": 8
+    },
+    {
+      "group": "validation_all",
+      "platform": "vanguard",
+      "thread_id": "https://vnnforum.com/showthread.php?t=575763",
+      "item_count": 5
+    }
+  ]
+}

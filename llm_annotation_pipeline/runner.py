@@ -11,7 +11,7 @@ from typing import Any
 from dotenv import load_dotenv
 from openai import APIConnectionError, APITimeoutError, InternalServerError, OpenAI, RateLimitError
 
-from llm_annotation_pipeline.datasets import PROJECT_ROOT, select_items
+from llm_annotation_pipeline.datasets import PROJECT_ROOT, select_all_validation_items, select_items
 from llm_annotation_pipeline.schemas import Annotation
 
 
@@ -107,8 +107,16 @@ def annotate(client: OpenAI, *, model: str, reasoning_effort: str, prompt: str, 
 def existing_ids(path: Path) -> set[str]:
     if not path.exists():
         return set()
+    completed: set[str] = set()
     with path.open(encoding="utf-8") as handle:
-        return {str(json.loads(line)["item_id"]) for line in handle if line.strip()}
+        for line_number, line in enumerate(handle, start=1):
+            if not line.strip():
+                continue
+            try:
+                completed.add(str(json.loads(line)["item_id"]))
+            except (json.JSONDecodeError, KeyError) as error:
+                raise ValueError(f"Cannot safely resume: invalid record at {path}:{line_number}") from error
+    return completed
 
 
 def write_manifest(path: Path, args: argparse.Namespace, items: list[dict[str, Any]]) -> None:
@@ -116,6 +124,7 @@ def write_manifest(path: Path, args: argparse.Namespace, items: list[dict[str, A
     manifest = {
         "created_at": datetime.now(timezone.utc).isoformat(), "model": args.model,
         "reasoning_effort": args.reasoning_effort, "seed": args.seed,
+        "all_validation": args.all_validation,
         "samples_per_fringe_platform": args.samples_per_platform, "item_count": len(items),
         "thread_count": len(threads),
         "selected_threads": [
@@ -131,6 +140,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--model", default="gpt-5.4-mini")
     parser.add_argument("--reasoning-effort", choices=("none", "low", "medium", "high", "xhigh"), default="medium")
     parser.add_argument("--samples-per-platform", type=int, default=2)
+    parser.add_argument(
+        "--all-validation",
+        action="store_true",
+        help="Annotate every post in every 4chan, Gab, Stormfront, and Vanguard validation thread; exclude trial items.",
+    )
     parser.add_argument("--seed", type=int, default=20260710)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     parser.add_argument("--dry-run", action="store_true")
@@ -143,12 +157,16 @@ def main() -> int:
     if args.samples_per_platform < 1:
         raise SystemExit("--samples-per-platform must be at least 1")
     load_dotenv(PROJECT_ROOT / ".env")
-    items = select_items(samples_per_platform=args.samples_per_platform, seed=args.seed)
+    items = select_all_validation_items() if args.all_validation else select_items(
+        samples_per_platform=args.samples_per_platform,
+        seed=args.seed,
+    )
     if args.limit is not None:
         items = items[:args.limit]
     args.output_dir.mkdir(parents=True, exist_ok=True)
     limit_suffix = f"_limit{args.limit}" if args.limit is not None else ""
-    stem = f"annotations_{args.model.replace('/', '-')}_{args.reasoning_effort}_reasoning_seed{args.seed}{limit_suffix}"
+    selection_suffix = "_all_validation" if args.all_validation else f"_seed{args.seed}"
+    stem = f"annotations_{args.model.replace('/', '-')}_{args.reasoning_effort}_reasoning{selection_suffix}{limit_suffix}"
     results_path = args.output_dir / f"{stem}.jsonl"
     manifest_path = args.output_dir / f"{stem}.manifest.json"
     write_manifest(manifest_path, args, items)
@@ -184,6 +202,7 @@ def main() -> int:
             }
             output.write(json.dumps(record, ensure_ascii=False) + "\n")
             output.flush()
+            os.fsync(output.fileno())
             print(f"[{index}/{len(remaining)}] {platform} {item['item_id']}")
     print(f"Results: {results_path}")
     return 0

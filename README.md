@@ -11,6 +11,8 @@ uv run flask --app annotation_app.app run
 
 Open the local Flask URL and read the instructions page before starting annotation. After consent, annotators choose between the trial annotation and the full annotation. The trial task loads the fixed trial set from `annotation_app/data/items.json`; dynamic assignment applies only to the full task. The full task dynamically assigns one validation thread at a time from `data/validation_set_jsons/`, restores saved progress for returning annotators, and requires completing the assigned thread for payment. Submissions are written to dated CSV and JSONL files in `annotation_app/annotation_storage/`.
 
+Gab advertisement placeholders (`gab-ad-comment`) are discarded during validation-data conversion, so they are never presented for human or LLM annotation.
+
 To share the local app through ngrok, start Flask first, then run this in another terminal and share the forwarding URL. Annotators should open the forwarding URL at `/`, read the instructions, save consent, and choose either Trial Annotation or Full Annotation. Full Annotation assigns one validation thread at a time:
 
 ```bash
